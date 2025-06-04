@@ -4,6 +4,7 @@ import React from 'react';
 interface CircleIcon {
   src: string;
   color: string;
+  iconWidth: number;
 }
 export default function NestingCircle(props: CircleIcon) {
   const themeOutterClass =
@@ -24,7 +25,12 @@ export default function NestingCircle(props: CircleIcon) {
         <div
           className={`flex justify-center items-center w-55 h-55  rounded-[50%] ${themeClass}`}
         >
-          <Image src={props.src} alt="image" width={100} height={100} />
+          <Image
+            src={props.src}
+            alt="image"
+            width={props.iconWidth}
+            height={props.iconWidth}
+          />
         </div>
       </div>
     </>
