@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
+import ShadowCircle from '../common/ShadowCircle';
 interface CircleProps {
   title: string;
   image: string;
@@ -22,11 +23,6 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
       blue: 'text-[#032FF4]',
       red: 'text-[#E61E2B]',
     }[theme] || 'text-black';
-  const shadowThemeClass =
-    {
-      blue: 'shadow-[0_4px_16px_0_rgba(0,47,244,0.75)]',
-      red: 'shadow-[0_4px_16px_0_rgba(230,30,43,0.75)]',
-    }[theme] || 'shadow-0';
   return (
     <div
       className={`w-screen min-h-[550px] ${bgThemeClass} flex flex-col items-center justify-evenly`}
@@ -40,7 +36,7 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
             style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
           >
             <motion.div
-              className={`w-[220px] h-[220px] rounded-full bg-white ${shadowThemeClass} flex flex-col items-center justify-center`}
+              // className={`w-[220px] h-[220px] rounded-full bg-white ${shadowThemeClass} flex flex-col items-center justify-center`}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
@@ -49,14 +45,23 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
                 ease: 'easeInOut',
               }}
             >
-              {/* item 타이틀 */}
-              <p className="font-bold text-lg text-black mb-3">
-                {`STEP ${idx + 1}`}
-              </p>
-              {/* 아이콘 */}
-              <Image width={55} height={60} src={item.image} alt={item.title} />
-              {/* 설명 라벨 */}
-              <p className={`mt-6 font-bold ${textThemeClass}`}>{item.title}</p>
+              <ShadowCircle color={theme} diameter={220}>
+                {/* item 타이틀 */}
+                <p className="font-bold text-lg text-black mb-3">
+                  {`STEP ${idx + 1}`}
+                </p>
+                {/* 아이콘 */}
+                <Image
+                  width={55}
+                  height={60}
+                  src={item.image}
+                  alt={item.title}
+                />
+                {/* 설명 라벨 */}
+                <p className={`mt-6 font-bold ${textThemeClass}`}>
+                  {item.title}
+                </p>
+              </ShadowCircle>
             </motion.div>
           </div>
         ))}

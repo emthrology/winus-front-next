@@ -8,7 +8,7 @@ interface IContactProps {
 
 const Contact = (props: IContactProps) => {
   return (
-    <div className="z-0 w-screen h-64 overflow-y-hidden bg-[#f4f3ff]">
+    <div className="z-1 w-screen h-64 overflow-y-hidden bg-[#f4f3ff]">
       <div className="flex flex-col justify-around mt-6 mb-12 mx-36">
         <div className="flex justify-between px-2">
           <div className="left">

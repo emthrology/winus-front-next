@@ -29,7 +29,7 @@ export default function ButtonGroup({
     onChange?.(idx);
   };
   return (
-    <div className="w-screen min-h-[80px] bg-white border border-b-black flex justify-start items-center pl-36">
+    <div className="w-screen min-h-[80px] bg-white  border-2 border-b-zinc-200 flex justify-start items-center pl-36">
       {buttonData.map((item, idx) => (
         <button
           className={`

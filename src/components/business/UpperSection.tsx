@@ -1,5 +1,5 @@
 import React from 'react';
-import NestingCircle from './NestingCircle';
+import NestingCircle from '../common/NestingCircle';
 import { motion } from 'framer-motion';
 
 interface CirclePropData {
@@ -45,7 +45,7 @@ export default function UpperSection({
               ease: 'easeInOut',
             }}
           >
-            <NestingCircle src={item.image} color={theme} />
+            <NestingCircle iconWidth={100} src={item.image} color={theme} />
             <p className={`${themeClass} font-bold mt-4`}>{item.title}</p>
             <p>{item.def1}</p>
             <p>{item.def2}</p>

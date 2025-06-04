@@ -1,10 +1,12 @@
 'use client';
 import ButtoGroup from '@/components/common/ButtonGroup';
 import LowerSection from '@/components/business/LowerSection';
-import TitleComponent from '@/components/business/TitleComponent';
+import TitleComponent from '@/components/common/TitleComponent';
 import UpperSection from '@/components/business/UpperSection';
-import Contact from '@/components/common/Contact';
-import React, { useState } from 'react';
+// import Contact from '@/components/common/Contact';
+import useThemeStore from '@/store/themeStore';
+import React, { useState, useEffect } from 'react';
+import Footer from '@/components/common/Footer';
 
 export default function Page() {
   const pageData = [
@@ -214,23 +216,39 @@ export default function Page() {
     },
   ];
   const [idx, setIdx] = useState(0);
+  const themeColor = useThemeStore((state) => state.themeColor);
+  const setThemeColor = useThemeStore((state) => state.setThemeColor);
+  const handleIdx = (idx: number) => {
+    setIdx(idx);
+    setThemeColor(pageData[idx].theme);
+  };
+  // useEffect 사용시 의존성 배열을 비운 채로 선언하면 마운트 시 한번, 언마운트시 한번 실행된다
+  // 이를 활용해 vue의 omMounted, onBeforeUnmount 처럼 활용이 가능하다
+  // 의존성배열은 빈 배열로 필수적인 듯하다. 없애라고 경고가 뜨는데, 없애보면 작동을 안한다
+  useEffect(() => {
+    // 마운트 시 실행
+    return () => {
+      // 언마운트 시 실행 (페이지 이동, 컴포넌트 제거 등)
+      setThemeColor('blue');
+    };
+  }, []);
   return (
     <>
       <TitleComponent title={pageData[idx].pageTitle} />
-      <ButtoGroup buttonData={pageData} activeIdx={idx} onChange={setIdx} />
+      <ButtoGroup buttonData={pageData} activeIdx={idx} onChange={handleIdx} />
       <UpperSection
         key={idx}
         title={pageData[idx].upperSectionData.title}
         subtitle={pageData[idx].upperSectionData.subtitle}
         circleData={pageData[idx].upperSectionData.circleData}
-        theme={pageData[idx].theme}
+        theme={themeColor}
       />
       <LowerSection
         key={idx + 20}
         circleData={pageData[idx].lowerSectionData}
-        theme={pageData[idx].theme}
+        theme={themeColor}
       />
-      <Contact theme={pageData[idx].theme} />
+      <Footer contactTheme={themeColor} />
     </>
   );
 }

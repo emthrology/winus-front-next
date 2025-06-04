@@ -22,6 +22,37 @@ export default function FullPage() {
     return () => setScrollRef(null); // 언마운트 시 해제
   }, [setScrollRef]);
 
+  const secondPageData = [
+    {
+      title: 'DESIGN',
+      subtitle1: '고객님의 생각을',
+      subrtitle2: '크리에이티브하게 구현하다.',
+      def1: '디자인 기획부터',
+      def2: '대중적이지만 독특한 차별화로',
+    },
+    {
+      title: 'EVENT',
+      subtitle1: '특별한 즐거움을',
+      subrtitle2: '찾아내어 기획하다.',
+      def1: '고객니즈에 부합하는',
+      def2: '특별한 즐거움을 향한 시작',
+    },
+    {
+      title: 'ELECTION',
+      subtitle1: '가치를 찾아',
+      subrtitle2: '완성도를 높이다.',
+      def1: '후보님의 가치를 찾아',
+      def2: '먼저 제시하고 아이디어를 제공',
+    },
+    {
+      title: 'STORYTELLING',
+      subtitle1: '디테일을 설계해',
+      subrtitle2: '치밀하게 스토리텔링하다.',
+      def1: '전문적인 기술로 시작자의',
+      def2: '관점으로 시작된 스토리텔링',
+    },
+  ];
+
   // TODO 이 값은 페이지로부터 api로 받아와야함
   const pageObjArray = [
     {
@@ -84,7 +115,7 @@ export default function FullPage() {
           {/* 상단 메인 문구 */}
           <div className="relative z-10 w-[75%]  text-left mb-42 pb-5">
             <motion.div
-              className="text-xl md:text-2xl font-bold text-gray-700"
+              className="text-xl md:text-3xl font-bold text-gray-700"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -93,7 +124,7 @@ export default function FullPage() {
               가치를 찾는 시작점,
             </motion.div>
             <motion.div
-              className="text-2xl md:text-3xl font-bold mt-1"
+              className="text-2xl md:text-5xl font-bold mt-1"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -107,95 +138,41 @@ export default function FullPage() {
           {/* 4개 서비스 설명 */}
           <div className="relative z-10 w-[75%] max-w-8xl grid grid-cols-1 md:grid-cols-4 gap-16 px-4">
             {/* DESIGN */}
-            <motion.div
-              className="flex flex-col items-start"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-              viewport={{ root: scrollContainerRef, once: false, amount: 0.7 }}
-            >
-              <div className="font-bold text-blue-700 mb-1 text-lg">DESIGN</div>
-              <div className="font-bold text-blue-700 mb-2 text-left text-lg">
-                고객님의 생각을
-                <br />
-                크리에이티브하게 구현하다.
-              </div>
-              <div className="w-[20px] border-zinc-400"></div>
-              {/* 선분(가로줄) */}
-              <hr className="my-4 border-t-2 border-gray-200 w-1/2" />
-              <div className="text-sm text-gray-500 text-left">
-                디자인 기획부터
-                <br />
-                대중적이지만 독특한 차별화로
-              </div>
-            </motion.div>
-            {/* EVENT */}
-            <motion.div
-              className="flex flex-col items-start"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
-              viewport={{ root: scrollContainerRef, once: false, amount: 0.7 }}
-            >
-              <div className="font-bold text-blue-700 mb-1 text-lg">EVENT</div>
-              <div className="font-bold text-blue-700 mb-2 text-left text-lg">
-                특별한 즐거움을
-                <br />
-                찾아내어 기획하다.
-              </div>
-              <hr className="my-4 border-t-2 border-gray-200 w-1/2" />
-              <div className="text-sm text-gray-500 text-left">
-                고객니즈에 부합하는
-                <br />
-                특별한 즐거움을 향한 시작
-              </div>
-            </motion.div>
-            {/* ELECTION */}
-            <motion.div
-              className="flex flex-col items-start"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}
-              viewport={{ root: scrollContainerRef, once: false, amount: 0.7 }}
-            >
-              <div className="font-bold text-blue-700 mb-1 text-lg">
-                ELECTION
-              </div>
-              <div className="font-bold text-blue-700 mb-2 text-left text-lg">
-                가치를 찾아
-                <br />
-                완성도를 높이다.
-              </div>
-              <hr className="my-4 border-t-2 border-gray-200 w-1/2" />
-              <div className="text-sm text-gray-500 text-left">
-                후보님의 가치를 찾아
-                <br />
-                먼저 제시하고 아이디어를 제공
-              </div>
-            </motion.div>
-            {/* STORYTELLING */}
-            <motion.div
-              className="flex flex-col items-start"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7, ease: 'easeOut' }}
-              viewport={{ root: scrollContainerRef, once: false, amount: 0.7 }}
-            >
-              <div className="font-bold text-blue-700 mb-1 text-lg">
-                STORYTELLING
-              </div>
-              <div className="font-bold text-blue-700 mb-2 text-left text-lg">
-                디테일을 설계해
-                <br />
-                치밀하게 스토리텔링하다.
-              </div>
-              <hr className="my-4 border-t-2 border-gray-200 w-1/2" />
-              <div className="text-sm text-gray-500 text-left">
-                전문적인 기술로 시작자의
-                <br />
-                관점으로 시작된 스토리텔링
-              </div>
-            </motion.div>
+            {secondPageData.map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex flex-col items-start min-w-[200px]"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.1 + index * 0.2,
+                  ease: 'easeOut',
+                }}
+                viewport={{
+                  root: scrollContainerRef,
+                  once: false,
+                  amount: 0.7,
+                }}
+              >
+                <div className="font-bold text-blue-700 mb-1 text-lg">
+                  {item.title}
+                </div>
+                <div className="font-bold text-blue-700 mb-2 text-left text-lg">
+                  {item.subtitle1}
+                  <br />
+                  {item.subrtitle2}
+                </div>
+                <div className="w-[20px] border-zinc-400"></div>
+                {/* 선분(가로줄) */}
+                <hr className="my-4 border-t-2 border-gray-200 w-1/2" />
+                <div className="text-sm text-gray-500 text-left">
+                  {item.def1}
+                  <br />
+                  {item.def2}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       ),
@@ -287,7 +264,7 @@ export default function FullPage() {
             <Image
               src="/images/main/main_4_1.png"
               alt="WINUS"
-              width={500}
+              width={550}
               height={500}
               priority
               style={{
@@ -299,7 +276,7 @@ export default function FullPage() {
           {/* 상단 메인 문구 */}
           <div className="relative z-10 w-[85%]  text-left ">
             <motion.div
-              className="text-xl md:text-2xl font-bold text-[#e61e2b]"
+              className="text-xl md:text-3xl font-bold text-[#e61e2b]"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -308,7 +285,7 @@ export default function FullPage() {
               치열한 선거현장에서,
             </motion.div>
             <motion.div
-              className="text-2xl md:text-3xl font-bold mt-1"
+              className="text-2xl md:text-5xl font-bold mt-1"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -319,9 +296,7 @@ export default function FullPage() {
               </span>
             </motion.div>
           </div>
-          {/* 4개 서비스 설명 */}
-          <div className="relative z-10 w-[85%] h-auto  max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-16 px-4">
-            {/* DESIGN */}
+          <div className="relative z-10 w-[85%] h-auto  max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-28 px-4">
             <motion.div
               className="flex flex-col items-start justify-end"
               initial={{ opacity: 0, x: -40 }}
@@ -329,9 +304,8 @@ export default function FullPage() {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               viewport={{ root: scrollContainerRef, once: false, amount: 0.7 }}
             >
-              {/* 선분(가로줄) */}
               <hr className="my-4 border-t-3 border-[#e61e2b] w-[7%]" />
-              <div className="text-md text-bold text-[#e61e2b] text-left">
+              <div className="text-lg font-semibold text-[#e61e2b] text-left">
                 WINUS는 이해하고,
                 <br />
                 설계하고, 함께 이깁니다.
@@ -339,7 +313,7 @@ export default function FullPage() {
             </motion.div>
 
             <motion.div
-              className="relative pl-24 w-[450px]"
+              className="relative pl-28 w-[450px]"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}

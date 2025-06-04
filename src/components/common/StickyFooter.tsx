@@ -1,13 +1,23 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { usePageStore } from '@/store/pageStore';
 import Icon from '@mdi/react';
-import { mdiDownload } from '@mdi/js';
-interface IFooterProps {
-  bg: string;
-}
-const Footer = (props: IFooterProps) => {
+import { mdiDownload, mdiLoading } from '@mdi/js';
+import useThemeStore from '@/store/themeStore';
+
+const Footer = () => {
+  const [downloading, setDownloading] = useState(false);
+  const [activeBtnKey, setActiveBtnKey] = useState<string | null>(null);
+  const handleClick = (key: string) => {
+    setActiveBtnKey(key);
+    setDownloading(true);
+    // 2초 후 아이콘 복구 (실제 다운로드 완료 감지는 불가)
+    setTimeout(() => {
+      setDownloading(false);
+      setActiveBtnKey(null);
+    }, 3000);
+  };
   const scrollRef = usePageStore((state) => state.scrollRef);
   const handleScrollTop = () => {
     if (scrollRef && scrollRef.current) {
@@ -16,11 +26,18 @@ const Footer = (props: IFooterProps) => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
+  const themeColor = useThemeStore((state) => state.themeColor);
+  const bgThemeClass =
+    {
+      blue: 'bg-[#001ea3]',
+      red: 'bg-[#94161E]',
+    }[themeColor] || 'bg-white';
+
   return (
     <>
       <footer
-        className={`fixed bottom-0 w-full h-12 ${
-          props.bg == 'blue' ? 'bg-[#032ff4]' : 'bg-[#e61e2b]'
+        className={`z-10 fixed bottom-0 w-full h-12 shadow-[0_4px_8px_2px_rgba(0,0,0,0.48)] ${
+          themeColor == 'blue' ? 'bg-[#032ff4] ' : 'bg-[#e61e2b] '
         } text-white flex flex-col items-center justify-center`}
       >
         <div className="w-full px-24 flex flex-row justify-between">
@@ -28,7 +45,9 @@ const Footer = (props: IFooterProps) => {
             id="left"
             className="flex flex-fow justify-between min-w-[480px]"
           >
-            <div className="flex items-center justify-center mr-4 h-12 w-[150px] bg-[#001ea3] text-xs">
+            <div
+              className={`flex items-center justify-center mr-4 h-12 w-[150px] ${bgThemeClass} text-xs`}
+            >
               CONTACT US
             </div>
             <div className="flex flex-row flex-1 items-center justify-between text-sm">
@@ -51,29 +70,51 @@ const Footer = (props: IFooterProps) => {
           >
             <div className="flex flex-row items-center justify-between text-sm space-x-2">
               <a
-                href="https://drive.google.com/file/d/1FeC5v_Bcn4THagUJjqVl_YE8AEoJUUZw/view"
-                target="_blank"
+                href="https://drive.google.com/uc?export=download&id=1FeC5v_Bcn4THagUJjqVl_YE8AEoJUUZw"
+                // target="_blank"
+                // rel="noopener noreferrer"
                 download
+                onClick={() => handleClick('company')}
                 className="flex justify-center items-center h-8 min-w-[160px] bg-white rounded-[10px] space-x-1"
               >
-                <Icon path={mdiDownload} size={1} color={'blue'} />
+                {downloading && activeBtnKey == 'company' ? (
+                  <Icon
+                    path={mdiLoading}
+                    size={1}
+                    color="blue"
+                    spin // mdi/react의 spin prop (로딩 애니메이션)
+                  />
+                ) : (
+                  <Icon path={mdiDownload} size={1} color="blue" />
+                )}
                 <b className="text-black">회사소개서</b>
                 <span className="text-black">다운로드</span>
               </a>
               <a
-                href="https://drive.google.com/file/d/1T8QWAlQUUr-WHFakjZGGmAkl5bXEzQKS/view?usp=sharings"
-                target="_blank"
+                href="https://drive.google.com/uc?export=download&id=1T8QWAlQUUr-WHFakjZGGmAkl5bXEzQKS"
+                // target="_blank"
+                // rel="noopener noreferrer"
                 download
+                onClick={() => handleClick('election')}
                 className="flex justify-center items-center h-8 min-w-[160px] bg-white rounded-[10px] space-x-1"
               >
-                <Icon path={mdiDownload} size={1} color={'red'} />
+                {downloading && activeBtnKey == 'election' ? (
+                  <Icon
+                    path={mdiLoading}
+                    size={1}
+                    color="red"
+                    spin // mdi/react의 spin prop (로딩 애니메이션)
+                  />
+                ) : (
+                  <Icon path={mdiDownload} size={1} color="red" />
+                )}
                 <b className="text-black">선거소개서</b>
                 <span className="text-black">다운로드</span>
               </a>
             </div>
             <div
               onClick={handleScrollTop}
-              className="flex items-center justify-center px-4 h-12 bg-[#001ea3] text-xs"
+              className={`flex items-center justify-center px-4 h-12 ${bgThemeClass} text-xs`}
             >
               <Image
                 src="/images/footer/footer_top.png"
