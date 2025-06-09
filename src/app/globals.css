@@ -25,6 +25,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 전역 CSS 또는 styled-jsx 등 */
+.swiper-slide-prev .overlay,
+.swiper-slide-next .overlay {
+  background: rgba(0, 30, 163, 0.4); /* #001EA3, opacity 0.4 */
+  opacity: 1;
+  width: 100%;
+  border-radius: 16px;
+}
+.swiper-slide-active .overlay {
+  opacity: 0;
+  width: 100%;
+  border-radius: 16px;
+}
+.overlay {
+  opacity: 0;
+  width: 100%;
+  transition: opacity 0.3s;
+  border-radius: 16px;
+}
+
 /* 크로스 브라우징 스크롤바 숨기기 */
 /* html,body {
   -ms-overflow-style: none;

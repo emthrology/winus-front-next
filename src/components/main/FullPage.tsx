@@ -7,6 +7,7 @@ import { useEffect, useCallback, useRef, useState } from 'react';
 import { usePageStore } from '@/store/pageStore';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 export interface IPageObj {
   pageNum: number;
   bgColor: string;
@@ -206,8 +207,9 @@ export default function FullPage() {
               { src: '/images/main/main_3_3.png', title: '선거 포트폴리오' },
               { src: '/images/main/main_3_4.png', title: '영상 포트폴리오' },
             ].map((item, index) => (
-              <div
+              <Link
                 key={index}
+                href={`/portfolio?tab=${index}`}
                 className="w-full bg-transparent rounded-[15px] flex items-center justify-center overflow-hidden relative group cursor-pointer"
               >
                 <Image
@@ -242,7 +244,7 @@ export default function FullPage() {
                     </svg>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

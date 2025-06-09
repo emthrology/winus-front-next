@@ -1,9 +1,14 @@
+import textStroke from '@designbycode/tailwindcss-text-stroke';
 const config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/components/**/*.{js,ts,jsx,tsx,mdx}",
     // ... 기타 경로
   ],
+  plugins: [
+    textStroke,
+  ],
+
   theme: {
     extend: {
       fontFamily: {

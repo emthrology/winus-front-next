@@ -1,15 +1,16 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface CircleIcon {
-  src: string;
+  src?: string | undefined;
   color: string;
   iconWidth: number;
+  children?: ReactNode | undefined;
 }
 export default function NestingCircle(props: CircleIcon) {
   const themeOutterClass =
     {
-      blue: 'bg-[#e0e7ff]',
+      blue: 'bg-[#9eaffb]',
       red: 'bg-[#E61E2B4D]',
     }[props.color] || 'bg-grey';
   const themeClass =
@@ -25,12 +26,15 @@ export default function NestingCircle(props: CircleIcon) {
         <div
           className={`flex justify-center items-center w-55 h-55  rounded-[50%] ${themeClass}`}
         >
-          <Image
-            src={props.src}
-            alt="image"
-            width={props.iconWidth}
-            height={props.iconWidth}
-          />
+          {props.src && (
+            <Image
+              src={props.src}
+              alt="image"
+              width={props.iconWidth - 10}
+              height={props.iconWidth - 10}
+            />
+          )}
+          {props.children && <>{props.children}</>}
         </div>
       </div>
     </>

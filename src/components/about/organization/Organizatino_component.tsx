@@ -1,4 +1,3 @@
-import NestingCircle from '@/components/common/NestingCircle';
 import React from 'react';
 import { motion } from 'framer-motion';
 import ShadowCircle from '@/components/common/ShadowCircle';
@@ -38,10 +37,16 @@ export default function Organizatino_component() {
           </p>
         </div>
         <div className="mt-32 flex flex-col items-center">
-          <NestingCircle
+          {/* <NestingCircle
             src={'/images/winus_logo_simple.png'}
             iconWidth={160}
             color="blue"
+          />*/}
+          <Image
+            src={'/images/about/about_organ_logo.png'}
+            alt="Organization Logo"
+            width={270}
+            height={260}
           />
           <Image
             className="z-1 mt-12 mb-[-50px]"
@@ -50,6 +55,7 @@ export default function Organizatino_component() {
             width={780}
             height={76}
           />
+
           <div className="z-2 flex justify-center items-center py-10">
             {circleData.map((item, idx) => (
               <div

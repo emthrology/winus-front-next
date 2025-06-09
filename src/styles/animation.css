@@ -1,0 +1,31 @@
+/* styles/animation.css */
+@keyframes colorChange {
+  0% {
+    color: #959595;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+.color-change {
+  animation: colorChange 2s ease-in-out forwards;
+}
+
+@keyframes gradient-wipe {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-wipe-text {
+  background: linear-gradient(90deg, #fff 0%, #0baf00 100%);
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-wipe 2s ease-in-out forwards;
+}
