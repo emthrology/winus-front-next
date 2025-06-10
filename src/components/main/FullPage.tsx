@@ -333,9 +333,11 @@ export default function FullPage() {
                   height: 'auto',
                 }}
               />
-              <button className="absolute z-11 bottom-[-30] left-20 shadow-2xl h-[60px] w-full bg-[#e61e2b] text-white text-2xl rounded-[45px]">
-                선거 서비스 소개
-              </button>
+              <Link href="/election">
+                <button className="absolute z-11 bottom-[-30] left-20 shadow-2xl h-[60px] w-full bg-[#e61e2b] text-white text-2xl rounded-[45px]">
+                  선거 서비스 소개
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>

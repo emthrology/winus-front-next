@@ -1,4 +1,7 @@
+'use client';
+import Link from 'next/link';
 import React from 'react';
+import { usePathname } from 'next/navigation';
 // interface IContactProps {
 //   pageRef: React.RefObject<HTMLDivElement | null>;
 // }
@@ -7,6 +10,8 @@ interface IContactProps {
 }
 
 const Contact = (props: IContactProps) => {
+  const pathname = usePathname();
+
   return (
     <div className="z-1 w-screen h-64 overflow-y-hidden bg-[#f4f3ff]">
       <div className="flex flex-col justify-around mt-6 mb-12 mx-36">
@@ -26,15 +31,17 @@ const Contact = (props: IContactProps) => {
               </span>
             </div>
           </div>
-          <div className="right">
-            <button
-              className={`shadow-2xl h-[50px] min-w-[200px] ${
-                props.theme == 'blue' ? 'bg-[#032ff4]' : 'bg-[#e61e2b]'
-              }  text-white text-md rounded-[10px]`}
-            >
-              견 적 문 의
-            </button>
-          </div>
+          {pathname != '/contact' && (
+            <Link href="/contact" className="right">
+              <button
+                className={`shadow-2xl h-[50px] min-w-[200px] ${
+                  props.theme == 'blue' ? 'bg-[#032ff4]' : 'bg-[#e61e2b]'
+                }  text-white text-md rounded-[10px]`}
+              >
+                견 적 문 의
+              </button>
+            </Link>
+          )}
         </div>
 
         <hr className="border-[#727272]" />

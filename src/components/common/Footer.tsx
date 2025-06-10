@@ -20,7 +20,7 @@ const Footer = (props: IFooterProps) => {
               <div className="flex flex-row justify-start space-x-2">
                 <Link href={'/'}>회사소개서</Link>
                 <span>|</span>
-                <Link href={'/'}>견적문의</Link>
+                <Link href={'/contact'}>견적문의</Link>
                 <span>|</span>
                 <Link href={'/'}>개인결제</Link>
               </div>

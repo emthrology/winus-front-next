@@ -5,6 +5,7 @@ import { usePageStore } from '@/store/pageStore';
 import Icon from '@mdi/react';
 import { mdiDownload, mdiLoading } from '@mdi/js';
 import useThemeStore from '@/store/themeStore';
+import Link from 'next/link';
 
 const Footer = () => {
   const [downloading, setDownloading] = useState(false);
@@ -45,11 +46,12 @@ const Footer = () => {
             id="left"
             className="flex flex-fow justify-between min-w-[480px]"
           >
-            <div
+            <Link
+              href="/contact"
               className={`flex items-center justify-center mr-4 h-12 w-[150px] ${bgThemeClass} text-xs`}
             >
               CONTACT US
-            </div>
+            </Link>
             <div className="flex flex-row flex-1 items-center justify-between text-sm">
               <a href="mailto:cat302302@wewinus.com">cat302302@wewinus.com</a>
               <span>|</span>
