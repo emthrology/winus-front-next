@@ -13,7 +13,7 @@ export default function ElectionFirstSection() {
           <motion.p
             initial={{ backgroundPosition: '100% 50%' }}
             animate={{ backgroundPosition: '0% 50%' }}
-            transition={{ duration: 2.5, ease: easeIn }} // sharp한 커브
+            transition={{ duration: 1.5, ease: easeIn }} // sharp한 커브
             style={{
               WebkitTextStroke: '1px black',
               background:

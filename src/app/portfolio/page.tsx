@@ -15,6 +15,8 @@ import Footer from '@/components/common/Footer';
 import ElectionTitle from '@/components/portfolio/election/ElectionTitle';
 import ElectionFirstSection from '@/components/portfolio/election/ElectionFirstSection';
 import ElectionSecondSection from '@/components/portfolio/election/ElectionSecondSection';
+import ElectionThirdSection from '@/components/portfolio/election/ElectionThirdSection';
+import { usePrevious } from '@/hooks';
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -23,8 +25,16 @@ export default function Page() {
   const setThemeColor = useThemeStore((state) => state.setThemeColor);
   const [idx, setIdx] = useState(0);
   const handleIdx = (idx: number) => {
+    if (idx === 3) {
+      window.open(
+        'https://www.youtube.com/watch?v=qDhfRjGMv7o&list=PLKAK7oej5Kto0UNj6UUJWUToy_UKW6PUM&index=1',
+        '_blank'
+      );
+      return; // setIdx를 실행하지 않으려면 return
+    }
     setIdx(idx);
   };
+
   const pageData = [
     {
       label: '디자인',
@@ -109,7 +119,46 @@ export default function Page() {
     {
       label: '선거',
       theme: 'red',
-      sectionData: {},
+      sectionData: {
+        fourth: {
+          listData: [
+            {
+              title: '통합 홍보 솔루션 제안',
+              defs: [
+                '선거전략에 기반한 메시지 작성',
+                '문자, 카드뉴스, 공보물의 기획안 작성',
+                '유권자별 맞춤형 홍보 방안 제시',
+              ],
+            },
+            {
+              title: 'P.I 기획',
+              defs: [
+                '선거전략에 기반한 메시지 작성',
+                '문자, 카드뉴스, 공보물의 기획안 작성',
+                '유권자별 맞춤형 홍보 방안 제시',
+              ],
+            },
+            {
+              title: 'SWOT 분석',
+              defs: [
+                '후보자 분석',
+                '경쟁후보 분석',
+                '선거구도에 기반한 선거전략 수립',
+                '유권자 맞춤형 선거전략 수립',
+              ],
+            },
+            {
+              title: '맞춤형 메시지 전략',
+              defs: [
+                '캐치프레이즈, 슬로건 작성',
+                '출마의변 및 스피치 원고 작성',
+                '스토리텔링에 기반한 선거전략 수립',
+                '선거 홍보물 기획',
+              ],
+            },
+          ],
+        },
+      },
     },
     {
       label: '영상',
@@ -151,19 +200,33 @@ export default function Page() {
         <ElectionTitle key="election_title" />,
         <ElectionFirstSection key="election_first" />,
         <ElectionSecondSection key="election_second" />,
+        <ElectionThirdSection
+          key="election_third"
+          list={data!.fourth!.listData}
+        />,
       ];
     }
     // 다른 idx에 따라 다른 sections 반환
     return [];
   }, [idx]);
-
+  // usePrevious훅으로 idx 이전값 기억
+  const prevIdx = usePrevious(idx);
+  useEffect(() => {
+    if (idx == 3) {
+      window.open(
+        'https://www.youtube.com/watch?v=qDhfRjGMv7o&list=PLKAK7oej5Kto0UNj6UUJWUToy_UKW6PUM&index=1',
+        '_blank'
+      );
+      setIdx(Number(prevIdx)); // 직전 idx로 복원
+    }
+  }, [idx]);
   useEffect(() => {
     if (tab) setIdx(Number(tab));
   }, [tab]);
   useEffect(() => {
-    // 마운트 시 실행
+    // 마운트 시 실행지역
     return () => {
-      // 언마운트 시 실행 (페이지 이동, 컴포넌트 제거 등)
+      // 언마운트 시 실행지역 (페이지 이동, 컴포넌트 제거 등)
       setThemeColor('blue');
     };
   }, []);
