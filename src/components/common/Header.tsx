@@ -5,7 +5,8 @@ import React from 'react';
 export default function Header() {
   return (
     <>
-      <header className="z-100 fixed top-0 right-0 w-full bg-[rgba(31,41,55,0.8)] text-white flex items-center justify-between px-24">
+      {/* bg-[rgba(31,41,55,0.8)] */}
+      <header className="z-100 fixed top-0 right-0 w-full bg-black text-white flex items-center justify-between px-24">
         <div className="flex flex-row justify-between min-w-[380px] py-2 ">
           <Link href="/">
             <Image
@@ -33,32 +34,32 @@ export default function Header() {
         <nav>
           <ul className="flex space-x-8">
             <li>
-              <Link href="/business" className="hover:underline">
+              <Link href="/business" className="font-sans hover:underline">
                 Business
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:underline">
+              <Link href="/about" className="font-sans hover:underline">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" className="hover:underline">
+              <Link href="/portfolio" className="font-sans hover:underline">
                 Portfolio
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:underline">
+              <Link href="/contact" className="font-sans hover:underline">
                 Contact
               </Link>
             </li>
             <li>
-              <Link href="/notice" className="hover:underline">
+              <Link href="/notice" className="font-sans hover:underline">
                 Notice
               </Link>
             </li>
             <li>
-              <Link href="/election" className="hover:underline">
+              <Link href="/election" className="font-sans hover:underline">
                 선거
               </Link>
             </li>

@@ -16,83 +16,94 @@ export default function EventFirstSection({
   buttonData,
 }: EventFirstSectionProps) {
   return (
-    <div className=" flex flex-col items-start justify-start w-full  min-h-[1350px] bg-white">
-      {/* 상단 텍스트/버튼 등 */}
-      <div className="flex w-full flex-col items-start pl-32 mt-16 ">
+    <div className=" w-full bg-white min-h-[1350px]">
+      {/* 상단 텍스트 */}
+      <div className="flex flex-col items-start pt-16 pl-32 mb-10">
         <p className="text-black text-[42px] font-normal">특별함을 시작으로</p>
         <p className="text-black text-[60px] font-bold">아이디어를 도출하다</p>
       </div>
-      <div className=" w-full flex flex-col items-start py-16 pl-32">
-        {images?.map((image, idx) => (
-          <div key={image} className="flex">
-            <div className="flex flex-row space-x-16">
-              {idx % 2 == 1 ? (
-                <div className="min-w-[760px] max-w-2xl pr-12 w-full flex flex-col justify-center items-end space-y-8">
-                  <p className="text-[#032ff4] text-xl font-bold">CONFIDENCE</p>
-                  <p className="text-black text-right text-xl font-thin">
-                    공공기관과 기업행사에서 인정받은
-                    <br />
-                    준비력과 체계적인 운영으로, 만족도 높은 결과를 제공합니다.
-                  </p>
-                  <div className="flex justifty-start gap-3">
-                    {buttonData!.map((item, idx) => (
-                      <motion.button
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                          duration: 0.5,
-                          delay: idx * 0.2,
-                          ease: 'easeInOut',
-                        }}
-                        className="border border-[#032FF4] bg-[#032FF4] text-white  rounded-[40px] h-[40px] w-[130px]  shadow-[0_4px_8px_-2px_rgba(0,0,0,0.48)]"
-                        onClick={() => {}}
-                        key={idx}
-                      >
-                        {item.label}
-                      </motion.button>
-                    ))}
+      <div className="max-w-8xl mx-auto w-full md:px-12 lg:px-32 flex flex-col">
+        {/* 이미지+텍스트 반복 */}
+        <div className="flex flex-col gap-24">
+          {images?.map((image, idx) => (
+            <div key={image} className="flex">
+              <div className="flex flex-row items-center space-x-48">
+                {idx % 2 == 1 ? (
+                  <div className="w-full max-w-xl flex flex-col items-end space-y-6 pr-2">
+                    <p className="text-[#032ff4] text-xl font-bold">
+                      CONFIDENCE
+                    </p>
+                    <p className="text-black text-right text-xl font-thin">
+                      공공기관과 기업행사에서 인정받은
+                      <br />
+                      준비력과 체계적인 운영으로, 만족도 높은 결과를 제공합니다.
+                    </p>
+                    <div className="flex justifty-start gap-3">
+                      {buttonData!.map((item, idx) => (
+                        <motion.button
+                          initial={{ opacity: 0, y: 40 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: idx * 0.2,
+                            ease: 'easeInOut',
+                          }}
+                          className="border border-[#032FF4] bg-[#032FF4] text-white  rounded-[40px] h-[40px] w-[130px]  shadow-[0_4px_8px_-2px_rgba(0,0,0,0.48)]"
+                          onClick={() => {}}
+                          key={idx}
+                        >
+                          {item.label}
+                        </motion.button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ) : null}
-              <Image
-                src={image}
-                width={1146}
-                height={859}
-                alt={`Interior ${idx + 1}`}
-                className=" w-full h-auto object-cover rounded-lg"
-              />
+                ) : null}
+                {/* <div className="w-full max-w-[700px]"> */}
+                <Image
+                  src={image}
+                  width={1146}
+                  height={859}
+                  alt={`Interior ${idx + 1}`}
+                  className="w-[1146px] h-auto object-cover rounded-lg"
+                  sizes="(max-width: 1146px) 100vw"
+                  priority={idx === 0}
+                />
+                {/* </div> */}
 
-              {idx % 2 == 0 ? (
-                <div className="minw-[760px]  flex flex-col justify-center items-start space-y-8">
-                  <p className="text-[#032ff4] text-xl font-bold">JOVIALITY</p>
-                  <p className="text-black text-start text-xl font-thin">
-                    단순한 행사가 아닌 특별함을 느낄 수 있는
-                    <br />
-                    감동적인 즐거움을 느낄 수 있습니다.
-                  </p>
-                  <div className="flex justifty-start gap-3">
-                    {buttonData!.map((item, idx) => (
-                      <motion.button
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                          duration: 0.5,
-                          delay: idx * 0.2,
-                          ease: 'easeInOut',
-                        }}
-                        className="border border-[#032FF4] text-[#0052ff]  rounded-[40px] h-[40px] w-[130px] font-bold shadow-[0_4px_8px_-2px_rgba(0,0,0,0.48)]"
-                        onClick={() => {}}
-                        key={idx}
-                      >
-                        {item.label}
-                      </motion.button>
-                    ))}
+                {idx % 2 == 0 ? (
+                  <div className="w-full max-w-xl flex flex-col items-start space-y-6 pl-2">
+                    <p className="text-[#032ff4] text-xl font-bold">
+                      JOVIALITY
+                    </p>
+                    <p className="text-black text-start text-xl font-thin">
+                      단순한 행사가 아닌 특별함을 느낄 수 있는
+                      <br />
+                      감동적인 즐거움을 느낄 수 있습니다.
+                    </p>
+                    <div className="flex justifty-start gap-3">
+                      {buttonData!.map((item, idx) => (
+                        <motion.button
+                          initial={{ opacity: 0, y: 40 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: idx * 0.2,
+                            ease: 'easeInOut',
+                          }}
+                          className="border border-[#032FF4] text-[#0052ff]  rounded-[40px] h-[40px] w-[130px] font-bold shadow-[0_4px_8px_-2px_rgba(0,0,0,0.48)]"
+                          onClick={() => {}}
+                          key={idx}
+                        >
+                          {item.label}
+                        </motion.button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ) : null}
+                ) : null}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

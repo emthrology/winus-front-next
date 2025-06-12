@@ -24,7 +24,7 @@ export default function TitleComponent({
       {type !== 'default' && (
         <div className="absolute inset-0 bg-black/40 pointer-events-none z-0" />
       )}
-      <span className="z-1">{title}</span>
+      <span className="z-1 text-white">{title}</span>
     </div>
   );
 }

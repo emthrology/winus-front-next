@@ -64,7 +64,7 @@ export default function FullPage() {
       innerSection: (
         <div className="flex flex-col items-center justify-center h-full space-y-0">
           <motion.h2
-            className="text-[54px] font-[700] font-pretendard text-center"
+            className="text-[54px] font-[700] text-white font-pretendard text-center"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -73,7 +73,7 @@ export default function FullPage() {
             우리가 이기는 방식
           </motion.h2>
           <motion.h1
-            className="text-[210px] font-[700] font-pretendard text-center leading-none"
+            className="text-[210px] font-[700] text-white font-pretendard text-center leading-none"
             initial={{ opacity: 0, scale: 0.7 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
@@ -82,7 +82,7 @@ export default function FullPage() {
             WINUS
           </motion.h1>
           <motion.h3
-            className="text-[32px] font-extralight text-center leading-none"
+            className="text-[32px] font-extralight text-white text-center leading-none"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}

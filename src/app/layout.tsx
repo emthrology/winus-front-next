@@ -1,8 +1,15 @@
 import type { Metadata } from 'next';
+import { Noto_Sans_KR } from 'next/font/google';
+
 import './globals.css';
 import localFont from 'next/font/local';
 import Header from '@/components/common/Header';
 import StikcyFooter from '@/components/common/StickyFooter';
+
+const notoSansKr = Noto_Sans_KR({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -22,7 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={pretendard.variable}>
+    <html
+      lang="en"
+      className={`${pretendard.variable} ${notoSansKr.className}`}
+    >
       <head></head>
       <body className="font-pretendard z-1 relative min-h-screen flex flex-col">
         <Header />
