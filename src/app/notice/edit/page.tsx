@@ -3,7 +3,7 @@ import Footer from '@/components/common/Footer';
 import TitleComponent from '@/components/common/TitleComponent';
 import React, { useEffect } from 'react';
 import useThemeStore from '@/store/themeStore';
-import NoticeBoard from '@/components/notice/NoticeBoard';
+import NoticeEditor from '@/components/notice/NoticeEditor';
 export default function Page() {
   const setThemeColor = useThemeStore((state) => state.setThemeColor);
   // useEffect 사용시 의존성 배열을 비운 채로 선언하면 마운트 시 한번, 언마운트시 한번 실행된다
@@ -18,8 +18,10 @@ export default function Page() {
   }, [setThemeColor]);
   return (
     <>
-      <TitleComponent title="Notice." />
-      <NoticeBoard />
+      <TitleComponent title="notice." />
+      <div className="px-32 py-4 min-h-[700px] bg-white">
+        <NoticeEditor />
+      </div>
       <Footer contactTheme={'blue'} />
     </>
   );

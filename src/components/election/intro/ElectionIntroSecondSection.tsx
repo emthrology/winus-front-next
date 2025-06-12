@@ -18,33 +18,29 @@ export default function ElectionIntroSecondSection({
       {/* 상단 overflow 투명원 */}
       <div className="absolute -top-[12.5%] left-1/2 transform -translate-x-1/2 flex space-x-16 ">
         {circleData.map((circle, idx) => (
-          <>
-            <motion.div
-              key={`${circle.title}-${idx}`}
-              className="w-[469px] h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4 flex flex-col items-center justify-center"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.43,
-                delay: (idx + 2) * 0.145,
-                ease: 'easeInOut',
-              }}
-            >
-              <p className="font-bold text-6xl text-[#E61E2B] mb-8">
-                {circle.title}
+          <motion.div
+            key={`${circle.title}-${idx}`}
+            className="w-[469px] h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4 flex flex-col items-center justify-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.43,
+              delay: (idx + 2) * 0.145,
+              ease: 'easeInOut',
+            }}
+          >
+            <p className="font-bold text-6xl text-[#E61E2B] mb-8">
+              {circle.title}
+            </p>
+            {circle.defs.map((definition, innerIdx) => (
+              <p
+                key={`${definition}-${innerIdx}`}
+                className="font-[300] text-2xl text-[#727272]"
+              >
+                {definition}
               </p>
-              {circle.defs.map((definition, innerIdx) => (
-                <>
-                  <p
-                    key={`${definition}-${innerIdx}`}
-                    className="font-[300] text-2xl text-[#727272]"
-                  >
-                    {definition}
-                  </p>
-                </>
-              ))}
-            </motion.div>
-          </>
+            ))}
+          </motion.div>
         ))}
       </div>
       {/* 하단 */}

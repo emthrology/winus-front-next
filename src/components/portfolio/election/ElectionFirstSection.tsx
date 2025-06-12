@@ -15,7 +15,7 @@ export default function ElectionFirstSection() {
             animate={{ backgroundPosition: '0% 50%' }}
             transition={{ delay: 1, duration: 2, ease: easeIn }} // sharp한 커브
             style={{
-              WebkitTextStroke: '1px black',
+              // WebkitTextStroke: '1px black',
               background:
                 'linear-gradient(90deg,#fff 0%,#fff 50%, #959595 50%,#959595 100%',
               backgroundSize: '300% 100%',

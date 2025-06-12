@@ -9,7 +9,8 @@ interface IPageState {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const stateCreator = (set: any) => ({
   scrollRef: null,
-  setScrollRef: (ref) => set({ scrollRef: ref }),
+  setScrollRef: (ref: RefObject<HTMLDivElement> | null) =>
+    set({ scrollRef: ref }),
 });
 
 //devtools적용과 create를 curry로 처리했는데..devtools가 작동을안함

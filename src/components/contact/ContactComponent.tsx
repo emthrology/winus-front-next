@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectRequestForm from './ProejctRequestForm';
 
 export default function ContactComponent() {
   return (
@@ -30,7 +31,9 @@ export default function ContactComponent() {
       </div>
 
       {/* 견적의뢰 작성 */}
-      <div className="w-[80%] h-[900px] mt-20 mx-auto bg-white shadow-[0_4px_1px_0_rgba(3, 47, 244, 0.12)]"></div>
+      <div className="w-[80%] h-[900px] mt-20 mx-auto bg-white shadow-[0_4px_1px_0_rgba(3, 47, 244, 0.12)]">
+        <ProjectRequestForm />
+      </div>
     </div>
   );
 }

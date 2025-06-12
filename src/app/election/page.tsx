@@ -10,6 +10,12 @@ import ElectionIntroThirdSection from '@/components/election/intro/ElectionIntro
 import ElectionIntroFourthSection from '@/components/election/intro/ElectionIntroFourthSection';
 import ElectionConsultingSecondSection from '@/components/election/consulting/ElectionConsultingSecondSection';
 import ElectionConsultingThirdSection from '@/components/election/consulting/ElectionConsultingThirdSection';
+import ElectionPromotionFirstSection from '@/components/election/promotion/ElectionPromotionFirstSection';
+import ElectionPromotionSecondSection from '@/components/election/promotion/ElectionPromotionSecondSection';
+import ElectionPromotionThirdSection from '@/components/election/promotion/ElectionPromotionThirdSection';
+import ElectionMovementFirstSection from '@/components/election/movement/ElectionMovementFirstSection';
+import ElectionMovementSecondSection from '@/components/election/movement/ElectionMovementSecondSection';
+import ElectionMovementThirdSection from '@/components/election/movement/ElectionMovementThirdSection';
 export default function Page() {
   const [idx, setIdx] = useState(0);
   const setThemeColor = useThemeStore((state) => state.setThemeColor);
@@ -25,7 +31,7 @@ export default function Page() {
       // 언마운트 시 실행 (페이지 이동, 컴포넌트 제거 등)
       setThemeColor('red');
     };
-  }, []);
+  }, [setThemeColor]);
   const pageData = [
     {
       label: '소개',
@@ -159,12 +165,49 @@ export default function Page() {
     {
       label: '홍보물',
       theme: 'red',
-      sectionData: {},
+      sectionData: {
+        first: {
+          buttonData: [
+            '# 읽기 쉬운 공보',
+            '# 핵심이 쏙쏙 들어오는',
+            '# 전담 디자이너 배정',
+          ],
+        },
+      },
     },
     {
       label: '선거운동',
       theme: 'red',
-      sectionData: {},
+      sectionData: {
+        first: {
+          proscons: [
+            {
+              cons: '가격 측면에서 부담스러움',
+              pros1: '윈어스 자체제작으로',
+              pros2: '저렴한 가격대',
+            },
+            {
+              cons: '기존버전에 제한된 개사',
+              pros1: '윈어스 자체제작으로',
+              pros2: '자유로운 메시지',
+            },
+            {
+              cons: '사진만 남발된 유세송MV',
+              pros1: '입체적 구성인',
+              pros2: '맞춤 유세송 MV 제작',
+            },
+          ],
+          buttons: [
+            '#중독성',
+            '#트로트',
+            '#댄스',
+            '#노래방',
+            '#록',
+            '#동요',
+            '#응원가',
+          ],
+        },
+      },
     },
   ];
 
@@ -199,7 +242,31 @@ export default function Page() {
         />,
       ];
     }
+    if (idx == 2) {
+      const data = pageData[2].sectionData;
+      return [
+        <ElectionPromotionFirstSection
+          key={'election_promotion_first'}
+          buttonData={data.first!.buttonData!}
+        />,
+        <ElectionPromotionSecondSection key={'election_promotion_second'} />,
+        <ElectionPromotionThirdSection key={'election_promition_third'} />,
+      ];
+    }
+    if (idx == 3) {
+      const data = pageData[3].sectionData;
+      return [
+        <ElectionMovementFirstSection
+          key={'election_movement_first'}
+          proscons={data.first!.proscons!}
+          buttons={data.first!.buttons!}
+        />,
+        <ElectionMovementSecondSection key={'election_movement_second'} />,
+        <ElectionMovementThirdSection key={'election_movent_third'} />,
+      ];
+    }
     return [];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx]);
   return (
     <>

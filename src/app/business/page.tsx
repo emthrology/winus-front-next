@@ -231,7 +231,7 @@ export default function Page() {
       // 언마운트 시 실행 (페이지 이동, 컴포넌트 제거 등)
       setThemeColor('blue');
     };
-  }, []);
+  }, [setThemeColor]);
   return (
     <>
       <TitleComponent title={pageData[idx].pageTitle} />

@@ -16,18 +16,18 @@ export default function EventFirstSection({
   buttonData,
 }: EventFirstSectionProps) {
   return (
-    <div className="relative flex flex-col items-start justify-start w-screen  h-[1350px] bg-white">
+    <div className=" flex flex-col items-start justify-start w-full  min-h-[1350px] bg-white">
       {/* 상단 텍스트/버튼 등 */}
       <div className="flex w-full flex-col items-start pl-32 mt-16 ">
         <p className="text-black text-[42px] font-normal">특별함을 시작으로</p>
         <p className="text-black text-[60px] font-bold">아이디어를 도출하다</p>
       </div>
-      <div className="relative w-full flex flex-col items-start py-16 pl-32">
+      <div className=" w-full flex flex-col items-start py-16 pl-32">
         {images?.map((image, idx) => (
           <div key={image} className="flex">
             <div className="flex flex-row space-x-16">
               {idx % 2 == 1 ? (
-                <div className="min-w-[760px] pr-12 w-full flex flex-col justify-center items-end space-y-8">
+                <div className="min-w-[760px] max-w-2xl pr-12 w-full flex flex-col justify-center items-end space-y-8">
                   <p className="text-[#032ff4] text-xl font-bold">CONFIDENCE</p>
                   <p className="text-black text-right text-xl font-thin">
                     공공기관과 기업행사에서 인정받은
@@ -59,8 +59,9 @@ export default function EventFirstSection({
                 width={1146}
                 height={859}
                 alt={`Interior ${idx + 1}`}
-                className="w-full h-full object-cover rounded-lg"
+                className=" w-full h-auto object-cover rounded-lg"
               />
+
               {idx % 2 == 0 ? (
                 <div className="minw-[760px]  flex flex-col justify-center items-start space-y-8">
                   <p className="text-[#032ff4] text-xl font-bold">JOVIALITY</p>

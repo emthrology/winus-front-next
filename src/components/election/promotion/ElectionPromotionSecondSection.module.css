@@ -1,0 +1,57 @@
+/* 모서리만 border를 그리는 방법 예시 */
+.cornerBorder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  height: 1000px;
+  background: transparent;
+  margin-top: 5rem;
+  margin-inline: auto;
+}
+
+/* 좌상단 */
+.cornerBorder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 270px;
+  border-top: 4px solid #d9d9d9;
+  border-left: 4px solid #d9d9d9;
+}
+
+/* 우하단 */
+.cornerBorder::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 270px;
+  height: 270px;
+  border-bottom: 4px solid #d9d9d9;
+  border-right: 4px solid #d9d9d9;
+}
+
+/* 우상단 */
+.cornerBorder .topRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 270px;
+  height: 270px;
+  border-top: 4px solid #d9d9d9;
+  border-right: 4px solid #d9d9d9;
+}
+
+/* 좌하단 */
+.cornerBorder .bottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 270px;
+  height: 270px;
+  border-bottom: 4px solid #d9d9d9;
+  border-left: 4px solid #d9d9d9;
+}
