@@ -2,6 +2,11 @@
 
 import nodemailer from 'nodemailer';
 
+/**
+ * SMTP 서버 통신 모듈
+ * @param formData
+ * @returns
+ */
 export async function sendProjectRequest(
   formData: FormData
 ): Promise<{ ok: boolean }> {

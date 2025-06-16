@@ -89,8 +89,8 @@ const Footer = () => {
                 ) : (
                   <Icon path={mdiDownload} size={1} color="blue" />
                 )}
-                <b className="text-black">회사소개서</b>
-                <span className="text-black">다운로드</span>
+                <b className="text-black text-[13px]">회사소개서</b>
+                <span className="text-black text-[13px]">다운로드</span>
               </a>
               <a
                 href="https://drive.google.com/uc?export=download&id=1T8QWAlQUUr-WHFakjZGGmAkl5bXEzQKS"
@@ -110,8 +110,8 @@ const Footer = () => {
                 ) : (
                   <Icon path={mdiDownload} size={1} color="red" />
                 )}
-                <b className="text-black">선거소개서</b>
-                <span className="text-black">다운로드</span>
+                <b className="text-black text-[13px]">선거소개서</b>
+                <span className="text-black text-[13px]">다운로드</span>
               </a>
             </div>
             <div

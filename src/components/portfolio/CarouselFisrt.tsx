@@ -17,6 +17,8 @@ const images = [
   '/images/portfolio/design/swiper/portfolio_design_carousel_2.png',
   '/images/portfolio/design/swiper/portfolio_design_carousel_3.png',
   '/images/portfolio/design/swiper/portfolio_design_carousel_4.png',
+  '/images/portfolio/design/swiper/portfolio_design_carousel_5.png',
+  '/images/portfolio/design/swiper/portfolio_design_carousel_6.png',
 ];
 
 export default function CarouselFirst() {

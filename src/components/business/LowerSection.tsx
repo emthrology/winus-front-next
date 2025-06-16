@@ -27,7 +27,7 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
     <div
       className={`w-screen min-h-[550px] ${bgThemeClass} flex flex-col items-center justify-evenly`}
     >
-      <h1 className="text-[60px] font-bold">DESIGN PROCESS</h1>
+      <h1 className="text-[60px] font-bold text-white">DESIGN PROCESS</h1>
       <div className="flex justify-center items-center py-10 gap-[-32px]">
         {circleData.map((item, idx) => (
           <div

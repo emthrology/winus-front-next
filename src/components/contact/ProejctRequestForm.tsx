@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { sendProjectRequest } from '@/actions/sendProjectRequest';
+import { sendProjectRequest } from '@/actions/smtp';
 import Icon from '@mdi/react';
 import { mdiMenuDown } from '@mdi/js'; // 원하는 caret 아이콘
 import Link from 'next/link';
