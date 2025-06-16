@@ -12,8 +12,9 @@ export default function AdminTd({ postId, handleDelete }: Props) {
   const { data: session, status } = useSession();
   if (status === 'authenticated' && session?.user?.name) {
     return (
-      <td className="py-[15px] border-b border-[#e5e7eb] flex justify-center">
+      <td className="h-[64px] py-2 border-b border-[#e5e7eb] text-center align-middle">
         <div
+          className="inline-flex justify-center items-center"
           onClick={(e) => {
             e.stopPropagation(); // ← 이벤트 버블링 방지!
             handleDelete(postId);
