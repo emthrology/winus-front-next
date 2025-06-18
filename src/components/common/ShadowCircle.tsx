@@ -19,7 +19,8 @@ export default function ShadowCircle({
   return (
     <>
       <div
-        className={`w-[${diameter}px] h-[${diameter}px] rounded-full bg-white ${shadowThemeClass} flex flex-col items-center justify-center`}
+        style={{ width: diameter, height: diameter }}
+        className={` rounded-full bg-white ${shadowThemeClass} flex flex-col items-center justify-center`}
       >
         {children}
       </div>

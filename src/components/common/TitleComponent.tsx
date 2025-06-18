@@ -1,4 +1,5 @@
 import React from 'react';
+import { useIsLgUp } from '@/hooks/usePageSize';
 interface ITitleProps {
   title: string;
   type?: string;
@@ -8,15 +9,16 @@ export default function TitleComponent({
   title,
   type = 'default',
 }: ITitleProps) {
+  const isLgUp = useIsLgUp();
   return (
     <div
-      className="w-screen min-h-[400px] flex justify-start items-end py-4 pl-36  text-[72px] font-bold relative overflow-hidden"
+      className="w-screen min-h-[300px] lg:min-h-[400px] flex justify-center items-center lg:justify-start lg:items-end py-4 lg:pl-36  text-[48px] lg:text-[72px] font-bold relative overflow-hidden"
       style={{
         backgroundImage:
           type === 'default'
             ? "url('/images/main/main_1.png')"
             : "url('/images/guke.png')",
-        backgroundSize: 'cover',
+        backgroundSize: `${isLgUp ? 'cover' : '200% 200%'}`,
         backgroundPosition: 'top',
       }}
     >

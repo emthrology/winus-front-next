@@ -51,20 +51,25 @@ export default function Page() {
   const UpperSectionComponent = pageData[idx].upperSection;
   const LowerSectionComponent = pageData[idx].lowerSection;
   return (
-    <>
+    <div className="w-screen overflow-x-hidden">
       <TitleComponent title={pageTitle} />
       <ButtonGroup buttonData={pageData} activeIdx={idx} onChange={handleIdx} />
+      <div className="md:p-8 h-0 bg-white" />
       <UpperSection solitary={!pageData[idx].showLower}>
         {/* 여기에 페이지별로 ReactComponent 넣으면 된다 */}
         {UpperSectionComponent && <UpperSectionComponent />}
       </UpperSection>
+      <div className="md:p-8 h-0 bg-white" />
+      <div className="p-8 h-0 bg-[#032FF4]" />
       {pageData[idx].showLower && LowerSectionComponent && (
         <LowerSection theme={'blue'}>
           {/* 여기에 페이지별로 ReactComponent 넣으면 된다 */}
           <LowerSectionComponent />
         </LowerSection>
       )}
+      <div className="p-8 md:p-0 bg-[#032FF4]" />
+
       <Footer contactTheme={'blue'} />
-    </>
+    </div>
   );
 }

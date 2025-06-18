@@ -3,26 +3,32 @@ import { SNoticeDetail } from '@/actions/notice/SNoticeDetail';
 import Footer from '@/components/common/Footer';
 import TitleComponent from '@/components/common/TitleComponent';
 import { notFound } from 'next/navigation';
-import React from 'react';
+import React, { Suspense } from 'react';
 import NoticeDetail from './NoticeDetail';
+// interface PageProps {
+//   params: { [key: string]: string };
+//   searchParams?: { [key: string]: string | string[] | undefined };
+// }
+export default async function NoticeDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const notice = await SNoticeDetail(Number(id));
 
-interface NoticeDetailPageProps {
-  params: { id: string };
-}
-// const NoticeDetailPage = async ({ params }: DetailPageProps) => {
-const NoticeDetailPage = async ({ params }: NoticeDetailPageProps) => {
-  const awaitParams = await params;
-  const notice = await SNoticeDetail(Number(awaitParams.id));
+  // const NoticeDetailPage = async () => {
+  //   const notice = await SNoticeDetail(1);
 
   if (!notice) return notFound();
 
   return (
     <>
       <TitleComponent title="Notice." />
-      <NoticeDetail notice={notice} />
+      <Suspense>
+        <NoticeDetail notice={notice} />
+      </Suspense>
       <Footer contactTheme={'blue'} />
     </>
   );
-};
-
-export default NoticeDetailPage;
+}

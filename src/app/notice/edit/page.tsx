@@ -1,5 +1,4 @@
 'use client';
-import Footer from '@/components/common/Footer';
 import TitleComponent from '@/components/common/TitleComponent';
 import React from 'react';
 // import NoticeEditor from '@/components/notice/NoticeEditor';

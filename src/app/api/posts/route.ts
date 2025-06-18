@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // app/api/posts/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth/next';
@@ -53,8 +54,15 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     // 세션에서 user id 추출
-    const session = await getServerSession(authOptions);
-    console.log(session, 3333333);
+    interface SessionUser {
+      id: string;
+      [key: string]: any;
+    }
+    interface Session {
+      user?: SessionUser;
+      [key: string]: any;
+    }
+    const session = (await getServerSession(authOptions)) as Session;
     if (!session || !session.user?.id) {
       return NextResponse.json(
         { success: false, error: '로그인 필요' },

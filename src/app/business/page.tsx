@@ -83,8 +83,8 @@ export default function Page() {
           },
           {
             title: 'EXPERT',
-            def1: '행사진행 전문가로',
-            def2: '행사진행 중 의연한 대처가 가능합니다.',
+            def1: '행사진행 전문가로 행사진행 중',
+            def2: '의연한 대처가 가능합니다.',
             image: '/images/business/business_upper_event_3.png',
           },
         ],
@@ -146,11 +146,11 @@ export default function Page() {
           image: '/images/business/business_lower_election_1.png',
         },
         {
-          title: '후보자 인터뷰 및 분석',
+          title: `후보자 인터뷰 \n및 분석`,
           image: '/images/business/business_lower_election_2.png',
         },
         {
-          title: '홍보 기획 및 제작',
+          title: '홍보 기획 \n및 제작',
           image: '/images/business/business_lower_election_3.png',
         },
         {
@@ -233,9 +233,10 @@ export default function Page() {
     };
   }, [setThemeColor]);
   return (
-    <>
+    <div className="w-screen overflow-x-hidden">
       <TitleComponent title={pageData[idx].pageTitle} />
       <ButtoGroup buttonData={pageData} activeIdx={idx} onChange={handleIdx} />
+      <div className="lg:p-8 h-0 bg-white" />
       <UpperSection
         key={idx}
         title={pageData[idx].upperSectionData.title}
@@ -243,12 +244,13 @@ export default function Page() {
         circleData={pageData[idx].upperSectionData.circleData}
         theme={themeColor}
       />
+      <div className="lg:p-8 h-0 bg-white" />
       <LowerSection
         key={idx + 20}
         circleData={pageData[idx].lowerSectionData}
         theme={themeColor}
       />
       <Footer contactTheme={themeColor} />
-    </>
+    </div>
   );
 }

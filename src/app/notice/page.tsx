@@ -5,15 +5,23 @@ import { SNoticeTableBody } from '@/actions/notice/SNoticeTableBody';
 import { Suspense } from 'react';
 import NoticeBoard from '@/components/notice/NoticeBoard';
 
-interface PageProps {
-  searchParams: {
+// interface NoticePageProps {
+//   searchParams: {
+//     page?: string;
+//     searchType?: string;
+//     keyword?: string;
+//   };
+// }
+
+export default async function NoticePage({
+  searchParams,
+}: {
+  searchParams: Promise<{
     page?: string;
     searchType?: string;
     keyword?: string;
-  };
-}
-
-export default async function NoticePage({ searchParams }: PageProps) {
+  }>;
+}) {
   const params = await searchParams;
   const page = Number(params.page) || 1;
   const searchType = params.searchType === '작성자' ? 'author' : 'title';

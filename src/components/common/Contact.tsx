@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import Icon from '@mdi/react';
+import { mdiChevronRight } from '@mdi/js';
 // interface IContactProps {
 //   pageRef: React.RefObject<HTMLDivElement | null>;
 // }
@@ -13,10 +15,10 @@ const Contact = (props: IContactProps) => {
   const pathname = usePathname();
 
   return (
-    <div className="z-1 w-screen h-64 overflow-y-hidden bg-[#f4f3ff]">
-      <div className="flex flex-col justify-around mt-6 mb-12 mx-36">
-        <div className="flex justify-between px-2">
-          <div className="left">
+    <div className="z-1 w-screen h-auto  md:h-64 overflow-y-hidden bg-[#f4f3ff]">
+      <div className="flex flex-col justify-around mt-6 mb-6 sm:mx-12 lg:mx-36">
+        <div className="flex  justify-center sm:justify-between items-center px-4">
+          <div className="hidden sm:block left">
             <p className="text-2xl md:text-3xl font-bold mt-1 text-black">
               지금 무료로 상담받으세요!
             </p>
@@ -32,21 +34,22 @@ const Contact = (props: IContactProps) => {
             </div>
           </div>
           {pathname != '/contact' && (
-            <Link href="/contact" className="right">
-              <button
-                className={`shadow-2xl h-[50px] min-w-[200px] ${
+            <Link href="/contact" className="right w-full sm:w-auto">
+              <div
+                className={`flex justify-center items-center text-lg shadow-2xl h-[50px] min-w-[200px] w-full ${
                   props.theme == 'blue' ? 'bg-[#032ff4]' : 'bg-[#e61e2b]'
                 }  text-white text-md rounded-[10px]`}
               >
-                견 적 문 의
-              </button>
+                <span>견 적 문 의</span>
+                <Icon path={mdiChevronRight} size={1.2} />
+              </div>
             </Link>
           )}
         </div>
 
-        <hr className="border-[#727272]" />
+        <hr className="border-[#727272] hidden md:inline" />
         {/* 4개 서비스 설명 */}
-        <div className="relative mt-3 w-full max-w-8xl grid grid-cols-1 md:grid-cols-4 gap-16">
+        <div className="hidden relative mt-3 w-full max-w-8xl md:grid grid-cols-4 md:grid-cols-4 gap-16">
           <div className="flex flex-col items-start">
             <div className="font-bold text-black mb-1 text-lg">이메일</div>
             <div className=" text-[#727272] font-thin mb-2 text-left text-md">

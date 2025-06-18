@@ -1,5 +1,3 @@
-// app/board/[id]/page.tsx
-
 import { Notice } from '@/types/notice';
 import React from 'react';
 

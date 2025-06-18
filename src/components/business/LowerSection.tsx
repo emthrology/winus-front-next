@@ -25,10 +25,13 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
     }[theme] || 'text-black';
   return (
     <div
-      className={`w-screen min-h-[550px] ${bgThemeClass} flex flex-col items-center justify-evenly`}
+      className={`w-screen overflow-x-hidden min-h-[550px] ${bgThemeClass} flex flex-col items-center justify-evenly`}
     >
-      <h1 className="text-[60px] font-bold text-white">DESIGN PROCESS</h1>
-      <div className="flex justify-center items-center py-10 gap-[-32px]">
+      <h1 className="text-[32px] sm:text-[60px] pt-10 sm:py-0 font-noto font-semibold text-white">
+        DESIGN PROCESS
+      </h1>
+      {/* pc */}
+      <div className="hidden lg:flex justify-center items-center py-10 mx-[-32px]">
         {circleData.map((item, idx) => (
           <div
             key={item.title}
@@ -58,13 +61,102 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
                   alt={item.title}
                 />
                 {/* 설명 라벨 */}
-                <p className={`mt-6 font-bold ${textThemeClass}`}>
+                <p className={`mt-6 font-bold  ${textThemeClass}`}>
                   {item.title}
                 </p>
               </ShadowCircle>
             </motion.div>
           </div>
         ))}
+      </div>
+      {/* mobile */}
+      <div className="py-10 w-screen">
+        <div className="lg:hidden flex justify-center items-center ">
+          {circleData.map(
+            (item, idx) =>
+              idx < 3 && ( // 모바일에서는 처음 3개만 보여줌
+                <div
+                  key={item.title}
+                  className="flex flex-col items-center min-w-[160px] mx-[-20px]"
+                  style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
+                >
+                  <motion.div
+                    // className={`w-[220px] h-[220px] rounded-full bg-white ${shadowThemeClass} flex flex-col items-center justify-center`}
+                    initial={{ opacity: 0, x: -40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.43,
+                      delay: (idx + 1) * 0.145,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <ShadowCircle color={theme} diameter={170}>
+                      {/* item 타이틀 */}
+                      <p className="font-bold text-lg text-black mb-3">
+                        {`STEP ${idx + 1}`}
+                      </p>
+                      {/* 아이콘 */}
+                      <Image
+                        width={45}
+                        height={50}
+                        src={item.image}
+                        alt={item.title}
+                      />
+                      {/* 설명 라벨 */}
+                      <p
+                        className={`mt-6 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
+                      >
+                        {item.title}
+                      </p>
+                    </ShadowCircle>
+                  </motion.div>
+                </div>
+              )
+          )}
+        </div>
+        <div className="lg:hidden flex justify-center items-center">
+          {circleData.map(
+            (item, idx) =>
+              idx >= 3 && ( // 모바일에서는 처음 3개만 보여줌
+                <div
+                  key={item.title}
+                  className="flex flex-col items-center min-w-[160px] mx-[-20px]"
+                  style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
+                >
+                  <motion.div
+                    // className={`w-[220px] h-[220px] rounded-full bg-white ${shadowThemeClass} flex flex-col items-center justify-center`}
+                    initial={{ opacity: 0, x: -40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.43,
+                      delay: (idx + 1) * 0.145,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <ShadowCircle color={theme} diameter={180}>
+                      {/* item 타이틀 */}
+                      <p className="font-bold text-lg text-black mb-3">
+                        {`STEP ${idx + 1}`}
+                      </p>
+                      {/* 아이콘 */}
+                      <Image
+                        width={45}
+                        height={50}
+                        src={item.image}
+                        alt={item.title}
+                      />
+                      {/* 설명 라벨 */}
+                      <p
+                        className={`mt-6 font-bold whitespace-pre-line text-center ${textThemeClass}`}
+                      >
+                        {item.title}
+                      </p>
+                    </ShadowCircle>
+                  </motion.div>
+                </div>
+              )
+          )}
+        </div>
       </div>
     </div>
   );

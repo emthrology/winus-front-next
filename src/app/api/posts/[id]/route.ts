@@ -1,13 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { query } from '@/lib/db';
-export async function DELETE(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
-  const { id } = params;
+
+export async function DELETE(req: NextRequest) {
+  const url = new URL(req.url);
+  const id = url.pathname.split('/').pop();
+
+  if (!id) {
+    return NextResponse.json(
+      { success: false, error: 'ID가 없습니다.' },
+      { status: 400 }
+    );
+  }
+
   try {
     await query('DELETE FROM posts WHERE id = ?', [id]);
-    // 첨부파일 등 연관 데이터도 함께 삭제 필요시 추가
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error(err);

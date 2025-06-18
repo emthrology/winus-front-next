@@ -13,7 +13,7 @@ const config = {
     extend: {
       fontFamily: {
         pretendard: ["var(--font-pretendard)", "ui-sans-serif", "system-ui"],
-        sans: ['var(--font-noto-sans-kr)', 'sans-serif'],
+        noto: ["var(--font-noto-sans) !important", "sans-serif"],
       },
     },
   },

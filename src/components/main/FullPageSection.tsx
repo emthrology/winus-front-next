@@ -15,9 +15,9 @@ const Section = (props: ISectionProps) => {
       ref={(element) => {
         props.pageRefs.current[props.pageNum] = element!;
       }}
-      className={`w-screen ${props.isLast ? 'h-auto' : 'h-screen'} ${
-        props.bgColor
-      } snap-start`}
+      className={`w-screen ${
+        props.isLast ? 'h-auto' : `${'h-auto md:h-screen'}`
+      } ${props.bgColor} snap-start`}
       style={
         props.bgImage
           ? {

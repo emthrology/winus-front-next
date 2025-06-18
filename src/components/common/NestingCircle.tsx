@@ -6,6 +6,8 @@ interface CircleIcon {
   color: string;
   iconWidth: number;
   children?: ReactNode | undefined;
+  diameterOutter?: number;
+  diameterInner?: number;
 }
 export default function NestingCircle(props: CircleIcon) {
   const themeOutterClass =
@@ -20,11 +22,19 @@ export default function NestingCircle(props: CircleIcon) {
     }[props.color] || 'bg-black';
   return (
     <>
+      {/* w-60 h-60 (240px) */}
       <div
-        className={`flex justify-center items-center w-60 h-60 rounded-[50%] ${themeOutterClass}`}
+        style={{
+          minWidth: props.diameterOutter,
+          width: props.diameterOutter,
+          height: props.diameterOutter,
+        }}
+        className={`flex justify-center items-center rounded-[50%] ${themeOutterClass}`}
       >
+        {/* w-55 h-55 (220px) */}
         <div
-          className={`flex justify-center items-center w-55 h-55  rounded-[50%] ${themeClass}`}
+          style={{ width: props.diameterInner, height: props.diameterInner }}
+          className={`flex justify-center items-center rounded-[50%] ${themeClass}`}
         >
           {props.src && (
             <Image

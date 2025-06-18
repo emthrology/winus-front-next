@@ -25,6 +25,7 @@ export default function PartfolioMain() {
   const setThemeColor = useThemeStore((state) => state.setThemeColor);
   const [idx, setIdx] = useState(0);
   const handleIdx = (idx: number) => {
+    setThemeColor(pageData[idx].theme);
     if (idx === 3) {
       window.open(
         'https://www.youtube.com/watch?v=qDhfRjGMv7o&list=PLKAK7oej5Kto0UNj6UUJWUToy_UKW6PUM&index=1',
@@ -226,9 +227,10 @@ export default function PartfolioMain() {
   }, [tab]);
   useEffect(() => {
     // 마운트 시 실행지역
+    setThemeColor(pageData[idx].theme);
     return () => {
       // 언마운트 시 실행지역 (페이지 이동, 컴포넌트 제거 등)
-      setThemeColor('blue');
+      setThemeColor(pageData[idx].theme);
     };
   }, [setThemeColor]);
   // const sectionComponents = pageData[idx].sections || [];
