@@ -112,20 +112,31 @@ export default function FullPage() {
       bgColor: 'bg-white',
       btnColor: 'bg-[#245dfa]',
       innerSection: (
-        <div className="relative w-full sm:min-h-screen bg-white flex flex-col items-center justify-center py-16">
+        <div className="relative w-full overflow-hidden sm:min-h-screen bg-white flex flex-col items-center justify-center py-16">
           {/* WINUS 로고 */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+          <div className="absolute inset-0 hidden sm:flex justify-center items-center pointer-events-none select-none z-0 w-full h-full max-w-full max-h-full">
             <Image
               src="/images/main/main_2.png"
               alt="WINUS"
               width={1400} // 원하는 고정 px
               height={500} // 원하는 고정 px
-              className="opacity-70"
+              className="opacity-70 max-w-[400px] sm:max-w-full h-auto"
               priority
               style={{
                 minWidth: '561px',
                 minHeight: '131px',
               }}
+            />
+          </div>
+          {/* WINUS 로고 모바일 */}
+          <div className="block sm:hidden absolute -left-5 bottom-[1/2] ">
+            <Image
+              src="/images/logo/winus3.png"
+              alt="WINUS"
+              width={500}
+              height={1400}
+              priority
+              className="max-w-[165px] h-auto"
             />
           </div>
           {/* 공통 컨테이너 */}
@@ -162,7 +173,7 @@ export default function FullPage() {
               </motion.div>
             </div>
             {/* 4개 서비스 설명 */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-16">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-0 sm:gap-x-4 gap-y-16">
               {/* DESIGN */}
               {secondPageData.map((item, index) => (
                 <motion.div
@@ -181,10 +192,10 @@ export default function FullPage() {
                     amount: 0.7,
                   }}
                 >
-                  <div className="font-bold text-blue-700 mb-1 text-center lg:text-left text-xl">
+                  <div className="font-bold text-blue-700 mb-1 text-center lg:text-left text-base sm:text-xl">
                     {item.title}
                   </div>
-                  <div className="font-bold text-blue-700 mb-2 text-center text-lg lg:text-left lg:text-xl">
+                  <div className="font-bold text-blue-700 mb-2 text-center text-sm sm:text-lg lg:text-left lg:text-xl">
                     {item.subtitle1}
                     <br />
                     {item.subrtitle2}
@@ -192,7 +203,7 @@ export default function FullPage() {
                   <div className="w-[20px] border-zinc-400"></div>
                   {/* 선분(가로줄) */}
                   <hr className="my-4 border-t-2 border-gray-200 w-1/2" />
-                  <div className="text-md text-gray-500 text-center lg:text-left">
+                  <div className="text-sm sm:text-base text-gray-500 text-center lg:text-left">
                     {item.def1}
                     <br />
                     {item.def2}
@@ -243,7 +254,7 @@ export default function FullPage() {
                   alt={`Portfolio ${index + 1}`}
                   width={500}
                   height={300}
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover transition-transform duration-300 scale-105 group-hover:scale-110"
                   priority
                 />
                 {/* PC 호버 오버레이 + 문구 */}
@@ -450,7 +461,7 @@ export default function FullPage() {
   }, [handlePageChange]);
 
   return (
-    <>
+    <div className="w-screen overflow-x-hidden">
       <div
         ref={scrollContainerRef}
         className="relative md:snap-y md:snap-mandatory overflow-y-scroll w-screen h-screen"
@@ -486,6 +497,6 @@ export default function FullPage() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }

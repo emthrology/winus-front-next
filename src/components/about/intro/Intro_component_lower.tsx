@@ -71,6 +71,7 @@ export default function Intro_component_lower() {
           />
         </motion.div>
       </div>
+      {/* 모바일 레이아웃 */}
       <div className="relative md:hidden flex flex-col min-h-[500px] justify-between items-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -87,7 +88,7 @@ export default function Intro_component_lower() {
             서울특별시 성북구 화랑로19길 68, 대건빌딩 3층
           </h5>
         </motion.div>
-        {/* 약도 자리 */}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,8 +102,8 @@ export default function Intro_component_lower() {
           <Image
             src={'/images/about/sketchmap.png'}
             alt="약도"
-            width={600}
-            height={300}
+            width={800}
+            height={500}
           />
         </motion.div>
         <div className="absolute right-0 bottom-18 w-[300px]">

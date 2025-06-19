@@ -70,7 +70,7 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
         ))}
       </div>
       {/* mobile */}
-      <div className="py-10 w-screen">
+      <div className="py-10 w-full">
         <div className="lg:hidden flex justify-center items-center ">
           {circleData.map(
             (item, idx) =>
@@ -91,23 +91,25 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
                     }}
                   >
                     <ShadowCircle color={theme} diameter={170}>
-                      {/* item 타이틀 */}
-                      <p className="font-bold text-lg text-black mb-3">
-                        {`STEP ${idx + 1}`}
-                      </p>
-                      {/* 아이콘 */}
-                      <Image
-                        width={45}
-                        height={50}
-                        src={item.image}
-                        alt={item.title}
-                      />
-                      {/* 설명 라벨 */}
-                      <p
-                        className={`mt-6 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
-                      >
-                        {item.title}
-                      </p>
+                      <div className="h-[140px] flex flex-col justify-between items-center">
+                        {/* item 타이틀 */}
+                        <p className="font-bold text-lg text-black mb-3">
+                          {`STEP ${idx + 1}`}
+                        </p>
+                        {/* 아이콘 */}
+                        <Image
+                          width={45}
+                          height={50}
+                          src={item.image}
+                          alt={item.title}
+                        />
+                        {/* 설명 라벨 */}
+                        <p
+                          className={`mt-6 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
+                        >
+                          {item.title}
+                        </p>
+                      </div>
                     </ShadowCircle>
                   </motion.div>
                 </div>
@@ -134,23 +136,25 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
                     }}
                   >
                     <ShadowCircle color={theme} diameter={180}>
-                      {/* item 타이틀 */}
-                      <p className="font-bold text-lg text-black mb-3">
-                        {`STEP ${idx + 1}`}
-                      </p>
-                      {/* 아이콘 */}
-                      <Image
-                        width={45}
-                        height={50}
-                        src={item.image}
-                        alt={item.title}
-                      />
-                      {/* 설명 라벨 */}
-                      <p
-                        className={`mt-6 font-bold whitespace-pre-line text-center ${textThemeClass}`}
-                      >
-                        {item.title}
-                      </p>
+                      <div className="h-[140px] flex flex-col justify-between items-center">
+                        {/* item 타이틀 */}
+                        <p className="font-bold text-lg text-black mb-3">
+                          {`STEP ${idx + 1}`}
+                        </p>
+                        {/* 아이콘 */}
+                        <Image
+                          width={45}
+                          height={50}
+                          src={item.image}
+                          alt={item.title}
+                        />
+                        {/* 설명 라벨 */}
+                        <p
+                          className={`mt-6 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
+                        >
+                          {item.title}
+                        </p>
+                      </div>
                     </ShadowCircle>
                   </motion.div>
                 </div>

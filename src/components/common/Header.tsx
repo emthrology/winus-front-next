@@ -92,6 +92,16 @@ export default function Header() {
       {/* 모바일 메뉴 오버레이 */}
       {menuOpen && (
         <div className="lg:hidden fixed inset-0 z-50 bg-white flex flex-col items-center justify-center">
+          <div className="absolute -left-5 bottom-[1/2]">
+            <Image
+              src="/images/logo/winus3.png"
+              alt="WINUS"
+              width={500}
+              height={1400}
+              priority
+              className="max-w-[40vw] lg:max-w-[70vw] h-auto"
+            />
+          </div>
           <button
             className="absolute top-20 right-8 text-black"
             aria-label="메뉴 닫기"
@@ -100,7 +110,7 @@ export default function Header() {
             <Icon path={mdiClose} size={1.5} />
           </button>
           <nav>
-            <ul className="flex flex-col items-center space-y-6 pb-24 text-black text-xl font-noto font-medium">
+            <ul className="flex flex-col items-center space-y-6 pb-8 text-black text-xl font-noto font-medium">
               {menuList.map((menu, index) => (
                 <li key={index}>
                   <Link href={menu.href} onClick={() => setMenuOpen(false)}>

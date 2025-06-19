@@ -22,7 +22,7 @@ export default function Intro_component_upper() {
     }, 3000);
   };
   return (
-    <div className="w-screen max-w-[1536px] px-6 mx-auto">
+    <div className="w-full max-w-[1536px] px-6 mx-auto">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="flex flex-col justify-start items-start">
           <p className="text-black text-4xl font-bold mb-2">

@@ -1,5 +1,7 @@
 'use client';
+import Image from 'next/image';
 import React, { useState } from 'react';
+import { useIsLgUp } from '@/hooks/usePageSize';
 const years = [2025, 2024, 2023];
 export default function History_component() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -78,17 +80,18 @@ export default function History_component() {
       '시민단체 브랜딩 구축',
     ],
   };
+  const isLgUp = useIsLgUp();
   return (
     <>
-      <div className="flex flex-col w-screen">
-        <div className="mt-[-60px] flex flex-col items-center">
-          <div className="flex border-b border-gray-200 w-[70%]">
+      <div className="w-full max-w-[1536px] px-6 mx-auto flex flex-col ">
+        <div className="flex flex-col items-center w-full">
+          <div className="flex border-b border-gray-200 w-full">
             {years.map((year, idx) => (
               <button
                 key={year}
                 onClick={() => setActiveIdx(idx)}
                 className={`
-            flex-1 text-center text-[30px] font-bold pb-1 mx-16
+            flex-1 text-center text-[30px] font-bold pb-1 md:mx-16
             transition-colors
             ${
               activeIdx === idx
@@ -102,16 +105,27 @@ export default function History_component() {
               </button>
             ))}
           </div>
-          <div className="mt-32 flex w-[56%]">
-            <div className="w-1/2 min-w-[320px] pt-8">
-              <p className="text-black text-2xl font-bold">함께 걸어온 시간,</p>
-              <p className="text-black text-4xl font-bold">
-                앞으로 기대되는 여정.
-              </p>
-              <p className="text-[#032FF4] text-8xl font-bold">WINUS</p>
+          <div className="mt-12 md:mt-32 flex justify-center w-full">
+            <div className="hidden md:flex justify-center w-1/2 min-w-[320px] pt-8">
+              <div className="w-fit">
+                <p className="text-black md:text-3xl lg:text-4xl font-normal">
+                  함께 걸어온 시간,
+                </p>
+                <p className="text-black md:text-4xl lg:text-5xl font-bold">
+                  앞으로 기대되는 여정.
+                </p>
+                <div className="mt-4">
+                  <Image
+                    src="/images/logo/winus1.png"
+                    width={isLgUp ? 400 : 300}
+                    height={isLgUp ? 108 : 64}
+                    alt="윈어스 로고"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="w-1/2 relative p-8">
-              <p className="text-[#0052ff] text-3xl mt-[-30px] mb-8">
+            <div className="relative w-full pl-4 pt-4 sm:w-2/3 md:w-1/2 sm:p-8 ml-2 sm:ml-0">
+              <p className="hidden sm:block text-[#0052ff] text-3xl mt-[-30px] mb-8">
                 {years[activeIdx]}
               </p>
 
