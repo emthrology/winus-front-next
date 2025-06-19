@@ -235,7 +235,7 @@ export default function PartfolioMain() {
   }, [setThemeColor]);
   // const sectionComponents = pageData[idx].sections || [];
   return (
-    <div>
+    <div className="w-screen overflow-x-hidden">
       <TitleComponent title="Portfolio." />
       <ButtonGroup buttonData={pageData} activeIdx={idx} onChange={handleIdx} />
       {sectionComponents.map((section) => section)}
