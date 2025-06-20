@@ -14,13 +14,13 @@ export default function ElectionIntroSecondSection({
   circleData,
 }: SecondSectionProps) {
   return (
-    <div className="relative flex w-full h-[920px] bg-white z-1">
+    <div className="relative flex w-screen h-[920px] bg-white z-1">
       {/* 상단 overflow 투명원 */}
-      <div className="absolute -top-[12.5%] left-1/2 transform -translate-x-1/2 flex space-x-16 ">
+      <div className="absolute -top-[12.5%] left-1/2 transform -translate-x-1/2 flex space-x-10 xl:space-x-16 ">
         {circleData.map((circle, idx) => (
           <motion.div
             key={`${circle.title}-${idx}`}
-            className="w-[469px] h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4 flex flex-col items-center justify-center"
+            className="w-[300px] h-[300px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4 flex flex-col items-center justify-center"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{

@@ -3,14 +3,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 export default function ElectionMovementSecondSection() {
   return (
-    <div className="w-full min-h-[700px] bg-white py-48">
-      {/* 상단 텍스트 */}
-      <div className="flex flex-col items-start pl-32 mb-24">
-        <p className="text-[#E61E2B] text-[42px] font-normal">선거운동의 꽃</p>
-        <p className="text-[#E61E2B] text-[60px] font-bold mb-4">
-          선거 차량 자체보유
-        </p>
+    <div className="w-screen min-h-[700px] bg-white py-18">
+      <div className="max-w-[1536px] mx-auto">
+        {/* 상단 텍스트 */}
+        <div className="flex flex-col items-start px-6 py-24">
+          <p className="text-[#E61E2B] text-[42px] font-normal">
+            선거운동의 꽃
+          </p>
+          <p className="text-[#E61E2B] text-[60px] font-bold mb-4">
+            선거 차량 자체보유
+          </p>
+        </div>
       </div>
+
       {/* 차량 소개 */}
       <div className="flex justiy-center gap-24 items-center px-32">
         <Image

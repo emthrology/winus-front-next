@@ -13,7 +13,7 @@ export default function ElectionIntroThirdSection({
   return (
     <div className="relative w-full h-[900px] pt-12 flex flex-col items-start bg-[linear-gradient(180deg,#FFE5E7_0%,#FFF_100%)]">
       {/* 상단 텍스트/버튼 등 */}
-      <div className="flex w-full flex-col items-center pl-32 mt-28 space-y-4">
+      <div className="flex w-full flex-col items-center mt-28 space-y-4">
         <p className="text-[#E93541] text-5xl font-normal">
           균형있는 업무 분담으로
         </p>

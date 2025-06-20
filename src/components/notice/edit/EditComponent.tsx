@@ -93,6 +93,7 @@ export default function EditComponent() {
     if (data.success) {
       alert('글이 저장되었습니다. postId: ' + data.postId);
       // 필요시 페이지 이동 등 처리
+      window.location.href = '/notice';
     } else {
       alert(data.error || '저장 실패');
     }

@@ -169,9 +169,9 @@ export default function Page() {
       sectionData: {
         first: {
           buttonData: [
-            '# 읽기 쉬운 공보',
-            '# 핵심이 쏙쏙 들어오는',
-            '# 전담 디자이너 배정',
+            '읽기 쉬운 공보',
+            '핵심이 쏙쏙 들어오는',
+            '전담 디자이너 배정',
           ],
         },
       },

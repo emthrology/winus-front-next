@@ -44,10 +44,11 @@ export default function ElectionPromotionFirstSection({
               delay: idx * 0.2,
               ease: 'easeInOut',
             }}
-            className="border border-[#E93541] bg-[#E93541] text-white text-[30px] rounded-[40px] h-[60px] w-[400px] font-bold shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]"
+            className="border border-[#E93541] bg-[#E93541] text-white text-[30px] rounded-[40px] h-[60px] w-[400px] font-[600] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]"
             onClick={() => {}}
             key={idx}
           >
+            <span className="font-[400]"># </span>
             {item}
           </motion.button>
         ))}

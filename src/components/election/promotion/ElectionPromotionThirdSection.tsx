@@ -5,7 +5,7 @@ export default function ElectionPromotionThirdSection() {
   return (
     <div className="relative border-2relative w-full h-[2000px] pt-12 flex flex-col items-start bg-[linear-gradient(180deg,#FFF_30%,#FFE5E7_60%,#FFF_100%)]">
       {/* 상단 텍스트/버튼 등 */}
-      <div className="flex w-full flex-col items-center mt-28 space-y-4">
+      <div className="flex w-full flex-col items-center my-28 space-y-4">
         <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[170px] text-2xl font-bold">
           SNS 홍보
         </button>
@@ -13,7 +13,7 @@ export default function ElectionPromotionThirdSection() {
           페이스북, 인스타그램, 블로그 등
         </p>
         <p className="text-[#E93541] text-6xl font-semibold pb-4">
-          관리 대항 서비스
+          관리 대행 서비스
         </p>
 
         <p className="text-[#727272] text-center text-2xl font-[300] pt-2">
@@ -23,7 +23,7 @@ export default function ElectionPromotionThirdSection() {
         </p>
       </div>
       {/* phone */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[60%]">
+      <div className="absolute mt-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[60%]">
         <div className="w-full mt-24 pr-16 flex flex-col justify-center items-center space-y-4">
           <Image
             src="/images/election/promotion/election_promotion_third_iphone.png"
@@ -34,18 +34,18 @@ export default function ElectionPromotionThirdSection() {
         </div>
       </div>
       {/* sns */}
-      <div className="w-full mt-20 flex items-start justify-center gap-12 z-1">
+      <div className="w-full mt-20 flex items-center justify-center gap-12 z-1">
         {[
-          '/images/election/promotion/election_promotion_third_insta_1.png',
-          '/images/election/promotion/election_promotion_third_insta_2.png',
-          '/images/election/promotion/election_promotion_third_insta_3.png',
+          '/images/election/promotion/insta-1.png',
+          '/images/election/promotion/insta-2.png',
+          '/images/election/promotion/insta-3.png',
         ].map((image, idx) => (
           <div key={idx} className="">
             <Image
               src={image}
               alt="snss"
-              width={idx == 1 ? 548 : 464}
-              height={idx == 1 ? 700 : 600}
+              width={idx == 1 ? 548 : 494}
+              height={idx == 1 ? 700 : 660}
             />
           </div>
         ))}

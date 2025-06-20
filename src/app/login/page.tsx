@@ -31,11 +31,11 @@ export default function Page() {
   };
 
   return (
-    <>
+    <div className="w-screen">
       <TitleComponent title="Login" />
       <SessionProvider>
         <LoginComponent handleSubmit={handleSubmit} error={error} />
       </SessionProvider>
-    </>
+    </div>
   );
 }
