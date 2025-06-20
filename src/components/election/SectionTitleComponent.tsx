@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function SectionTitleComponent() {
   return (
-    <div className='flex justify-between w-full h-[460px] bg-[url("/images/election/election_gradient.png")]'>
+    <div className='flex justify-between w-full h-[460px] bg-cover bg-[url("/images/election/election_gradient.png")]'>
       {/* 상단 텍스트/버튼 등 */}
       <div className="flex w-full flex-col items-start pl-32 mt-16 ">
         <p className="text-white text-[42px] font-normal">후보님의 든든한</p>

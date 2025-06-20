@@ -32,14 +32,14 @@ export default function SecondSection() {
         <DesolveImages activeIndex={activeIndex} />
       </div>
       {/* 메인 콘텐츠 */}
-      <div className="max-w-[1536px]  px-6 mx-auto">
+      <div className="max-w-[1536px] px-6 mx-auto">
         <div className="relative z-10 flex flex-row w-full h-full">
           {/* 좌측: 버튼 + 텍스트 */}
           <div className="flex flex-col justify-start items-start min-w-[400px]">
             <p className="text-black text-2xl lg:text-lg font-noto font-[300] pb-4">
               DISPLAY
             </p>
-            <p className="text-black  text-[26px] sm:text-3xl lg:text-5xl font-semibold mb-6">
+            <p className="text-black text-[26px] sm:text-3xl lg:text-5xl font-semibold mb-6">
               다각도의 디스플레이
             </p>
             <hr className="hidden lg:inline my-12 border-t-3 border-black w-[90%]" />

@@ -17,10 +17,10 @@ export default function Page() {
     };
   }, [setThemeColor]);
   return (
-    <>
+    <div className="w-screen">
       <TitleComponent title="Contact." />
       <PrivacyPolicy />
       <Footer contactTheme={'blue'} />
-    </>
+    </div>
   );
 }

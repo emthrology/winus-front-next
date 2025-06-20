@@ -8,7 +8,7 @@ import { Navigation, EffectCreative } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-creative';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useSwiperRef } from '@/utils/useSwiperRef'; // 위에서 만든 훅
 import Icon from '@mdi/react';
 // 샘플 이미지 배열
@@ -92,10 +92,16 @@ export default function CarouselFirst() {
               onClick={() => swiperRef.current?.slideNext()}
             >
               <div className="w-full h-[160px] sm:h-[260px] md:h-[300px] lg:h-[450px] xl:h-[500px] bg-transparent rounded-2xl shadow-xl overflow-hidden flex items-center justify-center relative">
-                <Image
+                {/* <Image
                   src={src}
                   alt={`slide-${idx}`}
                   fill
+                  className="w-full h-full object-cover object-positionz mask-center scale-110"
+                  style={{ filter: 'brightness(0.95)', objectPosition: 'top' }}
+                /> */}
+                <img
+                  src={src}
+                  alt={`slide-${idx}`}
                   className="w-full h-full object-cover object-positionz mask-center scale-110"
                   style={{ filter: 'brightness(0.95)', objectPosition: 'top' }}
                 />

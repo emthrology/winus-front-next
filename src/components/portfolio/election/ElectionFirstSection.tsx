@@ -4,7 +4,7 @@ import { easeIn, motion } from 'framer-motion';
 export default function ElectionFirstSection() {
   return (
     <div
-      className={`relative w-screen min-h-[768px] bg-[url('/images/portfolio/election/portfolio_election_1.png')] bg-cover bg-center
+      className={`relative w-screen min-h-[540px] lg:min-h-[768px] bg-[url('/images/portfolio/election/portfolio_election_1.png')] bg-cover bg-center
       flex justify-center items-center
     `}
     >
@@ -13,7 +13,7 @@ export default function ElectionFirstSection() {
           <motion.p
             initial={{ backgroundPosition: '100% 50%' }}
             animate={{ backgroundPosition: '0% 50%' }}
-            transition={{ delay: 1, duration: 2, ease: easeIn }} // sharp한 커브
+            transition={{ delay: 0, duration: 2, ease: easeIn }} // sharp한 커브
             style={{
               // WebkitTextStroke: '1px black',
               background:
@@ -23,11 +23,11 @@ export default function ElectionFirstSection() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
-            className="drop-shadow-[0px_2px_2px_rgba(0,0,0,1)] text-[60px] font-bold"
+            className="drop-shadow-[0px_2px_2px_rgba(0,0,0,1)] text-center whitespace-pre-line lg:whitespace-normal text-[48px] sm:text-[60px] font-bold"
           >
-            후보님의 모든
+            {`후보님의 모든\n`}
             [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
-            이 빛날 수 있도록
+            {`\n이 빛날 수 있도록`}
           </motion.p>
         </div>
       </div>

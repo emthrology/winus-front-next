@@ -39,7 +39,7 @@ export default function Intro_component_lower() {
               <p className="text-lg text-white">
                 이 메 일. cat302302@wewinus.com
               </p>
-              <p className=" text-md font-thin text-white">
+              <p className=" text-base font-thin text-white">
                 [ 평일 : 09:00 ~ 18:00 주말, 공휴일 휴무 ]
               </p>
             </motion.div>
@@ -126,7 +126,7 @@ export default function Intro_component_lower() {
         >
           <p className="pt-12 text-lg text-white">대표전화. 02-915-3702</p>
           <p className="text-lg text-white">이 메 일. cat302302@wewinus.com</p>
-          <p className=" text-md font-thin text-white">
+          <p className=" text-base font-thin text-white">
             [ 평일 : 09:00 ~ 18:00 주말, 공휴일 휴무 ]
           </p>
         </motion.div>

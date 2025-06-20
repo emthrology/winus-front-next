@@ -146,7 +146,7 @@ const Footer = () => {
           <div className="flex flex-row items-center justify-center space-x-4 w-full">
             <Link
               href="mailto:cat302302@wewinus.com"
-              className="flex items-center text-md  justify-center"
+              className="flex items-center text-sm sm:text-base  justify-center"
             >
               <Image
                 src={'/images/footer/footer_icon_mail.png'}
@@ -159,7 +159,7 @@ const Footer = () => {
             <span>|</span>
             <Link
               href="tel:029153702"
-              className="flex items-center text-md  justify-center"
+              className="flex items-center text-sm sm:text-base  justify-center"
             >
               <Image
                 src={'/images/footer/footer_icon_phone.png'}

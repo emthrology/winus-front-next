@@ -36,7 +36,7 @@ export default async function NoticePage({
   });
 
   return (
-    <>
+    <div className="w-screen">
       <TitleComponent title="Notice." />
       <Suspense fallback={<div>로딩 중...</div>}>
         <NoticeBoard
@@ -48,6 +48,6 @@ export default async function NoticePage({
         />
       </Suspense>
       <Footer contactTheme={'blue'} />
-    </>
+    </div>
   );
 }

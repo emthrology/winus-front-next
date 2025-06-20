@@ -136,7 +136,7 @@ export default function History_component() {
               <div className="max-h-[420px] overflow-y-auto">
                 <ul>
                   {histories[years[activeIdx]].map((item, idx) => (
-                    <li key={idx} className="mb-2 text-md text-black">
+                    <li key={idx} className="mb-2 text-base text-black">
                       {item}
                     </li>
                   ))}

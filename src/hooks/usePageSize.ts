@@ -29,4 +29,19 @@ function useIsLgUp() {
   return isLgUp;
 }
 
-export { useIsMdUp, useIsLgUp };
+function useIsSmUp() {
+  const [isSmUp, setIsSmUp] = useState(false);
+
+  useEffect(() => {
+    // 768px 이상인지 체크
+    const check = () =>
+      setIsSmUp(window.matchMedia('(min-width: 640px)').matches);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  return isSmUp;
+}
+
+export { useIsMdUp, useIsLgUp, useIsSmUp };

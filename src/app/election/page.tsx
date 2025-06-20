@@ -270,11 +270,11 @@ export default function Page() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx]);
   return (
-    <>
+    <div className="w-screen">
       <TitleComponent title="선거" type="election" />
       <ButtonGroup buttonData={pageData} activeIdx={idx} onChange={handleIdx} />
       {sectionComponents.map((section) => section)}
       <Footer contactTheme={'red'} />
-    </>
+    </div>
   );
 }

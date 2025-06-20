@@ -43,6 +43,7 @@ export default function ProjectRequestForm() {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       setResult(e.message || '오류가 발생했습니다.');
+      alert(result);
     }
     setPending(false);
   }
@@ -222,11 +223,11 @@ export default function ProjectRequestForm() {
       </div>
 
       {/* 결과 메시지 */}
-      {result && (
+      {/* {result && (
         <div className="mb-4 text-center text-red-600 font-semibold">
           {result}
         </div>
-      )}
+      )} */}
 
       {/* 버튼 */}
       <button

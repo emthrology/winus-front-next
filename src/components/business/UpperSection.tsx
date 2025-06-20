@@ -32,7 +32,7 @@ export default function UpperSection({
     <div className="w-screen bg-white py-12 md:py-0">
       <div className=" min-h-[600px]  max-w-[1536px] px-6 space-y-8 mx-auto flex flex-col justify-between">
         <div className="flex flex-col justify-start items-start">
-          <p className="text-black text-[32px] md:text-[42px] font-normal">
+          <p className="text-black text-[32px] md:text-[42px] leading-[1.0] font-normal">
             {subtitle}
           </p>
           <p className="text-black text-[32px] md:text-[60px] font-bold">

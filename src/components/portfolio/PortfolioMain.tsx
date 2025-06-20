@@ -76,8 +76,11 @@ export default function PartfolioMain() {
           ],
           buttonData: [
             { label: '#특별한', theme: 'blue' },
-            { label: '#감동적인', theme: 'red' },
-            { label: '#즐거움', theme: 'red' },
+            { label: '#감동적인', theme: 'blue' },
+            { label: '#즐거움', theme: 'blue' },
+            { label: '#체계적', theme: 'blue' },
+            { label: '#신뢰감', theme: 'blue' },
+            { label: '#만족스러운', theme: 'blue' },
           ],
         },
         second: {

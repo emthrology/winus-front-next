@@ -19,7 +19,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="z-100 fixed top-0 left-0 w-screen bg-black text-white flex items-center justify-between px-4 lg:px-14 h-16 lg:h-auto">
+    <header className="z-100 fixed top-0 left-0 w-screen bg-black text-white flex items-center justify-between px-4 lg:px-14 h-18">
       {/* 로고 및 전화번호 영역 */}
       <div className="flex justify-between items-center w-full lg:max-w-[320px] min-w-[150px] py-2">
         <Link href="/">

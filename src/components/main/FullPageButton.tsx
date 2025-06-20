@@ -17,7 +17,7 @@ const Buttons = (props: IButtonsProps) => {
             className={cls(
               'w-4 h-4  rounded-full cursor-pointer transition-all',
               props.currentPageNum === item.pageNum
-                ? `${item.btnColor} border-1 border-gray-500`
+                ? `${item.btnColor} `
                 : 'bg-gray-400'
             )}
             onClick={() => {

@@ -230,7 +230,7 @@ export default function FullPage() {
             <h2 className="text-[36px] md:text-[54px] text-black font-[700] font-pretendard text-center">
               PORTFOLIO
             </h2>
-            <h3 className="text-md md:text-lg text-[#727272] font-extralight text-center leading-none">
+            <h3 className="text-base md:text-lg text-[#727272] font-extralight text-center leading-none">
               윈어스의 사업분야별 대표 포트폴리오를 소개합니다.
             </h3>
           </motion.div>
@@ -349,9 +349,8 @@ export default function FullPage() {
                 믿을 수 있는 든든한 전문가
               </span>
             </motion.div>
-
             <motion.div
-              className="xl:hidden flex flex-col items-start justify-end mt-4"
+              className="xl:hidden flex flex-col items-start justify-end mt-8"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -390,9 +389,9 @@ export default function FullPage() {
                 </div>
               </motion.div>
             </div>
-
+            {/* pc 우측 */}
             <motion.div
-              className="hidden xl:block relative pl-28 w-[450px]"
+              className="hidden xl:block relative pl-28 w-[450px] mb-24"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
