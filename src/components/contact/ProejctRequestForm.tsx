@@ -1,10 +1,11 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { sendProjectRequest } from '@/actions/smtp';
 import Icon from '@mdi/react';
 import { mdiMenuDown } from '@mdi/js'; // 원하는 caret 아이콘
 import Link from 'next/link';
 export default function ProjectRequestForm() {
+  const debounceRef = useRef<NodeJS.Timeout | null>(null);
   const [form, setForm] = useState({
     company: '',
     manager: '',
@@ -16,7 +17,7 @@ export default function ProjectRequestForm() {
     agree: false,
   });
   const [pending, setPending] = useState(false);
-  const [result, setResult] = useState('');
+  // const [result, setResult] = useState('');
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -35,17 +36,23 @@ export default function ProjectRequestForm() {
   };
 
   async function handleAction(formData: FormData) {
-    setPending(true);
-    setResult('');
-    try {
-      await sendProjectRequest(formData);
-      setResult('문의가 성공적으로 발송되었습니다!');
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (e: any) {
-      setResult(e.message || '오류가 발생했습니다.');
-      alert(result);
+    if (debounceRef.current) {
+      clearTimeout(debounceRef.current);
     }
-    setPending(false);
+    debounceRef.current = setTimeout(async () => {
+      setPending(true);
+      // setResult('');
+      try {
+        await sendProjectRequest(formData);
+        // setResult('문의가 성공적으로 발송되었습니다!');
+        alert('문의가 성공적으로 발송되었습니다!');
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } catch (e: any) {
+        // setResult(e.message || '오류가 발생했습니다.');
+        alert(e.message || '오류가 발생했습니다.');
+      }
+      setPending(false);
+    }, 1000);
   }
   return (
     <form className=" mx-auto p-12" action={handleAction} autoComplete="off">

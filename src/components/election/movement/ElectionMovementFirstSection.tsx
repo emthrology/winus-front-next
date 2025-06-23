@@ -169,6 +169,7 @@ export default function ElectionMovementFirstSection({
             width={650}
             height={368}
             alt="mvs"
+            className="flex-1 object-cover"
           />
         ))}
       </div>

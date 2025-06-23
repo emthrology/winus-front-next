@@ -17,7 +17,7 @@ export default function ElectionMovementSecondSection() {
       </div>
 
       {/* 차량 소개 */}
-      <div className="flex justiy-center gap-24 items-center px-32">
+      <div className="flex justify-center gap-24 items-center">
         <Image
           src="/images/election/movement/election_movement_second_1.png"
           width={1070}
@@ -41,7 +41,7 @@ export default function ElectionMovementSecondSection() {
           ].map((button, idx) => (
             <motion.button
               key={idx}
-              className="border border-[#E93541] bg-[#E93541] text-white text-[30px] rounded-[40px] h-[70px] w-[450px] font-[400]"
+              className="border border-[#E93541] bg-[#E93541] text-white text-[30px] rounded-[40px] h-[70px] w-[460px] font-[400]"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -69,6 +69,7 @@ export default function ElectionMovementSecondSection() {
             width={650}
             height={368}
             alt="mvs"
+            className="flex-1 object-cover"
           />
         ))}
       </div>

@@ -22,11 +22,11 @@ export default function ThirdSection({ images }: ThirdSectionProps) {
           </div>
         </div>
         {/* 이미지 motions */}
-        <div className=" w-full flex gap-2 sm:gap-4 justify-center py-8 sm:py-24">
+        <div className="flex gap-2 sm:gap-4 justify-center py-8 sm:py-24">
           {images?.map((image, idx) => (
             <motion.div
               key={image}
-              className="flex "
+              className="flex-1"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -37,14 +37,14 @@ export default function ThirdSection({ images }: ThirdSectionProps) {
             >
               <div>
                 {idx == 0 || idx == images.length - 1 ? (
-                  <div className="h-8 sm:h-16"></div>
+                  <div className="w-full h-8 sm:h-16"></div>
                 ) : null}
                 <Image
                   src={image}
                   width={1146}
                   height={859}
                   alt={`Interior ${idx + 1}`}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-auto max-h-[900px] object-cover rounded-lg"
                 />
               </div>
             </motion.div>

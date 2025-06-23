@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function Intro_component_lower() {
   return (
     <div className="w-screen max-w-[1536px] md:px-6 mx-auto">
-      <div className="hidden md:flex justify-between w-screen">
+      <div className="hidden md:flex justify-between w-full">
         {/* 글 자리 */}
         <div className="flex flex-col justify-around pb-12">
           <div className="flex flex-col justify-start items-start">
@@ -37,7 +37,7 @@ export default function Intro_component_lower() {
             >
               <p className="pt-12 text-lg text-white">대표전화. 02-915-3702</p>
               <p className="text-lg text-white">
-                이 메 일. cat302302@wewinus.com
+                이 메 일. wewinus302@gmail.com
               </p>
               <p className=" text-base font-thin text-white">
                 [ 평일 : 09:00 ~ 18:00 주말, 공휴일 휴무 ]
@@ -125,7 +125,7 @@ export default function Intro_component_lower() {
           className="space-y-2"
         >
           <p className="pt-12 text-lg text-white">대표전화. 02-915-3702</p>
-          <p className="text-lg text-white">이 메 일. cat302302@wewinus.com</p>
+          <p className="text-lg text-white">이 메 일. wewinus302@gmail.com</p>
           <p className=" text-base font-thin text-white">
             [ 평일 : 09:00 ~ 18:00 주말, 공휴일 휴무 ]
           </p>

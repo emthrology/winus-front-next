@@ -18,7 +18,7 @@ export default function ElectionConsultingSecondSection({
   return (
     <div className="w-full h-[1100px] pt-12 flex flex-col items-start bg-white">
       {/* 상단 텍스트/버튼 등 */}
-      <div className="flex w-full flex-col items-center pl-32 my-16 space-y-4 ">
+      <div className="flex w-full flex-col items-center my-16 space-y-4 ">
         <p className="text-[#E93541] text-5xl font-normal">
           후보님께 약속드리는
         </p>

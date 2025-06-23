@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function OverlapImages() {
   return (
-    <div className="relative w-full min-h-[820px] mx-auto mt-32">
+    <div className="relative w-[1650px] min-h-[820px] mx-auto mt-32">
       {/* 좌상단 */}
       <motion.div
         className="absolute top-0 left-32 border-8 border-[#FAD4D7] bg-white shadow-xl w-[660px] h-[380px] z-9 "

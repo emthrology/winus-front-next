@@ -29,10 +29,11 @@ export default function ButtonGroup({
     onChange?.(idx);
   };
   return (
-    <div className="w-screen max-w-[1536px] min-h-[80px] bg-white  border-b border-b-zinc-200 flex justify-start items-center px-2 mx-auto">
-      {buttonData.map((item, idx) => (
-        <button
-          className={`
+    <div className="w-screen bg-white  border-b border-b-zinc-200 ">
+      <div className="max-w-[1536px] min-h-[80px] flex justify-start items-center px-2 mx-auto">
+        {buttonData.map((item, idx) => (
+          <button
+            className={`
             bg-white  font-medium text-[16px] sm:text-[18px] outline-none min-w-[70px] md:min-w-[120px] h-[40px] rounded-[40px] mx-3 cursor-pointer transition-all duration-200
             border-1
             ${
@@ -43,12 +44,13 @@ export default function ButtonGroup({
                 : 'text-[#222] border-transparent'
             }
           `}
-          onClick={() => handleClick(idx)}
-          key={idx}
-        >
-          {item.label}
-        </button>
-      ))}
+            onClick={() => handleClick(idx)}
+            key={idx}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

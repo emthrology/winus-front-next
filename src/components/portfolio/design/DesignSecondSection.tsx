@@ -26,7 +26,7 @@ export default function SecondSection() {
   return (
     <div className="w-screen relative min-h-[900px] bg-white">
       {/* 파란색 배경 (아래 깔림) */}
-      <div className="hidden lg:block absolute bottom-35 right-0 w-[80%] h-[45%] bg-[#032FF4] z-0" />
+      <div className="hidden lg:block absolute bottom-35 right-0 max-w-[1350px] w-[80%] h-[45%] bg-[#032FF4] z-0" />
       {/* 우측: motion으로 사진 */}
       <div className="hidden absolute bottom-45 -right-[7%] lg:flex flex-row justify-center items-end space-x-4 min-w-[340px] lg:min-w-[700px] xl:min-w-[1000px]">
         <DesolveImages activeIndex={activeIndex} />

@@ -53,7 +53,7 @@ const Contact = (props: IContactProps) => {
           <div className="flex flex-col items-start">
             <div className="font-bold text-black mb-1 text-lg">이메일</div>
             <div className=" text-[#727272] font-thin mb-2 text-left text-base">
-              cat302302@wewinus.com
+              wewinus302@gmail.com
             </div>
           </div>
           <div className="flex flex-col items-start">

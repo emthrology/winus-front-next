@@ -20,7 +20,7 @@ export default function ContactComponent() {
           <div className="flex space-x-16">
             <div className="flex flex-col space-y-1">
               <p className="text-[#032FF4] text-2xl font-bold">이메일</p>
-              <p className="text-gray-500 text-xl">cat302302@wewinus.com</p>
+              <p className="text-gray-500 text-xl">wewinus302@gmail.com</p>
             </div>
             <div className="flex flex-col space-y-1">
               <p className="text-[#032FF4] text-2xl font-bold">문의전화</p>

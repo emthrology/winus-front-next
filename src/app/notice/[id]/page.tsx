@@ -23,12 +23,12 @@ export default async function NoticeDetailPage({
   if (!notice) return notFound();
 
   return (
-    <>
+    <div className="w-screen">
       <TitleComponent title="Notice." />
       <Suspense>
         <NoticeDetail notice={notice} />
       </Suspense>
       <Footer contactTheme={'blue'} />
-    </>
+    </div>
   );
 }

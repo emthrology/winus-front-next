@@ -46,7 +46,7 @@ const Footer = (props: IFooterProps) => {
             <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start mt-4 text-xs text-[#727272] lg:text-base">
               <span>(주)윈어스 대표: 박상백</span>
               <span>
-                TEL : 02-915-3702 &nbsp;&nbsp; Mail : cat302302@wewinus.com
+                TEL : 02-915-3702 &nbsp;&nbsp; Mail : wewinus302@gmail.com
               </span>
               <span className="hidden lg:inline">
                 업무시간 : 평일 09:00 ~ 18:00 주말, 공휴일 휴무 | 주소 :

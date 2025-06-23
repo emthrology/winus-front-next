@@ -39,9 +39,10 @@ const NoticeDetail = async ({ notice }: Props) => {
           <div className="border-t border-gray-300 my-6" />
 
           {/* 본문 */}
-          <div className="mt-8 mb-8 min-h-[400px] text-[15px] leading-relaxed whitespace-pre-line text-[#23263b]">
-            {notice.content}
-          </div>
+          <div
+            className="mt-8 mb-8 min-h-[400px] text-[15px] leading-relaxed whitespace-pre-line text-[#23263b]"
+            dangerouslySetInnerHTML={{ __html: notice.content ?? '' }}
+          />
           {/* 이미지 */}
           <div className="flex justify-center mb-8">
             {/* <img
@@ -51,36 +52,39 @@ const NoticeDetail = async ({ notice }: Props) => {
             /> */}
           </div>
           {/* 첨부파일 */}
-          <a
-            href={notice.file_url}
-            download
-            className="ml-2 text-[#23263b] hover:text-blue-600"
-            aria-label="파일 다운로드"
-          >
-            <div className="bg-[#e7eaf5] rounded-md px-4 py-3 flex items-center mb-8">
-              <span className="flex-1 text-[#23263b] text-sm truncate">
-                {notice.file_url}
-              </span>
+          {notice.file_url && (
+            <a
+              href={notice.file_url}
+              download
+              className="ml-2 text-[#23263b] hover:text-blue-600"
+              aria-label="파일 다운로드"
+            >
+              <div className="bg-[#e7eaf5] rounded-md px-4 py-3 flex items-center mb-8">
+                <span className="flex-1 text-[#23263b] text-sm truncate">
+                  {notice.file_url.split('/').pop()}
+                </span>
 
-              <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
-                <path
-                  d="M10 3v10m0 0l4-4m-4 4l-4-4"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <rect
-                  x="4"
-                  y="17"
-                  width="12"
-                  height="2"
-                  rx="1"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </a>
+                <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <path
+                    d="M10 3v10m0 0l4-4m-4 4l-4-4"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <rect
+                    x="4"
+                    y="17"
+                    width="12"
+                    height="2"
+                    rx="1"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </a>
+          )}
+
           {/* 목록 버튼 */}
           <div className="flex justify-center">
             <a

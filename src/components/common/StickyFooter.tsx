@@ -53,7 +53,7 @@ const Footer = () => {
             </Link>
             <div className="flex flex-row items-center text-sm space-x-2">
               <a
-                href="mailto:cat302302@wewinus.com"
+                href="mailto:wewinus302@gmail.com"
                 className="flex items-center min-w-[190px]"
               >
                 <Image
@@ -62,7 +62,7 @@ const Footer = () => {
                   width={16}
                   height={16}
                 />
-                &nbsp;cat302302@wewinus.com
+                &nbsp;wewinus302@gmail.com
               </a>
               <span>|</span>
               <a
@@ -145,7 +145,7 @@ const Footer = () => {
           {/* 1단: 연락처 */}
           <div className="flex flex-row items-center justify-center space-x-4 w-full">
             <Link
-              href="mailto:cat302302@wewinus.com"
+              href="mailto:wewinus302@gmail.com"
               className="flex items-center text-sm sm:text-base  justify-center"
             >
               <Image
@@ -154,7 +154,7 @@ const Footer = () => {
                 width={16}
                 height={16}
               />
-              &nbsp;cat302302@wewinus.com
+              &nbsp;wewinus302@gmail.com
             </Link>
             <span>|</span>
             <Link
@@ -229,7 +229,7 @@ const Footer = () => {
               CONTACT US
             </Link>
             <div className="flex flex-row flex-1 items-center justify-between text-sm">
-              <a href="mailto:cat302302@wewinus.com">cat302302@wewinus.com</a>
+              <a href="mailto:wewinus302@gmail.com">wewinus302@gmail.com</a>
               <span>|</span>
               <a href="tel:029153702" className="flex items-center">
                 <Image
