@@ -21,10 +21,10 @@ export default function ElectionMovementFirstSection({
       <div className="max-w-[1536px] mx-auto">
         {/* 상단 텍스트 */}
         <div className="flex flex-col items-start px-6 pt-16">
-          <p className="text-[#E61E2B] text-[42px] font-normal">
+          <p className="text-[#E61E2B] text-[42px] font-normal leading-none">
             선거운동의 핵심
           </p>
-          <p className="text-[#E61E2B] text-[60px] font-bold mb-4">
+          <p className="text-[#E61E2B] text-[60px] font-bold my-2 leading-none">
             선거 유세송 자체제작
           </p>
         </div>

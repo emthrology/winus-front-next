@@ -9,24 +9,26 @@ export default function ElectionPromotionFirstSection({
   buttonData,
 }: FirstSectionProps) {
   return (
-    <div className="w-full h-[1400px] pt-12 flex flex-col items-start bg-[linear-gradient(180deg,#FFF_60%,#FFE5E7_100%)]">
+    <div className="w-full h-fit py-12 px-6 flex flex-col items-start bg-[linear-gradient(180deg,#FFF_60%,#FFE5E7_100%)]">
       {/* 상단 텍스트/버튼 등 */}
-      <div className="flex w-full flex-col items-center mt-28 space-y-4">
-        <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[170px] text-2xl font-bold">
+      <div className="flex w-full flex-col items-center mt-14 md:mt-28 space-y-4">
+        <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[120px] sm:w-[170px] text-2xl font-bold">
           공보
         </button>
-        <p className="text-[#E93541] text-5xl font-normal">
+        <p className="text-[#E93541] text-4xl sm:text-5xl font-normal pt-4 leading-8 lg:leading-none">
           눈길을 사로잡는 비결
         </p>
-        <p className="text-[#E93541] text-6xl font-semibold pb-4">선거 공보</p>
+        <p className="text-[#E93541] text-5xl sm:text-6xl font-semibold pb-4">
+          선거 공보
+        </p>
 
-        <p className="text-[#727272] text-center text-2xl font-[300] pt-2">
+        <p className="text-[#727272] text-center text-lg sm:text-2xl font-[300] pt-2">
           이제는 버려지는 선거 공보가 아닌,
           <br />
           핵심이 한눈에 들어오는 살아 있는 메시지를 담았습니다.
         </p>
       </div>
-      <div className="w-full mt-24 flex flex-col justify-center items-center space-y-4">
+      <div className="w-full mt-6 sm:mt-24 flex flex-col justify-center items-center ">
         <Image
           src="/images/election/promotion/election_promotion_first_1.png"
           width={1504}
@@ -34,7 +36,7 @@ export default function ElectionPromotionFirstSection({
           alt="pamplet"
         />
       </div>
-      <div className="w-full flex justify-center gap-3">
+      <div className="w-full flex flex-col items-center xl:flex-row justify-center gap-3 px-6">
         {buttonData!.map((item, idx) => (
           <motion.button
             initial={{ opacity: 0, y: 40 }}
@@ -44,7 +46,7 @@ export default function ElectionPromotionFirstSection({
               delay: idx * 0.2,
               ease: 'easeInOut',
             }}
-            className="border border-[#E93541] bg-[#E93541] text-white text-[30px] rounded-[40px] h-[60px] w-[400px] font-[600] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]"
+            className="border border-[#E93541] bg-[#E93541] text-white text-lg sm:text-[30px] rounded-[40px] h-[40px] sm:h-[60px] w-[350px] sm:w-[400px] font-[600] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]"
             onClick={() => {}}
             key={idx}
           >

@@ -2,11 +2,6 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import Icon from '@mdi/react';
-import { mdiChevronRight } from '@mdi/js';
-// interface IContactProps {
-//   pageRef: React.RefObject<HTMLDivElement | null>;
-// }
 interface IContactProps {
   theme: string;
 }
@@ -41,7 +36,6 @@ const Contact = (props: IContactProps) => {
                 }  text-white text-base rounded-[10px]`}
               >
                 <span>견 적 문 의</span>
-                <Icon path={mdiChevronRight} size={1.2} />
               </div>
             </Link>
           )}

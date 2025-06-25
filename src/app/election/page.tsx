@@ -16,6 +16,7 @@ import ElectionPromotionThirdSection from '@/components/election/promotion/Elect
 import ElectionMovementFirstSection from '@/components/election/movement/ElectionMovementFirstSection';
 import ElectionMovementSecondSection from '@/components/election/movement/ElectionMovementSecondSection';
 import ElectionMovementThirdSection from '@/components/election/movement/ElectionMovementThirdSection';
+import ElectionIntroFirstSection from '@/components/election/intro/ElectionIntroFirstSection';
 export default function Page() {
   const [idx, setIdx] = useState(0);
   const setThemeColor = useThemeStore((state) => state.setThemeColor);
@@ -156,7 +157,7 @@ export default function Page() {
           steps: [
             { num: '01', label: '상담 / 계약' },
             { num: '02', label: '후보자 인터뷰 진행' },
-            { num: '03', label: '경쟁 후보 및 금고 현황파악 및 분석' },
+            { num: '03', label: '경쟁 후보 및 금고 \n현황파악 및 분석' },
             { num: '04', label: '후보자 홍보 기획' },
             { num: '05', label: '선거 공보물 납품' },
           ],
@@ -221,6 +222,7 @@ export default function Page() {
           key={'election_intro_second'}
           circleData={data.second!.circleData!}
         />,
+        <ElectionIntroFirstSection key={'election_intro_first'} />,
         <ElectionIntroThirdSection
           key={'election_intro_third'}
           circleData={data.third!.circleData!}

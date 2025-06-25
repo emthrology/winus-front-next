@@ -63,46 +63,50 @@ export default function NoticeBoard({
   }
 
   return (
-    <div className="min-h-screen bg-white px-32 py-10 font-pretendard">
+    <div className="min-h-screen max-w-[1536px] mx-auto px-6 bg-white py-10 ">
       {/* 검색 영역 */}
-      <div className="flex justify-end mb-4 gap-2">
-        <SessionProvider>
-          <WriteButton />
-        </SessionProvider>
-        <select
-          className="border rounded px-2 py-1 text-sm text-[#23263b]"
-          value={selectSearchType}
-          onChange={(e) =>
-            setSelectSearchType(e.target.value as 'title' | 'author')
-          }
-        >
-          <option value="title">제목</option>
-          <option value="author">내용</option>
-        </select>
-        <input
-          className="border border-[#032FF4] placeholder-gray-400 rounded px-2 py-1 text-sm w-48"
-          placeholder="검색어를 입력하세요"
-          value={inputKeyword}
-          onChange={(e) => setInputKeyword(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') handleSearch();
-          }}
-        />
-        <button
-          className="bg-[#2563eb] text-white px-4 py-1 rounded text-sm"
-          onClick={handleSearch}
-        >
-          검색
-        </button>
+      <div className="flex flex-col items-end md:items-baseline md:flex-row justify-end mb-6 h-10 gap-2">
+        <div className="h-full space-x-2">
+          <SessionProvider>
+            <WriteButton />
+          </SessionProvider>
+        </div>
+        <div className="flex gap-2 h-full">
+          <select
+            className="border rounded px-2 py-1 text-sm text-[#23263b]"
+            value={selectSearchType}
+            onChange={(e) =>
+              setSelectSearchType(e.target.value as 'title' | 'author')
+            }
+          >
+            <option value="title">제목</option>
+            <option value="author">내용</option>
+          </select>
+          <input
+            className="border border-[#032FF4] placeholder-gray-400 rounded px-2 py-1 text-black text-sm w-48"
+            placeholder="검색어를 입력하세요"
+            value={inputKeyword}
+            onChange={(e) => setInputKeyword(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') handleSearch();
+            }}
+          />
+          <button
+            className="bg-[#2563eb] text-white px-4 py-1 rounded text-sm"
+            onClick={handleSearch}
+          >
+            검색
+          </button>
+        </div>
       </div>
       {/* 테이블 */}
-      <table className="w-full border-t border-[#d1d5db] text-center ">
+      <table className="w-full border-t border-[#d1d5db] mt-4 text-center table-fixed">
         <thead>
           <tr className="bg-[#fff] text-[#727272] text-base">
-            <th className="py-2 border-b border-[#d1d5db] w-36">NO.</th>
-            <th className="py-2 border-b border-[#d1d5db]">제목</th>
-            <th className="py-2 border-b border-[#d1d5db] w-64">작성자</th>
-            <th className="py-2 border-b border-[#d1d5db] w-64">날짜</th>
+            <th className="w-1/12 py-2 border-b border-[#d1d5db]">NO.</th>
+            <th className="w-5/12 py-2 border-b border-[#d1d5db]">제목</th>
+            <th className="w-2/12 py-2 border-b border-[#d1d5db]">작성자</th>
+            <th className="w-2/12 py-2 border-b border-[#d1d5db]">날짜</th>
             <SessionProvider>
               <AdminTh />
             </SessionProvider>
@@ -132,8 +136,8 @@ export default function NoticeBoard({
                   {notice.author}
                 </td>
                 <td className="py-2 border-b border-[#e5e7eb] text-[#727272]">
-                  {notice.created_at.getFullYear()}-
-                  {notice.created_at.getMonth() + 1}-
+                  {notice.created_at.getFullYear().toString().slice(2)}.
+                  {notice.created_at.getMonth() + 1}.
                   {notice.created_at.getDate()}
                 </td>
                 <SessionProvider>

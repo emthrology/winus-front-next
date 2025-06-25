@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useIsMdUp } from '@/hooks/usePageSize';
 interface Box {
   subtitle: string;
   title: string;
@@ -15,23 +16,25 @@ interface SecondSectionProps {
 export default function ElectionConsultingSecondSection({
   boxData,
 }: SecondSectionProps) {
+  const isMdUp = useIsMdUp();
   return (
-    <div className="w-full h-[1100px] pt-12 flex flex-col items-start bg-white">
+    <div className="w-full min-h-[1100px] py-12 flex flex-col items-start bg-white">
       {/* 상단 텍스트/버튼 등 */}
-      <div className="flex w-full flex-col items-center my-16 space-y-4 ">
-        <p className="text-[#E93541] text-5xl font-normal">
+      <div className="flex w-full flex-col items-center sm:my-16 space-y-4 ">
+        <p className="text-[#E93541] text-4xl sm:text-5xl font-normal">
           후보님께 약속드리는
         </p>
-        <p className="text-[#E93541] text-6xl font-semibold">
+        <p className="text-[#E93541] text-4xl sm:text-6xl font-bold">
           윈어스가 이기는 방식
         </p>
       </div>
       {/* boxes */}
-      <div className="mt-12 grid grid-cols-3 grid-rows-1 gap-12 w-fit mx-auto">
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 xl:gap-12 w-fit mx-auto px-6">
         {boxData.map((box, idx) => (
           <motion.div
             key={box.title}
-            className="relative flex flex-col justify-evenly items-center w-[500px] h-[654px] bg-white shadow-[0_1px_4px_2px_rgba(230,30,43,0.75)] rounded-3xl"
+            className="relative flex flex-col justify-center md:justify-evenly items-center py-12  
+            md:w-[400px] aspect-[4/3] md:aspect-[3/4] lg:w-[320px]  xl:w-[400px] 2xl:w-[500px]  bg-white shadow-[0_1px_4px_2px_rgba(230,30,43,0.75)] rounded-3xl"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
@@ -40,11 +43,30 @@ export default function ElectionConsultingSecondSection({
               ease: 'easeInOut',
             }}
           >
-            <div className="flex flex-col items-center">
-              <p className="text-[32px] font-[400] text-[#E93541] mb-2">
+            {!isMdUp && (
+              <Image
+                src={box.image}
+                width={248}
+                height={189}
+                alt="box_icon"
+                className="w-1/3 h-auto mt-[-30px] mb-8"
+              />
+            )}
+            {!isMdUp && (
+              <div className="flex flex-col items-center">
+                <p className="text-[26px] 2xl:text-[32px] font-[400] text-[#E93541]">
+                  {box.subtitle}
+                </p>
+                <p className="text-[30px] lg:text-[38px] 2xl:text-[42px] font-bold text-[#E93541] mb-2">
+                  {box.title}
+                </p>
+              </div>
+            )}
+            <div className="hidden md:flex flex-col items-center">
+              <p className="text-[26px] 2xl:text-[32px] font-[400] text-[#E93541] mb-2">
                 {box.subtitle}
               </p>
-              <p className="text-[42px] font-bold text-[#E93541]">
+              <p className="text-[30px] lg:text-[38px] 2xl:text-[42px] font-bold text-[#E93541]">
                 {box.title}
               </p>
             </div>
@@ -54,7 +76,7 @@ export default function ElectionConsultingSecondSection({
               width={248}
               height={189}
               alt="box_icon"
-              className="mt-[-30px]"
+              className="hidden md:block w-1/3 h-auto mt-[-30px]"
             />
 
             <div className="flex flex-col items-center">
@@ -68,6 +90,8 @@ export default function ElectionConsultingSecondSection({
             {/* 가운데 짧은 hr(구분선) */}
             <hr
               className="
+              hidden 
+              md:inline
       absolute left-1/2 bottom-10 
       -translate-x-1/2 
       w-48 border-t-2 border-[#E61E2B] opacity-80

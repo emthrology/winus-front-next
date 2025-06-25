@@ -55,7 +55,11 @@ export default function ProjectRequestForm() {
     }, 1000);
   }
   return (
-    <form className=" mx-auto p-12" action={handleAction} autoComplete="off">
+    <form
+      className="w-full py-4 px-2 md:p-12"
+      action={handleAction}
+      autoComplete="off"
+    >
       {/* 제목 */}
       <h2 className="text-4xl font-bold text-center text-blue-600 mb-12 tracking-wide">
         PROJECT REQUEST
@@ -63,7 +67,7 @@ export default function ProjectRequestForm() {
       <hr className="border-t-2 border-gray-300 mb-10" />
 
       {/* 1행: 회사명, 담당자명, 연락처 */}
-      <div className="grid grid-cols-3 gap-8 space-y-4 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-8 space-y-4 mb-8">
         {/* 회사명 */}
         <div>
           <div className="flex items-end border-b border-gray-300 pb-1">
@@ -114,10 +118,6 @@ export default function ProjectRequestForm() {
             />
           </div>
         </div>
-      </div>
-
-      {/* 2행: 프로젝트 구분, 이메일, 금액대 */}
-      <div className="grid grid-cols-3 gap-8 mb-8">
         {/* 프로젝트 구분 */}
         <div>
           <div className="relative flex items-end border-b border-gray-300 pb-1">
@@ -195,6 +195,11 @@ export default function ProjectRequestForm() {
           </div>
         </div>
       </div>
+
+      {/* 2행: 프로젝트 구분, 이메일, 금액대 */}
+      {/* <div className="grid grid-cols-3 gap-8 mb-8">
+
+      </div> */}
 
       {/* 문의사항 */}
       <div className="mb-6">

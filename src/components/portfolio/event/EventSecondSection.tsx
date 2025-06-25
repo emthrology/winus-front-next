@@ -37,7 +37,7 @@ export default function EventSecondSection({
                 src={item.image}
                 alt={item.title}
                 fill
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover bg-bottom transition-transform duration-300 group-hover:scale-110"
               />
             </div>
             <div

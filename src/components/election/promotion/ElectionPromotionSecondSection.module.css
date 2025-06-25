@@ -1,4 +1,4 @@
-/* 모서리만 border를 그리는 방법 예시 */
+/* 모서리만 border를 그리기*/
 .cornerBorder {
   position: relative;
   display: flex;
@@ -18,8 +18,8 @@
   left: 0;
   width: 270px;
   height: 270px;
-  border-top: 4px solid #d9d9d9;
-  border-left: 4px solid #d9d9d9;
+  border-top: 2px solid #d9d9d9;
+  border-left: 2px solid #d9d9d9;
 }
 
 /* 우하단 */
@@ -30,8 +30,8 @@
   right: 0;
   width: 270px;
   height: 270px;
-  border-bottom: 4px solid #d9d9d9;
-  border-right: 4px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  border-right: 2px solid #d9d9d9;
 }
 
 /* 우상단 */
@@ -41,8 +41,8 @@
   right: 0;
   width: 270px;
   height: 270px;
-  border-top: 4px solid #d9d9d9;
-  border-right: 4px solid #d9d9d9;
+  border-top: 2px solid #d9d9d9;
+  border-right: 2px solid #d9d9d9;
 }
 
 /* 좌하단 */
@@ -52,6 +52,82 @@
   left: 0;
   width: 270px;
   height: 270px;
-  border-bottom: 4px solid #d9d9d9;
-  border-left: 4px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  border-left: 2px solid #d9d9d9;
+}
+/* sm (640px 이상) */
+@media (max-width: 639px) {
+  .cornerBorder {
+    width: 320px;
+    height: 290px;
+  }
+  .cornerBorder::before,
+  .cornerBorder::after,
+  .cornerBorder .topRight,
+  .cornerBorder .bottomLeft {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* md (640px ~ 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .cornerBorder {
+    width: 480px;
+    height: 470px;
+  }
+  .cornerBorder::before,
+  .cornerBorder::after,
+  .cornerBorder .topRight,
+  .cornerBorder .bottomLeft {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* lg (768px ~ 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cornerBorder {
+    width: 700px;
+    height: 700px;
+  }
+  .cornerBorder::before,
+  .cornerBorder::after,
+  .cornerBorder .topRight,
+  .cornerBorder .bottomLeft {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* xl (1024px ~ 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .cornerBorder {
+    width: 900px;
+    height: 850px;
+    z-index: 0;
+  }
+  .cornerBorder::before,
+  .cornerBorder::after,
+  .cornerBorder .topRight,
+  .cornerBorder .bottomLeft {
+    width: 240px;
+    height: 240px;
+    z-index: 0;
+  }
+}
+
+/* 2xl (1280px 이상) */
+@media (min-width: 1280px) {
+  .cornerBorder {
+    width: 1000px;
+    height: 1000px;
+  }
+  .cornerBorder::before,
+  .cornerBorder::after,
+  .cornerBorder .topRight,
+  .cornerBorder .bottomLeft {
+    width: 270px;
+    height: 270px;
+  }
 }

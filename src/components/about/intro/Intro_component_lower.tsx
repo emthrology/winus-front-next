@@ -8,7 +8,7 @@ export default function Intro_component_lower() {
       <div className="hidden md:flex justify-between w-full">
         {/* 글 자리 */}
         <div className="flex flex-col justify-around pb-12">
-          <div className="flex flex-col justify-start items-start">
+          <div className="flex flex-col justify-start items-start mt-8">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Intro_component_lower() {
         </motion.div>
       </div>
       {/* 모바일 레이아웃 */}
-      <div className="relative md:hidden flex flex-col min-h-[500px] justify-between items-center">
+      <div className="relative md:hidden flex flex-col min-h-[500px] justify-between items-center pt-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export default function Intro_component_lower() {
             delay: 0.4,
             ease: 'easeInOut',
           }}
-          className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute mt-12 w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
           <Image
             src={'/images/about/sketchmap.png'}

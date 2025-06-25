@@ -59,7 +59,6 @@ export default function Page() {
       <div className="md:p-8  bg-white" />
       {LowerSectionComponent && (
         <>
-          <div className="p-8 bg-[#032FF4]" />
           <LowerSection theme={'blue'}>
             {/* 여기에 페이지별로 ReactComponent 넣으면 된다 */}
             <LowerSectionComponent />

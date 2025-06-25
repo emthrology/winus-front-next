@@ -2,10 +2,16 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 export default function OverlapImages() {
   return (
-    <div className="relative w-[1550px] h-[840px] mx-auto">
+    <div className="relative 2xl:w-[1536px] 2xl:h-[840px] w-[95vw] h-[50vw] mt-4 mx-auto">
       {/* 왼쪽 위 */}
       <motion.div
-        className="absolute top-0 left-0 border-10 border-[#FAD4D7]  bg-white shadow-lg w-[500px] h-[500px] z-7"
+        className="
+      absolute
+      top-0 left-0
+      2xl:w-[500px] 2xl:h-[500px] w-[30vw] h-[30vw] max-w-[500px] max-h-[500px]
+      border-5 md:border-10 border-[#FAD4D7] bg-white shadow-lg
+      z-7
+    "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -18,12 +24,18 @@ export default function OverlapImages() {
           src="/images/election/promotion/election_promotion_second_gallery_1.png"
           alt=""
           fill
-          className="object-cover "
+          className="object-cover"
         />
       </motion.div>
       {/* 중앙 위 */}
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 border-10 border-[#FAD4D7]  bg-white shadow-lg w-[500px] h-[500px] z-8"
+        className="
+      absolute
+      top-0 left-1/2 -translate-x-1/2
+      2xl:w-[500px] 2xl:h-[500px] w-[30vw] h-[30vw] max-w-[500px] max-h-[500px]
+      border-5 md:border-10 border-[#FAD4D7] bg-white shadow-lg
+      z-8
+    "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -36,12 +48,18 @@ export default function OverlapImages() {
           src="/images/election/promotion/election_promotion_second_gallery_2.png"
           alt=""
           fill
-          className="object-cover "
+          className="object-cover"
         />
       </motion.div>
       {/* 오른쪽 위 */}
       <motion.div
-        className="absolute top-0 right-0 border-10 border-[#FAD4D7]  bg-white shadow-lg w-[500px] h-[500px] z-9"
+        className="
+      absolute
+      top-0 right-0
+      2xl:w-[500px] 2xl:h-[500px] w-[30vw] h-[30vw] max-w-[500px] max-h-[500px]
+      border-5 md:border-10 border-[#FAD4D7] bg-white shadow-lg
+      z-9
+    "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -54,12 +72,18 @@ export default function OverlapImages() {
           src="/images/election/promotion/election_promotion_second_gallery_3.png"
           alt=""
           fill
-          className="object-cover "
+          className="object-cover"
         />
       </motion.div>
       {/* 왼쪽 아래 */}
       <motion.div
-        className="absolute bottom-0 left-1/6 border-10 border-[#FAD4D7]  bg-white shadow-lg w-[500px] h-[500px] z-9"
+        className="
+      absolute
+      bottom-0 left-[16%]
+      2xl:w-[500px] 2xl:h-[500px] w-[30vw] h-[30vw] max-w-[500px] max-h-[500px]
+      border-5 md:border-10 border-[#FAD4D7] bg-white shadow-lg
+      z-9
+    "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -72,12 +96,18 @@ export default function OverlapImages() {
           src="/images/election/promotion/election_promotion_second_gallery_4.png"
           alt=""
           fill
-          className="object-cover "
+          className="object-cover"
         />
       </motion.div>
       {/* 오른쪽 아래 */}
       <motion.div
-        className="absolute bottom-0 right-1/6 border-10 border-[#FAD4D7]  bg-white shadow-lg w-[500px] h-[500px] z-9"
+        className="
+      absolute
+      bottom-0 right-[16%]
+      2xl:w-[500px] 2xl:h-[500px] w-[30vw] h-[30vw] max-w-[500px] max-h-[500px]
+      border-5 md:border-10 border-[#FAD4D7] bg-white shadow-lg
+      z-9
+    "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -90,7 +120,7 @@ export default function OverlapImages() {
           src="/images/election/promotion/election_promotion_second_gallery_5.png"
           alt=""
           fill
-          className="object-cover "
+          className="object-cover"
         />
       </motion.div>
     </div>
