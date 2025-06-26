@@ -2,10 +2,11 @@
 import ButtonGroup from '@/components/common/ButtonGroup';
 import Footer from '@/components/common/Footer';
 import TitleComponent from '@/components/common/TitleComponent';
-import ElectionIntroSecondSection from '@/components/election/intro/ElectionIntroSecondSection';
 import SectionTitleComponent from '@/components/election/SectionTitleComponent';
 import React, { useState, useEffect, useMemo } from 'react';
 import useThemeStore from '@/store/themeStore';
+import ElectionIntroFirstSection from '@/components/election/intro/ElectionIntroFirstSection';
+import ElectionIntroSecondSection from '@/components/election/intro/ElectionIntroSecondSection';
 import ElectionIntroThirdSection from '@/components/election/intro/ElectionIntroThirdSection';
 import ElectionIntroFourthSection from '@/components/election/intro/ElectionIntroFourthSection';
 import ElectionConsultingSecondSection from '@/components/election/consulting/ElectionConsultingSecondSection';
@@ -16,7 +17,6 @@ import ElectionPromotionThirdSection from '@/components/election/promotion/Elect
 import ElectionMovementFirstSection from '@/components/election/movement/ElectionMovementFirstSection';
 import ElectionMovementSecondSection from '@/components/election/movement/ElectionMovementSecondSection';
 import ElectionMovementThirdSection from '@/components/election/movement/ElectionMovementThirdSection';
-import ElectionIntroFirstSection from '@/components/election/intro/ElectionIntroFirstSection';
 export default function Page() {
   const [idx, setIdx] = useState(0);
   const setThemeColor = useThemeStore((state) => state.setThemeColor);
@@ -218,11 +218,11 @@ export default function Page() {
       const data = pageData[0].sectionData;
       return [
         <SectionTitleComponent key={'election_title'} />,
-        <ElectionIntroSecondSection
-          key={'election_intro_second'}
+        <ElectionIntroFirstSection
+          key={'election_intro_first'}
           circleData={data.second!.circleData!}
         />,
-        <ElectionIntroFirstSection key={'election_intro_first'} />,
+        <ElectionIntroSecondSection key={'election_intro_second'} />,
         <ElectionIntroThirdSection
           key={'election_intro_third'}
           circleData={data.third!.circleData!}

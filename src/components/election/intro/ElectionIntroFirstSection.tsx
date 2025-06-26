@@ -1,50 +1,111 @@
 import React from 'react';
-import Image from 'next/image';
-export default function ElectionIntroFirstSection() {
+import { motion } from 'framer-motion';
+
+interface Circle {
+  title: string;
+  defs: string[];
+}
+
+interface SecondSectionProps {
+  circleData: Circle[];
+}
+
+export default function ElectionIntroFirstSection({
+  circleData,
+}: SecondSectionProps) {
   return (
-    <div className=" w-screen max-w-[1536px] mx-auto h-fit bg-white z-1">
-      {/* 하단 */}
-      <div className="z-10 w-full h-full flex items-end max-w-8xl px-4">
-        <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-14 sm:gap-28">
-          <div className="flex items-center lg:items-start justify-center lg:h-1/2">
-            {/* <Image
-              src="/images/election/intro/election_intro_second_lower_left.png"
-              width={492}
-              height={148}
-              alt="lower logo"
-            /> */}
-            <div className="flex flex-col ">
-              <div>
-                <span
-                  className="text-3xl sm:text-5xl text-[#E61E2B] font-semibold"
-                  style={{ textEmphasis: 'filled #e61e2b' }}
-                >
-                  다시 찾아오는 기업
-                </span>
-                <span className="text-3xl sm:text-5xl text-[#E61E2B] font-semibold">
-                  에는 <br />
-                </span>
-              </div>
-
-              <span className="text-center sm:text-left text-3xl sm:text-5xl text-[#E61E2B] ">
-                이유가 있습니다.
-              </span>
-            </div>
+    <div className="relative flex w-screen h-[400px] sm:h-[600px] md:h-[800px] xl:h-[600px] bg-white z-2">
+      {/* 상단 overflow 투명원 */}
+      <div className="hidden absolute -top-[12.5%] left-1/2 transform -translate-x-1/2 xl:flex space-x-10 xl:space-x-16 ">
+        {/* pc */}
+        {circleData.map((circle, idx) => (
+          <motion.div
+            key={`${circle.title}-${idx}`}
+            className=" flex w-[300px] h-[300px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4  flex-col items-center justify-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.43,
+              delay: (idx + 2) * 0.145,
+              ease: 'easeInOut',
+            }}
+          >
+            <p className="font-bold xl:text-5xl 2xl:text-6xl text-[#E61E2B] mb-8">
+              {circle.title}
+            </p>
+            {circle.defs.map((definition, innerIdx) => (
+              <p
+                key={`${definition}-${innerIdx}`}
+                className="font-[300] xl:text-xl 2xl:text-2xl text-[#727272]"
+              >
+                {definition}
+              </p>
+            ))}
+          </motion.div>
+        ))}
+      </div>
+      {/* mobile */}
+      <div className="xl:hidden absolute -top-[12.5%] h-fit left-1/2 transform -translate-x-1/2 w-full flex xl:space-x-16 ">
+        <div className="w-full">
+          <div className=" flex justify-center items-center">
+            {circleData.map(
+              (circle, idx) =>
+                idx == 0 && (
+                  <motion.div
+                    key={`${circle.title}-${idx}`}
+                    className="xl:hidden flex w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4  flex-col items-center justify-center"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.43,
+                      delay: (idx + 2) * 0.145,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <p className="font-bold text-3xl sm:text-4xl text-[#E61E2B] mb-4 sm:mb-8">
+                      {circle.title}
+                    </p>
+                    {circle.defs.map((definition, innerIdx) => (
+                      <p
+                        key={`${definition}-${innerIdx}`}
+                        className="font-[300] text-xs sm:text-base text-[#727272]"
+                      >
+                        {definition}
+                      </p>
+                    ))}
+                  </motion.div>
+                )
+            )}
           </div>
-
-          <div className="flex flex-col items-center lg:items-start">
-            <Image
-              className="z-10"
-              src="/images/main/main_4_2.png"
-              alt="WINUS"
-              width={400}
-              height={400}
-              priority
-              style={{
-                maxWidth: '70vw',
-                height: 'auto',
-              }}
-            />
+          <div className="flex justify-center items-center gap-2 md:space-x-10">
+            {circleData.map(
+              (circle, idx) =>
+                idx > 0 && (
+                  <motion.div
+                    key={`${circle.title}-${idx}`}
+                    className="xl:hidden flex w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4  flex-col items-center justify-center"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.43,
+                      delay: (idx + 2) * 0.145,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <p className="font-bold text-3xl sm:text-4xl text-[#E61E2B] mb-4 sm:mb-8">
+                      {circle.title}
+                    </p>
+                    {circle.defs.map((definition, innerIdx) => (
+                      <p
+                        key={`${definition}-${innerIdx}`}
+                        className="font-[300] text-xs sm:text-base text-[#727272]"
+                      >
+                        {definition}
+                      </p>
+                    ))}
+                  </motion.div>
+                )
+            )}
           </div>
         </div>
       </div>
