@@ -36,7 +36,7 @@ export default function SecondSection() {
         <div className="relative z-10 flex flex-row w-full h-full">
           {/* 좌측: 버튼 + 텍스트 */}
           <div className="flex flex-col justify-start items-start min-w-[400px]">
-            <p className="text-black text-2xl lg:text-lg font-noto font-[300] pb-4">
+            <p className="text-black text-2xl lg:text-lg font-noto font-[300] pb-2 lg:pb-4">
               DISPLAY
             </p>
             <p className="text-black text-[26px] sm:text-3xl lg:text-5xl font-semibold mb-6">

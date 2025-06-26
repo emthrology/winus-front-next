@@ -12,7 +12,7 @@ export default function ThirdSection({ images }: ThirdSectionProps) {
       <div className="w-full h-full">
         {/* 상단 텍스트/버튼 등 */}
         <div className="flex w-full max-w-[1536px]  flex-col items-start mx-auto mt-12 sm:mt-28  px-6 ">
-          <p className="text-black text-2xl lg:text-lg font-noto font-[300] pb-4">
+          <p className="text-black text-2xl lg:text-lg font-noto font-[300] pb-2 lg:pb-4">
             INTERIOR
           </p>
           <div className="flex justify-between w-full">

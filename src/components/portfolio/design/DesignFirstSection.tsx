@@ -11,7 +11,7 @@ export default function FirstSection() {
         <div className="flex w-full flex-col items-start pt-12 lg:pt-0 lg:mt-24 ">
           <div className="flex justify-center lg:justify-between items-end w-full">
             <div className="text-center lg:text-left">
-              <p className="text-white text-2xl lg:text-lg font-noto font-[300] pb-4">
+              <p className="text-white text-2xl lg:text-lg font-noto font-[300] pb-2 lg:pb-4">
                 DESIGN
               </p>
               <p className="text-white text-[26px] sm:text-3xl lg:text-5xl font-semibold">
