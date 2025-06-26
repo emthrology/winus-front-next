@@ -61,7 +61,7 @@ export default function ProjectRequestForm() {
       autoComplete="off"
     >
       {/* 제목 */}
-      <h2 className="text-4xl font-bold text-center text-blue-600 mb-12 tracking-wide">
+      <h2 className="text-4xl font-bold text-center text-[#032FF4] mb-12 tracking-wide">
         PROJECT REQUEST
       </h2>
       <hr className="border-t-2 border-gray-300 mb-10" />
@@ -245,7 +245,7 @@ export default function ProjectRequestForm() {
       <button
         type="submit"
         disabled={pending}
-        className="w-48 h-12 bg-blue-600 text-white font-bold rounded-lg text-lg hover:bg-blue-700 transition"
+        className="w-48 h-12 bg-[#032FF4] text-white font-bold rounded-lg text-lg transition"
       >
         {pending ? '전송 중...' : '문의하기'}
       </button>

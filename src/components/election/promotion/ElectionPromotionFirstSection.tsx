@@ -15,10 +15,10 @@ export default function ElectionPromotionFirstSection({
         <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[120px] sm:w-[170px] text-2xl font-bold">
           공보
         </button>
-        <p className="text-[#E93541] text-4xl sm:text-5xl font-normal pt-4 leading-2 sm:leading-none">
+        <p className="text-[#E93541] text-3xl sm:text-5xl font-normal pt-4 leading-1 sm:leading-none">
           눈길을 사로잡는 비결
         </p>
-        <p className="text-[#E93541] text-5xl sm:text-6xl font-semibold sm:pb-4">
+        <p className="text-[#E93541] text-4xl sm:text-6xl font-semibold sm:pb-4">
           선거 공보
         </p>
 

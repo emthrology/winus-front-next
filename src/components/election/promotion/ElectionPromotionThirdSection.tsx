@@ -16,10 +16,10 @@ export default function ElectionPromotionThirdSection() {
         <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[120px] sm:w-[170px] text-2xl font-bold">
           SNS 홍보
         </button>
-        <p className="text-[#E93541] text-3xl sm:text-5xl font-normal pt-4 leading-4 lg:leading-none">
+        <p className="text-[#E93541] text-3xl sm:text-5xl font-normal pt-4 leading-1 sm:leading-none">
           페이스북, 인스타그램, 블로그 등
         </p>
-        <p className="text-[#E93541] text-5xl sm:text-6xl font-semibold lg:pb-4">
+        <p className="text-[#E93541] text-4xl sm:text-6xl font-semibold lg:pb-4">
           관리 대행 서비스
         </p>
 
@@ -68,7 +68,7 @@ export default function ElectionPromotionThirdSection() {
       </div>
 
       {/* buttons-pc */}
-      <div className="hidden md:grid grid-cols-3 gap-12 w-fit mt-16 mx-auto px-6">
+      <div className="hidden md:grid grid-cols-3 gap-4 lg:gap-12 w-fit mt-16 mx-auto px-6">
         {[
           '실시간 업로드',
           '매일 업로드',
@@ -112,7 +112,7 @@ export default function ElectionPromotionThirdSection() {
                   ease: 'easeInOut',
                 }}
                 className={`${
-                  row.length == 1 ? '' : 'flex-1'
+                  row.length == 1 ? 'min-w-[200px]' : 'flex-1'
                 } border border-[#E93541] bg-[#E93541] text-white text-[16px] xl:text-[30px] rounded-[40px] h-[40px] max-w-[400px] px-6 font-[500] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]`}
                 onClick={() => {}}
                 key={idx}

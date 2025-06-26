@@ -56,7 +56,7 @@ export default function ElectionConsultingThirdSection({
       </div>
       {/* shadow-[0_0px_4px_8px_0px_rgba(230,30,43,0.25)] */}
       {/* boxes */}
-      <div className="grid grid-grid-cols-1 lg:grid-cols-2 gap-12 w-fit mx-auto">
+      <div className="grid grid-grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 w-fit mx-auto">
         {boxData.map((box, idx) => (
           <motion.div
             key={box.title}
