@@ -79,7 +79,7 @@ export default function OverlapImages() {
       <motion.div
         className="
       absolute
-      bottom-0 left-[17.5%]
+      bottom-0 left-[17%]
       2xl:w-[500px] 2xl:h-[500px] w-[30vw] h-[30vw] max-w-[500px] max-h-[500px]
       border-5 md:border-10 border-[#FAD4D7] bg-white shadow-lg
       z-9
@@ -103,7 +103,7 @@ export default function OverlapImages() {
       <motion.div
         className="
       absolute
-      bottom-0 right-[17.5%]
+      bottom-0 right-[17%]
       2xl:w-[500px] 2xl:h-[500px] w-[30vw] h-[30vw] max-w-[500px] max-h-[500px]
       border-5 md:border-10 border-[#FAD4D7] bg-white shadow-lg
       z-9
