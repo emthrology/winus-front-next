@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { motion } from 'framer-motion';
 interface Procon {
   cons: string;
   pros1: string;
@@ -37,36 +38,73 @@ export default function firstSectionProsCons({
             className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-0"
           >
             {/* 왼쪽 cons */}
-            <div className="w-full md:w-[300px] text-[#727272] text-xl md:text-xl xl:text-2xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.2,
+                ease: 'easeInOut',
+              }}
+              className="w-full md:w-[300px] text-[#727272] text-xl md:text-xl xl:text-2xl text-center"
+            >
               {item.cons}
-            </div>
+            </motion.div>
             {/* 가운데 화살표-pc */}
-            <div className="hidden md:block w-[220px]">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.2,
+                ease: 'easeInOut',
+              }}
+              className="hidden md:block w-[220px]"
+            >
               <Image
                 src="/images/half_right_arrow.png"
                 width={220}
                 height={27}
                 alt="half arrow right"
               />
-            </div>
-            <div className="md:hidden block">
+            </motion.div>
+            {/* 가운데 화살표-mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.2,
+                ease: 'easeInOut',
+              }}
+              className="md:hidden block"
+            >
               <Image
                 src="/images/half_down_arrow_mobile.png"
                 width={10}
                 height={4}
                 alt="half arrow right"
               />
-            </div>
+            </motion.div>
             {/* 오른쪽 pros */}
             <div className="ml-0 md:ml-12 flex justify-center items-center w-full md:w-[730px]">
-              <div className="w-full h-[60px] md:h-[100px] flex justify-center items-center border-2 border-[#E61E2B] rounded-2xl px-2 md:px-6 bg-white md:shadow-none shadow-[0_4px_8px_-2px_rgba(0,0,0,0.48)]">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: idx * 0.2,
+                  ease: 'easeInOut',
+                }}
+                className="w-full h-[60px] md:h-[100px] flex justify-center items-center border-2 border-[#E61E2B] rounded-2xl px-2 md:px-6 bg-white md:shadow-none shadow-[0_4px_8px_-2px_rgba(0,0,0,0.48)]"
+              >
                 <span className="text-[#E61E2B] text-xl lg:text-2xl xl:text-3xl font-normal">
                   {item.pros1}
                 </span>
                 <span className="ml-2 text-[#E61E2B] text-xl lg:text-2xl xl:text-3xl font-bold">
                   {item.pros2}
                 </span>
-              </div>
+              </motion.div>
             </div>
           </div>
         ))}
