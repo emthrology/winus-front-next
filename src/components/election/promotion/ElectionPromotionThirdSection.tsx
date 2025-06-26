@@ -19,7 +19,7 @@ export default function ElectionPromotionThirdSection() {
         <p className="text-[#E93541] text-3xl sm:text-5xl font-normal pt-4 leading-4 lg:leading-none">
           페이스북, 인스타그램, 블로그 등
         </p>
-        <p className="text-[#E93541] text-4xl sm:text-6xl font-semibold lg:pb-4">
+        <p className="text-[#E93541] text-5xl sm:text-6xl font-semibold lg:pb-4">
           관리 대행 서비스
         </p>
 

@@ -35,7 +35,7 @@ export default function ElectionIntroThirdSection({
           >
             <motion.div
               key={`${circle.title}-${idx}`}
-              className="w-[140px] h-[140px] sm:w-[210px] sm:h-[210px] md:w-[280px] md:h-[280px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-[#E61E2B] border-4 flex flex-col items-center justify-center"
+              className="w-[140px] h-[140px] sm:w-[210px] sm:h-[210px] md:w-[280px] md:h-[280px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-[#E61E2B] border-2 sm:border-4 flex flex-col items-center justify-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{

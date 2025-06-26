@@ -15,14 +15,14 @@ export default function ElectionPromotionFirstSection({
         <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[120px] sm:w-[170px] text-2xl font-bold">
           공보
         </button>
-        <p className="text-[#E93541] text-4xl sm:text-5xl font-normal pt-4 leading-8 lg:leading-none">
+        <p className="text-[#E93541] text-4xl sm:text-5xl font-normal pt-4 leading-2 sm:leading-none">
           눈길을 사로잡는 비결
         </p>
-        <p className="text-[#E93541] text-5xl sm:text-6xl font-semibold pb-4">
+        <p className="text-[#E93541] text-5xl sm:text-6xl font-semibold sm:pb-4">
           선거 공보
         </p>
 
-        <p className="text-[#727272] text-center text-lg sm:text-2xl font-[300] pt-2">
+        <p className="text-[#727272] text-center text-base sm:text-2xl font-[300] sm:pt-2">
           이제는 버려지는 선거 공보가 아닌,
           <br />
           핵심이 한눈에 들어오는 살아 있는 메시지를 담았습니다.

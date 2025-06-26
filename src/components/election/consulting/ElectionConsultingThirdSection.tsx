@@ -61,7 +61,7 @@ export default function ElectionConsultingThirdSection({
           <motion.div
             key={box.title}
             className="relative flex flex-col justify-center items-start p-8 sm:pl-20 
-            aspect-[5/2] w-[350px] sm:w-[450px] xl:w-[600px] 2xl:w-[700px]
+            aspect-[5/2] w-[385px] sm:w-[450px] xl:w-[600px] 2xl:w-[700px]
             
             bg-white/80  shadow-[0px_4px_8px_0px_rgba(230,30,43,0.25)] sm:shadow-[1px_4px_2px_rgba(230,30,43,0.75)] rounded-3xl"
             initial={{ opacity: 0, y: 40 }}

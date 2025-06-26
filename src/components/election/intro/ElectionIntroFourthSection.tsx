@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-
+import { useIsLgUp } from '@/hooks/usePageSize';
 export default function ElectionIntroFourthSection() {
+  const isLgUp = useIsLgUp();
   return (
     <div className="w-full lg:min-h-[600px] h-fit pb-12 lg:pb-24 flex flex-col items-start bg-white">
       <div className=" max-w-[1536px] h-full px-6 mx-auto">
@@ -17,7 +18,9 @@ export default function ElectionIntroFourthSection() {
         <div className="w-full max-w-[1400px] mx-auto mt-20 flex flex-col lg:flex-row justify-center items-center gap-4 px-2 overflow-x-auto">
           <div className="w-full lg:w-1/2 flex justify-center">
             <Image
-              src="/images/election/intro/eletion_intro_book1.png"
+              src={`/images/election/intro/eletion_intro_book${
+                isLgUp ? '1' : '2'
+              }.png`}
               width={700}
               height={400}
               alt="books"
@@ -27,7 +30,9 @@ export default function ElectionIntroFourthSection() {
           </div>
           <div className="w-full lg:w-1/2 flex justify-center">
             <Image
-              src="/images/election/intro/eletion_intro_book2.png"
+              src={`/images/election/intro/eletion_intro_book${
+                isLgUp ? '2' : '1'
+              }.png`}
               width={700}
               height={400}
               alt="books"

@@ -12,7 +12,7 @@ export default function ElectionPromotionSecondSection() {
         <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[120px] sm:w-[170px] text-2xl font-bold">
           사진촬영
         </button>
-        <p className="text-[#E93541] text-4xl sm:text-5xl font-normal pt-4 leading-8 lg:leading-none">
+        <p className="text-[#E93541] text-4xl sm:text-5xl font-normal pt-4 leading-2 sm:leading-none">
           사진연출의 자신감
         </p>
         <p className="text-[#E93541] text-5xl sm:text-6xl font-semibold lg:pb-4">
