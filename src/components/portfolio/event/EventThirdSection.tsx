@@ -1,5 +1,4 @@
 import NestingCircle from '@/components/common/NestingCircle';
-import ShadowCircle from '@/components/common/ShadowCircle';
 import { useIsLgUp, useIsSmUp } from '@/hooks/usePageSize';
 import { mdiArrowRight } from '@mdi/js';
 import Icon from '@mdi/react';
@@ -21,14 +20,14 @@ export default function EventThirdSection({
   const isSmUp = useIsSmUp();
   return (
     <>
-      <div className="w-screen bg-[#e1e6fe] h-[500px] flex flex-row justify-center items-center sm:space-x-4 2xl:space-x-12">
+      <div className="w-screen bg-[#e1e6fe] h-[500px] flex flex-row justify-center items-center sm:space-x-4 2xl:space-x-8">
         <div className="hidden xl:block">
           <NestingCircle
             src={'/images/portfolio/logo_portfolio_circle.png'}
             iconWidth={160}
             color="blue"
-            diameterOutter={isLgUp ? 240 : 160}
-            diameterInner={isLgUp ? 220 : 140}
+            diameterOutter={isLgUp ? 200 : 120}
+            diameterInner={isLgUp ? 180 : 110}
           />
         </div>
         <div className="hidden xl:block">
@@ -50,7 +49,7 @@ export default function EventThirdSection({
             <div
               key={item.def1}
               className={`flex flex-col items-center ${
-                isSmUp ? ' w-[180px] mx-2' : 'min-w-[150px] mx-[-15px]'
+                isSmUp ? ' w-[180px] mx-2' : 'min-w-[150px] mx-[-9px]'
               }`}
               style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
             >
@@ -64,7 +63,13 @@ export default function EventThirdSection({
                   ease: 'easeInOut',
                 }}
               >
-                <ShadowCircle color={'blue'} diameter={isSmUp ? 220 : 150}>
+                <div
+                  style={{
+                    width: isSmUp ? 220 : 145,
+                    height: isSmUp ? 220 : 145,
+                  }}
+                  className={` rounded-full bg-transparent border-2 sm:border-3 border-[#032ff4] flex flex-col items-center justify-center`}
+                >
                   {/* item 타이틀 */}
                   <p className="font-bold text-base sm:text-xl text-[#032FF4]">
                     {item.def1}
@@ -73,7 +78,7 @@ export default function EventThirdSection({
                   <p className="font-bold text-base sm:text-xl text-[#032FF4] mb-2">
                     {item.def2}
                   </p>
-                </ShadowCircle>
+                </div>
               </motion.div>
             </div>
           ))}
@@ -95,8 +100,8 @@ export default function EventThirdSection({
           <NestingCircle
             iconWidth={160}
             color="blue"
-            diameterOutter={isLgUp ? 240 : 160}
-            diameterInner={isLgUp ? 220 : 140}
+            diameterOutter={isLgUp ? 200 : 120}
+            diameterInner={isLgUp ? 180 : 110}
           >
             <b className="text-white text-4xl font-normal">행사</b>
           </NestingCircle>

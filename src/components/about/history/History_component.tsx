@@ -13,33 +13,33 @@ export default function History_component() {
       '하보우만의 약속 시사회',
       '시민단체 부산센터 설립 인테리어',
       'OOO전당 구로구청장 보궐선거 선거캠프',
-      '엔잭타코리아 킥오프 행사',
-      '고려대학교 최종성과 공유회 및 전체 교수 세미나',
-      '포라이프리서치코리아 오크벨리 세미나',
+      '엔잭타코리아 킥오프 행사*부분외주',
+      '고려대학교 최종성과 공유회 및 전체 교수 세미나*부분외주',
+      '포라이프리서치코리아 오크벨리 세미나*부분외주',
       '라이피스 동안하루 런칭 세미나',
       'OOO기업 신년회 빛나는 NJ의 밤',
       'OOO 외신 기자회견',
-      '포라이프리서치코리아 오크벨리 세미나',
+      '포라이프리서치코리아 오크벨리 세미나*부분외주',
     ],
     2024: [
-      'LH거주수기 공모 우수상 시상식',
-      '엔잭타코리아 송년회',
-      '고려대학교 세종캠퍼스 연찬회',
-      '애즈플레이 Bronze Moment Party',
-      'BWB',
+      'LH거주수기 공모 우수상 시상식*부분외주',
+      '엔잭타코리아 송년회*부분외주',
+      '고려대학교 세종캠퍼스 연찬회*부분외주',
+      '애즈플레이 Bronze Moment Party*부분외주',
+      'BWB*부분외주',
       '한국교회 200만 연합예배',
-      '결혼 웨딩데이',
-      '팝페라로 떠나는 시흥의 휴일 팝페라 피크닉',
-      'GSMA',
-      '2024 그릴마스터대회 경기도축산페스티벌',
+      '결혼 웨딩데이*부분외주',
+      '팝페라로 떠나는 시흥의 휴일 팝페라 피크닉*부분외주',
+      'GSMA*부분외주',
+      '2024 그릴마스터대회 경기도축산페스티벌*부분외주',
       'OOO기업 모터사이클 페스티벌',
-      '포라이프리서치코리아 컨벤션',
+      '포라이프리서치코리아 컨벤션*부분외주',
       '라이피스 런칭세미나',
       'OOO전당 역량강화 연수',
-      '국민통합위원회 과학기술과의 동행',
-      '엔잭타코리아 세상을 뒤집다 컨벤션',
-      'LH경기북부지역본부 개소식',
-      '포라이프리서치코리아 컨벤션',
+      '국민통합위원회 과학기술과의 동행*부분외주',
+      '엔잭타코리아 세상을 뒤집다 컨벤션*부분외주',
+      'LH경기북부지역본부 개소식*부분외주',
+      '포라이프리서치코리아 컨벤션*부분외주',
       '알뜰폰 통신사 영업매니저 웹페이지 제작',
       '대형교회 비공개 설명회',
       '제22대 국회의원선거 OOO전당 선거캠프',
@@ -128,20 +128,33 @@ export default function History_component() {
               <p className="hidden sm:block text-[#0052ff] text-3xl mt-[-30px] mb-8">
                 {years[activeIdx]}
               </p>
-
               {/* 세로선 */}
               <div className="absolute left-0 top-6 w-px h-[calc(100%-1.5rem)] bg-[#e0e0e0] z-0" />
               {/* 파란 원 */}
               <div className="absolute left-[-8px] top-3 w-4 h-4 rounded-full bg-[#0052ff] z-10" />
               <div className="max-h-[420px] overflow-y-auto">
                 <ul>
-                  {histories[years[activeIdx]].map((item, idx) => (
-                    <li key={idx} className="mb-2 text-base text-black">
-                      {item}
-                    </li>
-                  ))}
+                  {histories[years[activeIdx]].map((item, idx) => {
+                    const PART = '*부분외주';
+                    if (item.includes(PART)) {
+                      const [main, ...rest] = item.split(PART);
+                      return (
+                        <li key={idx} className="mb-2 text-base text-black">
+                          {main}&nbsp;
+                          <span className="text-xs text-[#727272]">{PART}</span>
+                          {rest.join(PART)}
+                        </li>
+                      );
+                    }
+                    return (
+                      <li key={idx} className="mb-2 text-base text-black">
+                        {item}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
+              727272
               {/* 하단 그라디언트 오버레이 */}
               <div
                 className="pointer-events-none absolute left-0 right-0 bottom-0 h-32"
