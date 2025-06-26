@@ -89,17 +89,30 @@ export default function ElectionConsultingSecondSection({
             </div>
             {/* defs-mobile */}
             <div className="md:hidden text-center">
-              {box.defs.map((definition, innerIdx) => (
+              {idx == 1 ? (
                 <>
-                  <span
-                    className="text-xl text-[#727272] font-[300]"
-                    key={innerIdx}
-                  >
-                    {definition}
-                  </span>
-                  {innerIdx == 0 && <br key={`br-${innerIdx}`} />}
+                  <p className="text-xl text-[#727272]">
+                    나를이기고 적을 알아야 이기는 법을 알아
+                  </p>
+                  <p className="text-xl text-[#727272]">
+                    철저한 분석으로 시작합니다.
+                  </p>
                 </>
-              ))}
+              ) : (
+                <>
+                  {box.defs.map((definition, innerIdx) => (
+                    <>
+                      <span
+                        className="text-xl text-[#727272] font-[300]"
+                        key={innerIdx}
+                      >
+                        {definition}&nbsp;
+                      </span>
+                      {innerIdx == 0 && <br key={`br-${innerIdx}`} />}
+                    </>
+                  ))}
+                </>
+              )}
             </div>
 
             {/* 가운데 짧은 hr(구분선) */}
