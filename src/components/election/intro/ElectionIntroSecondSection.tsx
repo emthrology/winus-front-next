@@ -2,18 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 export default function ElectionIntroSecondSection() {
   return (
-    <div className=" w-screen max-w-[1536px] mx-auto h-fit bg-white z-1">
+    <div className=" w-screen mx-auto h-fit bg-white z-1">
       {/* 하단 */}
       <div className="z-10 w-full h-full flex items-end max-w-8xl px-4">
         <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-14 sm:gap-28">
-          <div className="flex items-center lg:items-start justify-center lg:h-1/2">
+          <div className="flex items-center lg:items-start justify-center lg:justify-end lg:h-1/2">
             {/* <Image
               src="/images/election/intro/election_intro_second_lower_left.png"
               width={492}
               height={148}
               alt="lower logo"
             /> */}
-            <div className="flex flex-col ">
+            <div className="flex flex-col bg-white">
               <div>
                 <span
                   className="text-3xl sm:text-5xl text-[#E61E2B] font-semibold"

@@ -205,7 +205,7 @@ export default function Page() {
           image: '/images/business/business_lower_design_3.png',
         },
         {
-          title: '디자인 및 마케팅',
+          title: '디자인및마케팅',
           image: '/images/business/business_lower_design_4.png',
         },
         {
@@ -247,6 +247,7 @@ export default function Page() {
       <div className="lg:p-8 h-0 bg-white" />
       <LowerSection
         key={idx + 20}
+        keyProp={idx + 20}
         circleData={pageData[idx].lowerSectionData}
         theme={themeColor}
       />

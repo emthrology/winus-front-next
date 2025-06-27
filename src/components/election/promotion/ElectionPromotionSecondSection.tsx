@@ -9,7 +9,7 @@ export default function ElectionPromotionSecondSection() {
     <div className="relative w-full h-fit xl:min-h-[1100px] md:py-24 flex flex-col items-start bg-[linear-gradient(180deg,#FFE5E7_0%,#FFF_70%)] lg:bg-[linear-gradient(180deg,#FFE5E7_0%,#FFF_20%)]">
       {/* 상단 텍스트/버튼 등 */}
       <div className="flex w-full flex-col items-center mt-28 space-y-4">
-        <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[120px] sm:w-[170px] text-2xl font-bold">
+        <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[110px] sm:w-[170px] text-xl sm:text-2xl font-bold shadow-[0_2px_4px_0_rgba(230,30,43,0.75)] sm:shadow-none">
           사진촬영
         </button>
         <p className="text-[#E93541] text-3xl sm:text-5xl font-normal pt-4 leading-1 sm:leading-none">
@@ -67,7 +67,7 @@ export default function ElectionPromotionSecondSection() {
             </div>
           ))}
         </div>
-        {/* 오른쪽버튼 */}
+        {/* 오른쪽버튼 pc */}
         <div className="flex flex-col space-y-8">
           {[
             '3초로 결정되는 첫인상',

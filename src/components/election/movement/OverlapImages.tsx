@@ -2,12 +2,12 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const images = [
-  '/images/election/movement/election_movement_third_1.png',
-  '/images/election/movement/election_movement_third_2.png',
-  '/images/election/movement/election_movement_third_3.png',
-  '/images/election/movement/election_movement_third_4.png',
-  '/images/election/movement/election_movement_third_5.png',
-  '/images/election/movement/election_movement_third_6.png',
+  '/images/election/movement/election_movement_third_1_mobile.png',
+  '/images/election/movement/election_movement_third_2_mobile.png',
+  '/images/election/movement/election_movement_third_3_mobile.png',
+  '/images/election/movement/election_movement_third_4_mobile.png',
+  '/images/election/movement/election_movement_third_5_mobile.png',
+  '/images/election/movement/election_movement_third_6_mobile.png',
 ];
 export default function OverlapImages() {
   return (

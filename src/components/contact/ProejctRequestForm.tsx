@@ -213,17 +213,18 @@ export default function ProjectRequestForm() {
       </div>
 
       {/* 개인정보 동의 */}
-      <div className="flex items-center mb-8">
+      <div className="flex items-start sm:items-center mb-8 ">
         <input
           type="checkbox"
           id="agree"
           name="agree"
           checked={form.agree}
           onChange={handleChange}
-          className="mr-2"
+          className="m-1"
         />
         <label htmlFor="agree" className="text-sm text-gray-500">
-          개인정보 수집, 이용 및 처리방침에 동의(약관)
+          개인정보 수집, 이용 및<br className="sm:hidden" /> 처리방침에
+          동의(약관)
         </label>
 
         <Link

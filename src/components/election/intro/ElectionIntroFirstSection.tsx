@@ -53,7 +53,7 @@ export default function ElectionIntroFirstSection({
                 idx == 0 && (
                   <motion.div
                     key={`${circle.title}-${idx}`}
-                    className="xl:hidden flex w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4  flex-col items-center justify-center"
+                    className="xl:hidden flex w-[180px] h-[180px] sm:w-[280px] sm:h-[280px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4  flex-col items-center justify-center"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
@@ -68,7 +68,7 @@ export default function ElectionIntroFirstSection({
                     {circle.defs.map((definition, innerIdx) => (
                       <p
                         key={`${definition}-${innerIdx}`}
-                        className="font-[300] text-xs sm:text-base text-[#727272]"
+                        className="font-[300] text-[10.5px] sm:text-base text-[#727272]"
                       >
                         {definition}
                       </p>
@@ -83,7 +83,7 @@ export default function ElectionIntroFirstSection({
                 idx > 0 && (
                   <motion.div
                     key={`${circle.title}-${idx}`}
-                    className="xl:hidden flex w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4  flex-col items-center justify-center"
+                    className="xl:hidden flex w-[180px] h-[180px] sm:w-[280px] sm:h-[280px] lg:w-[360px] lg:h-[360px] 2xl:w-[469px] 2xl:h-[469px] rounded-full bg-[rgba(255,255,255,0.80)] shadow-[0px_4px_6px_0px_rgba(128,2,2,0.15)] border-white border-4  flex-col items-center justify-center"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
@@ -98,7 +98,7 @@ export default function ElectionIntroFirstSection({
                     {circle.defs.map((definition, innerIdx) => (
                       <p
                         key={`${definition}-${innerIdx}`}
-                        className="font-[300] text-xs sm:text-base text-[#727272]"
+                        className="font-[300] text-[10.5px] sm:text-base text-[#727272]"
                       >
                         {definition}
                       </p>

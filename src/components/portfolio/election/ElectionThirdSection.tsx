@@ -22,7 +22,7 @@ export default function ElectionThirdSection({ list }: FourthSectionProps) {
         </div>
       </div>
       {/* boxes */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-12 w-fit mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4 sm:gap-12 w-fit mx-auto">
         {list.map((item, idx) => (
           <motion.div
             key={item.title}

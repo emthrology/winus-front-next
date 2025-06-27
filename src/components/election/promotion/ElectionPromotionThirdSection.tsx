@@ -13,7 +13,7 @@ export default function ElectionPromotionThirdSection() {
     <div className="relative w-full h-fit md:pb-12 lg:py-24 flex flex-col items-start bg-[linear-gradient(180deg,#FFF_30%,#FFE5E7_60%,#FFF_100%)]">
       {/* 상단 텍스트/버튼 등 */}
       <div className="flex w-full flex-col items-center mt-28 sm:mb-14 md:my-28 space-y-4">
-        <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[120px] sm:w-[170px] text-2xl font-bold">
+        <button className="border-2 border-[#E93541] bg-white text-[#E93541] rounded-[40px] h-[40px] w-[110px] sm:w-[170px] text-xl sm:text-2xl font-bold shadow-[0_2px_4px_0_rgba(230,30,43,0.75)] sm:shadow-none">
           SNS 홍보
         </button>
         <p className="text-[#E93541] text-3xl sm:text-5xl font-normal pt-4 leading-1 sm:leading-none">
@@ -113,7 +113,7 @@ export default function ElectionPromotionThirdSection() {
                 }}
                 className={`${
                   row.length == 1 ? 'min-w-[200px]' : 'flex-1'
-                } border border-[#E93541] bg-[#E93541] text-white text-[16px] xl:text-[30px] rounded-[40px] h-[40px] max-w-[400px] px-6 font-[500] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]`}
+                } border border-[#E93541] bg-[#E93541] text-white text-[15px] xl:text-[30px] rounded-[40px] h-[40px] max-w-[400px] px-6 font-[500] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]`}
                 onClick={() => {}}
                 key={idx}
               >

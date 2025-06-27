@@ -55,7 +55,7 @@ export default function Organizatino_component() {
             className="z-1 mt-12 mb-[-50px]"
             src={'/images/Rectangle_25.png'}
             alt=""
-            width={isLgUp ? 780 : 380}
+            width={isLgUp ? 780 : 350}
             height={76}
           />
           {/* pc */}
@@ -91,14 +91,14 @@ export default function Organizatino_component() {
             ))}
           </div>
           {/* mobile */}
-          <div className="py-10 w-full">
+          <div className="py-8 w-full">
             <div className="lg:hidden z-2 flex justify-center items-center">
               {circleData.map(
                 (item, idx) =>
                   idx < 3 && (
                     <div
                       key={item.title}
-                      className="flex flex-col items-center min-w-[160px] mx-[-10px]"
+                      className="flex flex-col items-center min-w-[160px] mx-[-15px]"
                       style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
                     >
                       <motion.div
@@ -111,7 +111,7 @@ export default function Organizatino_component() {
                           ease: 'easeInOut',
                         }}
                       >
-                        <ShadowCircle color={'blue'} diameter={170}>
+                        <ShadowCircle color={'blue'} diameter={140}>
                           {/* item 타이틀 */}
                           <p className="font-bold text-[22px] text-[#032FF4] whitespace-pre-line text-center mb-2">
                             {item.title}
@@ -145,7 +145,7 @@ export default function Organizatino_component() {
                           ease: 'easeInOut',
                         }}
                       >
-                        <ShadowCircle color={'blue'} diameter={170}>
+                        <ShadowCircle color={'blue'} diameter={140}>
                           {/* item 타이틀 */}
                           <p className="font-bold text-[22px] text-[#032FF4] whitespace-pre-line text-center mb-2">
                             {item.title}

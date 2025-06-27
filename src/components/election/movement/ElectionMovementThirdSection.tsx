@@ -10,7 +10,7 @@ export default function ElectionMovementThirdSection() {
           <p className="text-[#E93541] text-[24px] sm:text-[40px] md:text-[48px] font-normal pt-4 leading-[1.0]">
             선거운동의 심장
           </p>
-          <p className="text-[#E93541] text-[27px] sm:text-[46px] md:text-[60px] font-semibold sm:pb-4">
+          <p className="text-[#E93541] tracking-tight text-[27px] sm:text-[46px] md:text-[60px] font-semibold sm:pb-4">
             에너지가 넘치는 젊은 선거운동원
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function ElectionMovementThirdSection() {
         ))}
       </div>
       {/* buttons-mobile */}
-      <div className="lg:hidden flex flex-col gap-2 w-full max-w-[410px] my-12 mx-auto">
+      <div className="lg:hidden flex flex-col gap-2 w-full max-w-[410px] py-12 mx-auto">
         {[
           ['선거운동원 확보', '유세댄스 제작'],
           ['청년층 선거운동원'],
@@ -67,7 +67,7 @@ export default function ElectionMovementThirdSection() {
                 }}
                 className={`${
                   row.length == 1 ? 'min-w-[200px]' : 'flex-1'
-                } border border-[#E93541] bg-[#E93541] text-white text-[16px] xl:text-[30px] rounded-[40px] h-[40px] max-w-[400px] px-6 font-[500] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]`}
+                } border border-[#E93541] bg-[#E93541] text-white text-[15px] xl:text-[30px] rounded-[40px] h-[40px] max-w-[400px] px-6 font-[500] shadow-[0_2px_4px_0_rgba(230,30,43,0.75)]`}
                 onClick={() => {}}
                 key={idx}
               >

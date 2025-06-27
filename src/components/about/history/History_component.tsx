@@ -154,7 +154,6 @@ export default function History_component() {
                   })}
                 </ul>
               </div>
-              727272
               {/* 하단 그라디언트 오버레이 */}
               <div
                 className="pointer-events-none absolute left-0 right-0 bottom-0 h-32"

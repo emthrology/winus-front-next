@@ -18,7 +18,7 @@ export default function ElectionConsultingSecondSection({
 }: SecondSectionProps) {
   const isMdUp = useIsMdUp();
   return (
-    <div className="w-full min-h-[1100px] py-12 mt-24 flex flex-col items-start bg-white">
+    <div className="w-full h-fit py-12 pt-24 flex flex-col items-start bg-white">
       {/* 상단 텍스트/버튼 등 */}
       <div className="flex w-full flex-col items-center sm:my-16 space-y-4 ">
         <p className="text-[#E93541] text-4xl sm:text-5xl font-normal leading-[0.5] sm:leading-none lg:leading-none">
@@ -49,24 +49,24 @@ export default function ElectionConsultingSecondSection({
                 width={248}
                 height={189}
                 alt="box_icon"
-                className="w-1/5 sm:w-1/3 h-auto mt-[-30px] mb-8"
+                className="w-1/5 sm:w-1/3 h-auto mt-[-30px] mb-4 sm:mb-8"
               />
             )}
-            {!isMdUp && (
-              <div className="flex flex-col items-center">
-                <p className="text-[26px] 2xl:text-[32px] font-[400] text-[#E93541] leading-none">
-                  {box.subtitle}
-                </p>
-                <p className="text-[30px] lg:text-[38px] 2xl:text-[42px] font-bold text-[#E93541] mb-2">
-                  {box.title}
-                </p>
-              </div>
-            )}
+            {/* pc */}
             <div className="hidden md:flex flex-col items-center">
-              <p className="text-[26px] 2xl:text-[32px] font-[400] text-[#E93541] mb-2">
+              <p className="text-[26px] 2xl:text-[32px] font-[400] text-[#E93541] mb-2 leading-[.6]">
                 {box.subtitle}
               </p>
               <p className="text-[30px] lg:text-[38px] 2xl:text-[42px] font-bold text-[#E93541]">
+                {box.title}
+              </p>
+            </div>
+            {/* mobile */}
+            <div className="md:hidden flex flex-col items-center ">
+              <p className="text-[22px] 2xl:text-[32px] font-[400] text-[#E93541] leading-none">
+                {box.subtitle}
+              </p>
+              <p className="text-[26px] lg:text-[38px] 2xl:text-[42px] font-bold text-[#E93541] mb-2">
                 {box.title}
               </p>
             </div>
@@ -91,10 +91,10 @@ export default function ElectionConsultingSecondSection({
             <div className="md:hidden text-center">
               {idx == 1 ? (
                 <>
-                  <p className="text-xl text-[#727272]">
+                  <p className="text-base text-[#727272]">
                     나를이기고 적을 알아야 이기는 법을 알아
                   </p>
-                  <p className="text-xl text-[#727272]">
+                  <p className="text-base text-[#727272]">
                     철저한 분석으로 시작합니다.
                   </p>
                 </>
@@ -103,7 +103,7 @@ export default function ElectionConsultingSecondSection({
                   {box.defs.map((definition, innerIdx) => (
                     <>
                       <span
-                        className="text-xl text-[#727272] font-[300]"
+                        className="text-base text-[#727272] font-[300]"
                         key={innerIdx}
                       >
                         {definition}&nbsp;

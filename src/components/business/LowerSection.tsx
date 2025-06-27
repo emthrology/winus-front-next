@@ -8,11 +8,16 @@ interface CircleProps {
 }
 
 interface SectionTheme {
+  keyProp: number;
   theme: string;
   circleData: CircleProps[];
 }
 
-export default function LowerSection({ theme, circleData }: SectionTheme) {
+export default function LowerSection({
+  theme,
+  circleData,
+  keyProp,
+}: SectionTheme) {
   const bgThemeClass =
     {
       blue: 'bg-[#032FF4]',
@@ -90,22 +95,24 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
                       ease: 'easeInOut',
                     }}
                   >
-                    <ShadowCircle color={theme} diameter={170}>
-                      <div className="h-[140px] flex flex-col justify-between items-center">
+                    <ShadowCircle color={theme} diameter={140}>
+                      <div className="h-[100px] flex flex-col justify-between items-center">
                         {/* item 타이틀 */}
                         <p className="font-bold text-lg text-black mb-3">
                           {`STEP ${idx + 1}`}
                         </p>
                         {/* 아이콘 */}
                         <Image
-                          width={45}
-                          height={50}
+                          width={35}
+                          height={40}
                           src={item.image}
                           alt={item.title}
                         />
                         {/* 설명 라벨 */}
                         <p
-                          className={`mt-6 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
+                          className={`${
+                            keyProp == 22 ? 'text-[10.5px]' : ''
+                          } mt-4 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
                         >
                           {item.title}
                         </p>
@@ -135,22 +142,25 @@ export default function LowerSection({ theme, circleData }: SectionTheme) {
                       ease: 'easeInOut',
                     }}
                   >
-                    <ShadowCircle color={theme} diameter={180}>
-                      <div className="h-[140px] flex flex-col justify-between items-center">
+                    <ShadowCircle color={theme} diameter={140}>
+                      <div className="h-[100px] flex flex-col justify-between items-center">
                         {/* item 타이틀 */}
                         <p className="font-bold text-lg text-black mb-3">
                           {`STEP ${idx + 1}`}
                         </p>
                         {/* 아이콘 */}
                         <Image
-                          width={45}
-                          height={50}
+                          width={35}
+                          height={35}
                           src={item.image}
                           alt={item.title}
+                          className={`${idx == 4 && 'mt-[-5%]'}`}
                         />
                         {/* 설명 라벨 */}
                         <p
-                          className={`mt-6 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
+                          className={`${idx == 4 ? 'mt-2' : 'mt-4'} ${
+                            keyProp == 22 ? 'text-[10.5px]' : ''
+                          } font-bold whitespace-pre-line text-center  ${textThemeClass}`}
                         >
                           {item.title}
                         </p>

@@ -20,12 +20,13 @@ export default function ElectionConsultingThirdSection({
 }: ThirdSectionProps) {
   return (
     <div className="relative overflow-hidden w-full min-h-[1150px] py-12 flex flex-col items-start bg-white">
+      {/* 가운데 배경 원 */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div
-          className={`flex justify-center items-center w-[1024px] h-[1024px] lg:w-[516px] lg:h-[516px] rounded-[50%] bg-[#e61e2ba8] opacity-30`}
+          className={`flex justify-center items-center w-[739px] h-[739px] lg:w-[516px] lg:h-[516px] rounded-[50%] bg-[#e61e2ba8] opacity-15 lg:opacity-30`}
         >
           <div
-            className={`flex justify-center items-center w-[850px] h-[850px] lg:w-[400px] lg:h-[400px]  rounded-[50%] bg-[#e61e2b86]`}
+            className={`flex justify-center items-center w-[572px] h-[572px] lg:w-[400px] lg:h-[400px]  rounded-[50%] bg-[#e61e2b86]`}
           ></div>
         </div>
       </div>
@@ -56,14 +57,15 @@ export default function ElectionConsultingThirdSection({
       </div>
       {/* shadow-[0_0px_4px_8px_0px_rgba(230,30,43,0.25)] */}
       {/* boxes */}
-      <div className="grid grid-grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 w-fit mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 max-w-screen w-auto sm:w-fit mx-6 sm:mx-auto">
         {boxData.map((box, idx) => (
           <motion.div
             key={box.title}
-            className="relative flex flex-col justify-center items-start p-8 sm:pl-20 
-            aspect-[5/2] w-[385px] sm:w-[450px] xl:w-[600px] 2xl:w-[700px]
-            
-            bg-white/80  shadow-[0px_4px_8px_0px_rgba(230,30,43,0.25)] sm:shadow-[1px_4px_2px_rgba(230,30,43,0.75)] rounded-3xl"
+            className="
+        relative flex flex-col justify-center items-start p-8 sm:pl-20 
+        aspect-[5/2] w-[100%]  xl:w-[600px] 2xl:w-[700px]
+        bg-white/80 shadow-[0px_4px_8px_0px_rgba(230,30,43,0.25)] 
+        sm:shadow-[1px_4px_2px_rgba(230,30,43,0.75)] rounded-3xl"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
@@ -84,8 +86,7 @@ export default function ElectionConsultingThirdSection({
         ))}
       </div>
 
-      {/* steps */}
-      {/* pc */}
+      {/* steps-pc */}
       <div className="hidden md:flex w-full py-12 bg-white flex-col items-center">
         <div className="relative w-full  flex items-center justify-between">
           {/* 점선 */}
@@ -121,19 +122,19 @@ export default function ElectionConsultingThirdSection({
           ))}
         </div>
       </div>
-      {/* mobile */}
+      {/* steps mobile */}
       <div className="md:hidden flex w-full py-6 bg-white flex-col items-center">
         <div className="relative w-full flex items-center justify-center gap-12">
           {/* 점선: 왼쪽 첫 원형 중앙부터 오른쪽 끝까지 */}
           <div
             className="
-        absolute
-        left-[20%] right-0
-        top-12
-        h-0.5
-        border-t-2 border-dotted border-[#e61e2b]
-        opacity-50 z-0
-      "
+              absolute
+              left-[20%] right-0
+              top-12
+              h-0.5
+              border-t-2 border-dotted border-[#e61e2b]
+              opacity-50 z-0
+            "
           />
           {/* 단계별 아이템 */}
           {steps.map(

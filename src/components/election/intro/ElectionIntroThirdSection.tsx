@@ -44,7 +44,7 @@ export default function ElectionIntroThirdSection({
                 ease: 'easeInOut',
               }}
             >
-              <p className="font-[500] text-[18px] sm:text-2xl md:text-4xl text-[#E61E2B] mb-2">
+              <p className="font-[500] text-[15px] sm:text-2xl md:text-4xl text-[#E61E2B] md:mb-2">
                 {circle.title}
               </p>
               <p

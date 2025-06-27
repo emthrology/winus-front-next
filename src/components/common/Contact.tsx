@@ -11,10 +11,10 @@ const Contact = (props: IContactProps) => {
 
   return (
     <div className="z-1 w-screen h-auto md:h-64 overflow-y-hidden bg-[#f4f3ff]">
-      <div className="flex flex-col justify-around py-4 md:py-12 sm:mx-12 lg:mx-36">
+      <div className="flex flex-col justify-around md:py-12 sm:mx-12 lg:mx-36">
         <div className="flex  justify-center sm:justify-between items-center pb-0 sm:pb-4 mx-4 sm:mx-0">
           <div className="hidden sm:block left">
-            <p className="text-2xl md:text-3xl font-bold mt-1 text-black">
+            <p className="text-2xl mt-4 md:text-3xl font-bold md:mt-1 text-black">
               지금 무료로 상담받으세요!
             </p>
             <div className="space-x-2 my-1">
@@ -29,7 +29,10 @@ const Contact = (props: IContactProps) => {
             </div>
           </div>
           {pathname != '/contact' && (
-            <Link href="/contact" className="right w-full sm:w-auto md:mr-8">
+            <Link
+              href="/contact"
+              className="right w-full sm:w-auto md:mr-8 my-4"
+            >
               <div
                 className={`flex justify-center items-center text-lg shadow-2xl h-[50px] min-w-[200px] w-full ${
                   props.theme == 'blue' ? 'bg-[#032ff4]' : 'bg-[#e61e2b]'
@@ -41,7 +44,7 @@ const Contact = (props: IContactProps) => {
           )}
         </div>
 
-        <hr className="border-[#727272] hidden md:inline" />
+        <hr className="border-[#727272] hidden md:inline " />
         {/* 4개 서비스 설명 */}
         <div className="hidden relative mt-3 w-full max-w-8xl md:grid grid-cols-4 md:grid-cols-4 gap-16">
           <div className="flex flex-col items-start">

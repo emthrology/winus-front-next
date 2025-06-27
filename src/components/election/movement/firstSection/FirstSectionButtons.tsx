@@ -35,7 +35,7 @@ const ResponsiveButtons: React.FC<ResponsiveButtonsProps> = ({ buttons }) => {
       <div
         className="
           w-full max-w-[900px] mx-auto
-          flex flex-col gap-2 my-8 pb-4
+          flex flex-col gap-2 mt-4 pb-4
           overflow-hidden
           lg:hidden
         "

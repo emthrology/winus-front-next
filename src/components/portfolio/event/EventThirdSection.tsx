@@ -75,7 +75,7 @@ export default function EventThirdSection({
                     {item.def1}
                   </p>
                   {/* 설명 라벨 */}
-                  <p className="font-bold text-base sm:text-xl text-[#032FF4] mb-2">
+                  <p className="font-bold text-base sm:text-xl text-[#032FF4]">
                     {item.def2}
                   </p>
                 </div>

@@ -105,7 +105,7 @@ export default function NoticeBoard({
           <tr className="bg-[#fff] text-[#727272] text-base">
             <th className="w-1/12 py-2 border-b border-[#d1d5db]">NO.</th>
             <th className="w-5/12 py-2 border-b border-[#d1d5db]">제목</th>
-            <th className="w-2/12 py-2 border-b border-[#d1d5db]">작성자</th>
+
             <th className="w-2/12 py-2 border-b border-[#d1d5db]">날짜</th>
             <SessionProvider>
               <AdminTh />
@@ -131,9 +131,6 @@ export default function NoticeBoard({
                 <td className="py-2 border-b border-[#e5e7eb]">{notice.id}</td>
                 <td className="py-2 border-b border-[#e5e7eb] text-left pl-4">
                   {notice.title}
-                </td>
-                <td className="py-2 border-b border-[#e5e7eb] text-[#727272]">
-                  {notice.author}
                 </td>
                 <td className="py-2 border-b border-[#e5e7eb] text-[#727272]">
                   {notice.created_at.getFullYear().toString().slice(2)}.

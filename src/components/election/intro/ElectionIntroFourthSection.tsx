@@ -8,7 +8,7 @@ export default function ElectionIntroFourthSection() {
       <div className=" max-w-[1536px] h-full px-6 mx-auto">
         {/* 상단 텍스트/버튼 등 */}
         <div className="flex w-full flex-col items-center sm:items-start mt-28 space-y-4">
-          <p className="text-[#E93541] text-3xl sm:text-5xl font-normal">
+          <p className="text-[#E93541] text-3xl sm:text-5xl font-normal leading-1 sm:leading-none">
             선거 시작 전
           </p>
           <p className="text-[#E93541] text-3xl sm:text-6xl font-semibold">

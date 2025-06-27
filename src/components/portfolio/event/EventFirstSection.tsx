@@ -178,10 +178,15 @@ export default function EventFirstSection({
               >
                 <div>
                   <p className="text-white text-xl font-bold">CONFIDENCE</p>
-                  <p className="text-white text-start text-base font-thin">
+                  <p className="hidden md:block text-white text-start text-base font-thin">
                     공공기관과 기업행사에서 인정받은
                     <br />
                     준비력과 체계적인 운영으로, 만족도 높은 결과를 제공합니다.
+                  </p>
+                  <p className="md:hidden text-white text-start text-base font-thin">
+                    공공기관과 기업행사에서 인정받은 준비력과
+                    <br />
+                    체계적인 운영으로, 만족도 높은 결과를 제공합니다.
                   </p>
                 </div>
               </div>

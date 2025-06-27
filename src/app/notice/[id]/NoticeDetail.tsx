@@ -1,4 +1,5 @@
 import { Notice } from '@/types/notice';
+import Link from 'next/link';
 import React from 'react';
 
 interface Props {
@@ -87,12 +88,12 @@ const NoticeDetail = async ({ notice }: Props) => {
 
           {/* 목록 버튼 */}
           <div className="flex justify-center">
-            <a
-              href="/board"
+            <Link
+              href="/notice"
               className="bg-[#2563eb] text-white px-8 py-2 rounded font-semibold text-lg hover:bg-[#1749b2] transition"
             >
               목록
-            </a>
+            </Link>
           </div>
         </div>
       </div>

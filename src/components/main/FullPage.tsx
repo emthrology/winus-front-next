@@ -87,7 +87,7 @@ export default function FullPage() {
             우리가 이기는 방식
           </motion.h2>
           <motion.h1
-            className="text-[120px] lg:text-[210px] font-[700] text-white font-pretendard text-center leading-none"
+            className="text-[110px] lg:text-[210px] font-[700] text-white font-pretendard text-center leading-none"
             initial={{ opacity: 0, scale: 0.7 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
@@ -242,7 +242,14 @@ export default function FullPage() {
                 title: '행사기획 포트폴리오',
               },
               { src: '/images/main/main_3_3.png', title: '선거 포트폴리오' },
-              { src: '/images/main/main_3_4.png', title: '영상 포트폴리오' },
+              {
+                src: `${
+                  isMdUp
+                    ? '/images/main/main_3_4.png'
+                    : '/images/main/main_3_4_mobile.png'
+                }`,
+                title: '영상 포트폴리오',
+              },
             ].map((item, index) => (
               <Link
                 key={index}
@@ -282,15 +289,15 @@ export default function FullPage() {
                   </div>
                 </div>
                 {/* 모바일 오버레이 + 문구 */}
-                <div className="md:hidden absolute inset-0 bg-[linear-gradient(90deg,rgba(3,47,244,0.5)_2.25%,rgba(255,255,255,0)_59%)] flex flex-col items-start justify-center pl-4">
-                  <div className="text-white text-2xl font-bold pl-4 ">
+                <div className="md:hidden absolute inset-0 bg-[linear-gradient(90deg,rgba(3,47,244,0.5)_2.25%,rgba(255,255,255,0)_59%)] flex flex-col items-start justify-center pt-12 pl-4">
+                  <div className="text-white text-[20px] font-bold pl-4 leading-none">
                     {item.title.split(' ')[0]}
                   </div>
-                  <div className="text-white text-2xl font-noto font-[300] pl-4">
+                  <div className="text-white text-[20px] font-noto font-[300] pl-4">
                     PORTFOLIO
                   </div>
-                  <div className="text-white text-base font-light">
-                    <Icon path={mdiChevronRight} size={2} />
+                  <div className="text-white text-base font-light mt-[-2%]">
+                    <Icon path={mdiChevronRight} size={1.6} />
                   </div>
                 </div>
               </Link>

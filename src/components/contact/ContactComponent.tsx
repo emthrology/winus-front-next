@@ -3,7 +3,7 @@ import ProjectRequestForm from './ProejctRequestForm';
 
 export default function ContactComponent() {
   return (
-    <div className=" w-full h-fit pb-4 sm:h-[1200px] md:h-[1400px] overflow-hidden flex flex-col items-start justify-start  mx-auto bg-[#e1e6fe]">
+    <div className=" w-full h-fit overflow-hidden flex flex-col items-start justify-start sm:pb-16 sm:px-6  mx-auto bg-[#e1e6fe]">
       {/* 상단 텍스트/버튼 등 */}
       <div className=" max-w-[1536px] mx-auto w-full flex flex-col items-start mt-24 md:mt-16 px-6 ">
         <p className="text-black text-2xl sm:text-[30px] md:text-[42px] font-normal">
@@ -29,10 +29,19 @@ export default function ContactComponent() {
           </div>
         </div>
       </div>
-
       {/* 견적의뢰 작성 */}
       <div className="flex max-w-[1536px] w-full md:h-[900px] mx-auto mt-8 md:mt-20 bg-white shadow-[0_4px_1px_0_rgba(3, 47, 244, 0.12)]">
         <ProjectRequestForm />
+      </div>
+      <div className="sm:hidden flex flex-col p-4 space-y-4">
+        <div className="flex flex-col space-y-1">
+          <p className="text-[#032FF4] text-xl font-bold">이메일</p>
+          <p className="text-gray-500 text-lg">wewinus302@gmail.com</p>
+        </div>
+        <div className="flex flex-col space-y-1">
+          <p className="text-[#032FF4] text-xl font-bold">문의전화</p>
+          <p className="text-gray-500 text-lg">02-915-3702</p>
+        </div>
       </div>
     </div>
   );

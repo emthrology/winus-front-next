@@ -41,14 +41,20 @@ export default function EventSecondSection({
               />
             </div>
             <div
-              className={`absolute bottom-0 left-0 w-full h-full
+              className={`absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,19,105,0)] via-[rgba(0,19,105,0.3)] to-[rgba(0,19,105,0.65)] transition-opacity duration-300 group-hover:opacity-0 pointer-events-none
                 ${
                   isMdUp
                     ? 'bg-gradient-to-b from-[rgba(0,19,105,0)] via-[rgba(0,19,105,0.3)] to-[rgba(0,19,105,0.65)]'
-                    : 'bg-transparent'
-                }
-        
-        transition-opacity duration-300 group-hover:opacity-0 pointer-events-none`}
+                    : ''
+                }`}
+              style={
+                !isMdUp
+                  ? {
+                      background:
+                        'linear-gradient(180deg, rgba(0, 19, 105, 0.00) 59.86%, rgba(0, 19, 105, 0.65) 100%)',
+                    }
+                  : {}
+              }
             />
             {/* 텍스트는 항상 보이게 */}
             <div className="absolute bottom-0 left-0 p-8 w-full h-full flex flex-col justify-end z-10">
