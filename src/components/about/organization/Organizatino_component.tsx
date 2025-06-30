@@ -113,7 +113,7 @@ export default function Organizatino_component() {
                       >
                         <ShadowCircle color={'blue'} diameter={140}>
                           {/* item 타이틀 */}
-                          <p className="font-bold text-[15px] text-[#032FF4] whitespace-pre-line text-center mb-2">
+                          <p className="font-bold text-[15px] text-[#032FF4] whitespace-pre-line text-center ">
                             {item.title}
                           </p>
                           {/* 설명 라벨 */}
@@ -147,7 +147,7 @@ export default function Organizatino_component() {
                       >
                         <ShadowCircle color={'blue'} diameter={140}>
                           {/* item 타이틀 */}
-                          <p className="font-bold text-[15px] text-[#032FF4] whitespace-pre-line text-center mb-2">
+                          <p className="font-bold text-[15px] text-[#032FF4] whitespace-pre-line text-center ">
                             {item.title}
                           </p>
                           {/* 설명 라벨 */}
