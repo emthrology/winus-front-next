@@ -3,7 +3,7 @@ import React from 'react';
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-[#e7eaf5] font-pretendard text-[#23263b]">
-      <section className=" bg-[#e7eaf5] px-32 py-8">
+      <section className=" bg-[#e7eaf5] px-6 sm:px-32 py-8">
         <h1 className="text-4xl font-bold mb-8 text-center">
           개인정보처리방침
         </h1>
@@ -13,8 +13,8 @@ export default function PrivacyPolicy() {
           <br /> 이용자의 개인정보를 안전하게 보호하고 적절히 관리하기 위해
           다음과 같이 개인정보처리방침을 수립·공개합니다.
         </p>
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
-          제 1조 (개인정보의 수집 항목 및 이용 목적)
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
+          {`제 1조\n (개인정보의 수집 항목 및 이용 목적)`}
         </h2>
         <p className="my-4 text-sm text-left text-[#5e5e7b]">
           회사는 다음과 같은 항목의 개인정보를 수집·이용합니다.
@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
           이 경우 문의 접수가 제한될 수 있습니다.
         </p>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
           제 2조 (개인정보의 제3자 제공)
         </h2>
         <p className="mb-4 text-sm">
@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
           3. 생명, 신체, 재산에 대한 긴급한 위험을 방지하기 위한 경우
         </p>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
           제 3조 (개인정보 처리의 위탁)
         </h2>
         <p className="my-4 text-sm text-left text-[#5e5e7b]">
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
           </tbody>
         </table>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
           제 4조 (개인정보의 보유 및 파기)
         </h2>
         <p className="mb-4 text-sm">
@@ -116,8 +116,8 @@ export default function PrivacyPolicy() {
           분쇄하거나 소각하여 폐기합니다.
         </p>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
-          제 5조 (이용자 및 법정대리인의 권리와 행사 방법)
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
+          {`제 5조\n (이용자 및 법정대리인의 권리와 행사 방법)`}
         </h2>
         <ul className="mb-4 text-sm space-y-1">
           <li>
@@ -128,7 +128,7 @@ export default function PrivacyPolicy() {
           </li>
         </ul>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
           제 6조 (개인정보의 안전성 확보 조치)
         </h2>
         <p className="mb-4 text-sm">
@@ -142,7 +142,7 @@ export default function PrivacyPolicy() {
           <li>정기적 교육 실시</li>
         </ol>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
           제 7조 (개인정보 보호책임자)
         </h2>
         <ul className="list-disc ml-5 mb-4 text-sm space-y-1">
@@ -152,7 +152,7 @@ export default function PrivacyPolicy() {
           <li>이메일: cat2032032@wewinus.com</li>
         </ul>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
           제 8조 (권익침해 구제방법)
         </h2>
         <p className="mb-4 text-sm">
@@ -167,7 +167,7 @@ export default function PrivacyPolicy() {
           </li>
         </ul>
 
-        <h2 className="font-bold mt-8 mb-2 text-3xl">
+        <h2 className="font-bold mt-8 mb-2 text-2xl sm:text-3xl whitespace-pre-line">
           제 9조 (개인정보 처리방침 변경)
         </h2>
         <p className="text-sm">
