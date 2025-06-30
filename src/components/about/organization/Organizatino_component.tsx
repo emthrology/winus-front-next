@@ -52,10 +52,10 @@ export default function Organizatino_component() {
             height={isMdUp ? 260 : 195}
           />
           <Image
-            className="z-1 mt-12 mb-[-50px]"
+            className="z-1 mt-12 mb-[-45px]"
             src={'/images/Rectangle_25.png'}
             alt=""
-            width={isLgUp ? 780 : 350}
+            width={isLgUp ? 780 : 320}
             height={76}
           />
           {/* pc */}
@@ -98,7 +98,7 @@ export default function Organizatino_component() {
                   idx < 3 && (
                     <div
                       key={item.title}
-                      className="flex flex-col items-center min-w-[160px] mx-[-15px]"
+                      className="flex flex-col items-center min-w-[160px] mx-[-20px]"
                       style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
                     >
                       <motion.div
@@ -113,7 +113,7 @@ export default function Organizatino_component() {
                       >
                         <ShadowCircle color={'blue'} diameter={140}>
                           {/* item 타이틀 */}
-                          <p className="font-bold text-[22px] text-[#032FF4] whitespace-pre-line text-center mb-2">
+                          <p className="font-bold text-[15px] text-[#032FF4] whitespace-pre-line text-center mb-2">
                             {item.title}
                           </p>
                           {/* 설명 라벨 */}
@@ -132,7 +132,7 @@ export default function Organizatino_component() {
                   idx >= 3 && (
                     <div
                       key={item.title}
-                      className="flex flex-col items-center min-w-[160px] mx-[-10px]"
+                      className="flex flex-col items-center min-w-[160px] mx-[-20px]"
                       style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
                     >
                       <motion.div
@@ -147,7 +147,7 @@ export default function Organizatino_component() {
                       >
                         <ShadowCircle color={'blue'} diameter={140}>
                           {/* item 타이틀 */}
-                          <p className="font-bold text-[22px] text-[#032FF4] whitespace-pre-line text-center mb-2">
+                          <p className="font-bold text-[15px] text-[#032FF4] whitespace-pre-line text-center mb-2">
                             {item.title}
                           </p>
                           {/* 설명 라벨 */}

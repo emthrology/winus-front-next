@@ -48,7 +48,8 @@ export default function ElectionSecondSection() {
             />
           </div>
           <p className="font-bold text-black text-[20px] sm:text-[24px] md:text-[32px] mb-3">
-            후보님의 말 한마디, 걸음 하나에도 의미를 담아 움직입니다.
+            후보님의 말 한마디, 걸음 하나에도
+            <br className="sm:hidden" /> 의미를 담아 움직입니다.
           </p>
           <p className="text-gray-700 text-[12px] sm:text-[18px] md:text-[26px]">
             세상을 올바르게 바꾸려는 의지와 그 무게를 알기에,

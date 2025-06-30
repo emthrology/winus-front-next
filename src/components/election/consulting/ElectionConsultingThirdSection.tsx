@@ -57,13 +57,13 @@ export default function ElectionConsultingThirdSection({
       </div>
       {/* shadow-[0_0px_4px_8px_0px_rgba(230,30,43,0.25)] */}
       {/* boxes */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 max-w-screen w-auto sm:w-fit mx-6 sm:mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12  w-full sm:w-fit mx-auto px-6">
         {boxData.map((box, idx) => (
           <motion.div
             key={box.title}
             className="
         relative flex flex-col justify-center items-start p-8 sm:pl-20 
-        aspect-[5/2] w-[100%]  xl:w-[600px] 2xl:w-[700px]
+        aspect-[5/2] w-full xl:w-[600px] 2xl:w-[700px]
         bg-white/80 shadow-[0px_4px_8px_0px_rgba(230,30,43,0.25)] 
         sm:shadow-[1px_4px_2px_rgba(230,30,43,0.75)] rounded-3xl"
             initial={{ opacity: 0, y: 40 }}

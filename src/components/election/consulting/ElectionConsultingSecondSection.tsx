@@ -29,7 +29,7 @@ export default function ElectionConsultingSecondSection({
         </p>
       </div>
       {/* boxes */}
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 xl:gap-12 w-fit mx-auto px-6">
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 xl:gap-12 w-full md:w-fit md:mx-auto px-6">
         {boxData.map((box, idx) => (
           <motion.div
             key={box.title}
@@ -63,10 +63,10 @@ export default function ElectionConsultingSecondSection({
             </div>
             {/* mobile */}
             <div className="md:hidden flex flex-col items-center ">
-              <p className="text-[22px] 2xl:text-[32px] font-[400] text-[#E93541] leading-none">
+              <p className="text-[20px] sm:text-[22px]  font-[400] text-[#E93541] leading-none">
                 {box.subtitle}
               </p>
-              <p className="text-[26px] lg:text-[38px] 2xl:text-[42px] font-bold text-[#E93541] mb-2">
+              <p className="text-[24px] sm:text-[26px] lg:text-[38px] 2xl:text-[42px] font-bold text-[#E93541] mb-2">
                 {box.title}
               </p>
             </div>
@@ -91,10 +91,10 @@ export default function ElectionConsultingSecondSection({
             <div className="md:hidden text-center">
               {idx == 1 ? (
                 <>
-                  <p className="text-base text-[#727272]">
+                  <p className="text-sm sm:text-base text-[#727272] font-[300] my-1">
                     나를이기고 적을 알아야 이기는 법을 알아
                   </p>
-                  <p className="text-base text-[#727272]">
+                  <p className="text-sm sm:text-base text-[#727272] font-[300]">
                     철저한 분석으로 시작합니다.
                   </p>
                 </>
@@ -103,7 +103,7 @@ export default function ElectionConsultingSecondSection({
                   {box.defs.map((definition, innerIdx) => (
                     <>
                       <span
-                        className="text-base text-[#727272] font-[300]"
+                        className="text-sm sm:text-base text-[#727272] font-[300]"
                         key={innerIdx}
                       >
                         {definition}&nbsp;

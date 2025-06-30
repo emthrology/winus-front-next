@@ -111,8 +111,8 @@ export default function LowerSection({
                         {/* 설명 라벨 */}
                         <p
                           className={`${
-                            keyProp == 22 ? 'text-[10.5px]' : ''
-                          } mt-4 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
+                            keyProp == 22 ? '' : ''
+                          } text-[10.5px] mt-4 font-bold whitespace-pre-line text-center  ${textThemeClass}`}
                         >
                           {item.title}
                         </p>
@@ -159,8 +159,8 @@ export default function LowerSection({
                         {/* 설명 라벨 */}
                         <p
                           className={`${idx == 4 ? 'mt-2' : 'mt-4'} ${
-                            keyProp == 22 ? 'text-[10.5px]' : ''
-                          } font-bold whitespace-pre-line text-center  ${textThemeClass}`}
+                            keyProp == 22 ? '' : ''
+                          } text-[10.5px] font-bold whitespace-pre-line text-center  ${textThemeClass}`}
                         >
                           {item.title}
                         </p>

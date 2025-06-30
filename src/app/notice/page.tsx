@@ -36,7 +36,7 @@ export default async function NoticePage({
   });
 
   return (
-    <div className="w-screen">
+    <div className="w-screen bg-white">
       <TitleComponent title="Notice." />
       <Suspense fallback={<div>로딩 중...</div>}>
         <NoticeBoard
