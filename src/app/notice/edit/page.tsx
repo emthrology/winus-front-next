@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div className="w-screen">
       <TitleComponent title="notice." />
-      <div className="px-32 py-4 min-h-[700px] bg-white">
+      <div className="px-6 sm:px-32 py-4 min-h-[700px] bg-white">
         {/* <NoticeEditor /> */}
         <EditComponent />
       </div>
