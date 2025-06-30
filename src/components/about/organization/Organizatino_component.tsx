@@ -52,10 +52,10 @@ export default function Organizatino_component() {
             height={isMdUp ? 260 : 195}
           />
           <Image
-            className="z-1 mt-12 mb-[-45px]"
+            className="z-1 mt-12 mb-[-43px]"
             src={'/images/Rectangle_25.png'}
             alt=""
-            width={isLgUp ? 780 : 320}
+            width={isLgUp ? 780 : 300}
             height={76}
           />
           {/* pc */}
@@ -98,7 +98,7 @@ export default function Organizatino_component() {
                   idx < 3 && (
                     <div
                       key={item.title}
-                      className="flex flex-col items-center min-w-[160px] mx-[-20px]"
+                      className="flex flex-col items-center min-w-[160px] mx-[-25px]"
                       style={{ zIndex: circleData.length - idx }} // 왼쪽이 더 높은 z-index
                     >
                       <motion.div
