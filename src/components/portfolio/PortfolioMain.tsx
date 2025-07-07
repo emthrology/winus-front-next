@@ -110,7 +110,7 @@ export default function PartfolioMain() {
             },
             {
               def1: '실외, 실내',
-              def2: '다수 경헙',
+              def2: '다수 경험',
             },
             {
               def1: '공기업, 사기업,',
