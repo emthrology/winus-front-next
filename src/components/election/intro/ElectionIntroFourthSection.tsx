@@ -12,7 +12,7 @@ export default function ElectionIntroFourthSection() {
             선거 시작 전
           </p>
           <p className="text-[#E93541] text-3xl sm:text-6xl font-semibold">
-            메뉴얼북을 꼭 체크하세요
+            매뉴얼북을 꼭 체크하세요
           </p>
         </div>
         <div className="w-full max-w-[1400px] mx-auto mt-20 flex flex-col lg:flex-row justify-center items-center gap-4 px-2 overflow-x-auto">
