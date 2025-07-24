@@ -22,7 +22,7 @@ export default function Intro_component_lower() {
                 윈어스 오시는 길
               </h1>
               <h5 className="text-lg font-[300] text-white pt-2">
-                서울특별시 성북구 화랑로19길 68, 대건빌딩 3층
+                서울특별시 성북구 화랑로 262, 3층 302-1호
               </h5>
             </motion.div>
 
@@ -64,7 +64,7 @@ export default function Intro_component_lower() {
           }}
         >
           <Image
-            src={'/images/about/sketchmap.png'}
+            src={`/images/about/sketchmap.png?v=${Date.now()}`}
             alt="약도"
             width={800}
             height={500}
@@ -85,7 +85,7 @@ export default function Intro_component_lower() {
         >
           <h1 className="text-4xl font-bold text-white">윈어스 오시는 길</h1>
           <h5 className="text-lg font-[200] text-white pt-2">
-            서울특별시 성북구 화랑로19길 68, 대건빌딩 3층
+            서울특별시 성북구 화랑로 262, 3층 302-1호
           </h5>
         </motion.div>
 
@@ -97,10 +97,10 @@ export default function Intro_component_lower() {
             delay: 0.4,
             ease: 'easeInOut',
           }}
-          className="absolute mt-12 w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute mt-12 w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[65%]"
         >
           <Image
-            src={'/images/about/sketchmap.png'}
+            src={`/images/about/sketchmap.png?v=${Date.now()}`}
             alt="약도"
             width={800}
             height={500}

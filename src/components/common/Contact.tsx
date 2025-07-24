@@ -70,9 +70,9 @@ const Contact = (props: IContactProps) => {
           <div className="flex flex-col items-start">
             <div className="font-bold text-black mb-1 text-lg">주소</div>
             <div className=" text-[#727272] mb-2 text-left text-base">
-              서울특별시 성북구 화랑로19길 68
+              서울특별시 성북구 화랑로 262,
               <br />
-              대건빌딩 3층
+              3층 302-1호
             </div>
           </div>
         </div>

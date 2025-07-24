@@ -50,11 +50,11 @@ const Footer = (props: IFooterProps) => {
               </span>
               <span className="hidden lg:inline">
                 업무시간 : 평일 09:00 ~ 18:00 주말, 공휴일 휴무 | 주소 :
-                서울특별시 성북구 화랑로19길 68, 대건빌딩 3층
+                서울특별시 성북구 화랑로 262, 3층 302-1호
               </span>
               <span className="lg:hidden">
                 업무시간 : 평일 09:00 ~ 18:00 주말, 공휴일 휴무 <br /> 주소 :
-                서울특별시 성북구 화랑로19길 68, 대건빌딩 3층
+                서울특별시 성북구 화랑로 262, 3층 302-1호
               </span>
             </div>
             {/* 저작권 */}
